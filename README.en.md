@@ -1,22 +1,17 @@
 # code
 
 #### Description
-code
+I love ning
+code repository
 
 #### Software Architecture
 Software architecture description
 
 #### Installation
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+不需要任何安装
 
 #### Instructions
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+阅读代码和修改代码
 
 #### Contribution
 
