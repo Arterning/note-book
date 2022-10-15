@@ -1,0 +1,33 @@
+version: '3'
+services:
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    container_name: mysql_ning
+    volumes:
+      - "$PWD/.mysql/data:/var/lib/mysql" # 挂载数据目录
+      - "$PWD/.mysql/config:/etc/mysql/conf.d" # 挂载配置文件目录
+    environment:
+      MYSQL_ROOT_PASSWORD: root #root@root
+      MYSQL_DATA_BASE: ning
+  pgsql:
+    container_name: pgsql_ning
+    restart: always
+    image: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - "$PWD/.pgdata/data:/var/lib/postgresql/data/pgdata"
+    environment:
+      POSTGRES_PASSWORD: root #postgres@root
+      PGDATA: /var/lib/postgresql/data/pgdata
+  mongo:
+    container_name: mongo_ning
+    image: mongo
+    ports:
+      - 27017:27017
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
