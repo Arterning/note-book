@@ -1,0 +1,121 @@
+name: Unit Test
+
+env:
+  GOVERSION: '1.17'
+  DIRENV_FILE: '.envrc'
+  DOCKER_COMPOSE_FILE: 'docker-compose.yaml'
+
+on:
+  pull_request:
+    branches-ignore: []
+
+jobs:
+  gomod:
+    name: Resolve go module dependencies
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Install Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: ${{ env.GOVERSION }}
+
+    - uses: actions/cache@v2
+      with:
+        path: ~/go/pkg/mod
+        key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-go-
+
+    - name: Check If $DIRENV_FILE exist
+      run: echo "FOUND_DIRENV_FILE=$(test -f $DIRENV_FILE && echo FOUND || echo NOT_FOUND)" >> $GITHUB_ENV
+
+    - name: Export Environment Variables
+      uses: HatsuneMiku3939/direnv-action@v1
+      if: env.FOUND_DIRENV_FILE == 'FOUND'
+
+    - name: Download go module
+      run: go mod download
+
+    - name: Build tools for go module caching
+      run: make tools
+
+  test:
+    name: Unit Testing
+    runs-on: ubuntu-latest
+    needs:
+      - gomod
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Install Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: ${{ env.GOVERSION }}
+
+    - uses: actions/cache@v2
+      with:
+        path: ~/go/pkg/mod
+        key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-go-
+
+    - name: Check If $DOCKER_COMPOSE_FILE exist
+      run: echo "FOUND_DOCKER_COMPOSE=$(test -f $DOCKER_COMPOSE_FILE && echo FOUND || echo NOT_FOUND)" >> $GITHUB_ENV
+
+    - name: Check If $DIRENV_FILE exist
+      run: echo "FOUND_DIRENV_FILE=$(test -f $DIRENV_FILE && echo FOUND || echo NOT_FOUND)" >> $GITHUB_ENV
+
+    - name: Prepare python3.7 for docker-compose-wait
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+      if: env.FOUND_DOCKER_COMPOSE == 'FOUND'
+
+    - name: Bring Up Test Environment
+      run: |
+        pip3 install docker-compose-wait
+        docker-compose up -d
+        docker-compose-wait -t 60s
+      if: env.FOUND_DOCKER_COMPOSE == 'FOUND'
+
+    - name: Export Environment Variables
+      uses: HatsuneMiku3939/direnv-action@v1
+      if: env.FOUND_DIRENV_FILE == 'FOUND'
+
+    - name: Test
+      run: make test/medium
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    needs:
+      - gomod
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Install Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: ${{ env.GOVERSION }}
+
+    - uses: actions/cache@v2
+      with:
+        path: ~/go/pkg/mod
+        key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-go-
+
+    - name: Check If $DIRENV_FILE exist
+      run: echo "FOUND_DIRENV_FILE=$(test -f $DIRENV_FILE && echo FOUND || echo NOT_FOUND)" >> $GITHUB_ENV
+
+    - name: Export Environment Variables
+      uses: HatsuneMiku3939/direnv-action@v1
+      if: env.FOUND_DIRENV_FILE == 'FOUND'
+
+    - name: Lint
+      run: make lint-ci

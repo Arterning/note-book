@@ -1,0 +1,26 @@
+name: Publish Release Note
+
+on:
+  push:
+    tags:
+      - v[0-9]+.[0-9]+.[0-9]+
+
+jobs:
+  build:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+
+      - name: Install github-release-notes
+        run: npm install github-release-notes -g
+
+      - name: Publish Release Note
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          CURRENT_RELEASE=$(echo ${{ github.ref }} | sed -e "s#refs/tags/##g")
+          gren r -T $GITHUB_TOKEN -D prs-with-issues -o -t $CURRENT_RELEASE
