@@ -1,0 +1,82 @@
+用mysql官方提供的日志分析工具查看TOP3慢日志
+
+mysqldumpslow -t 3 /home/mysql/data/mysql-slow.log | more
+
+linux系统下如果使用mysqldumpslow出现报错:-bash: mysqldumpslow: command not found的话,建立链接即可:   ln -s /usr/local/mysql/bin/mysqldumpslow /usr/bin
+
+
+mysqldumpslow 在windows中是一个perl文件，所以需要你配置perl环境变量 并使用perl运行mysqldumpslow.pl
+
+
+*****************
+通过慢查日志发现问题
+1.查询次数多且每次查询占用时间长的SQL
+  通常为pt-query-digest分析的前几个查询
+2.IO大的SQL
+  注意pt-query-digest分析中的Rows examine项
+3.未命中索引的SQL
+  注意pt-query-digest分析中的Rows examine和Row send 的对比
+
+**********************
+使用explain查询和分析语句
+explain返回各列的含义
+
+table：显示这一行的数据是关于哪张表的
+
+type:这是重要的列,显示连接使用了何种类型。从最好到最差的连接类型为const、eq_reg、ref、range、index和ALL
+
+possible_keys：显示可能应用在这张表中的索引。如果为空，没有可能的索引。
+
+key:实际使用的索引。如果为NULL，则没有使用索引。
+
+key_len:使用的索引的长度。在不损失精确性的情况下，长度越短越好。
+
+ref:显示索引的哪一列被使用了,如果可能的话，是一个常数
+
+rows：MYSQL认为必须检查的用来返回请求数据的行数
+
+
+extra列需要注意的返回值
+
+Using filesort:看到这个的时候，查询就需要优化了。MYSQL需要进行额外的步骤来发现如何对返回的行排序。它根据连接类型以及存储排序键值和匹配条件的全部行的行指针来排序全部行
+
+Using temporary:看到这个的时候，查询需要优化了。这里，MYSQL徐哟创建一个临时表来存储接口，这通常发生在对不同的列表进行ORDER BY上，而不是GROUP BY上
+
+************************************
+Max()和Count()的优化
+
+1.对max()查询，可以为表创建索引，create index index_name on table_name(column_name 规定需要索引的列),然后在进行查询
+
+2.count()对多个关键字进行查询，比如在一条SQL中同时查出2006年和2007年电影的数量，语句：
+
+select count(release_year='2006' or null) as '2006年电影数量',
+       count(release_year='2007' or null) as '2007年电影数量'
+from film;
+
+3.count(*) 查询的结果中，包含了该列值为null的结果
+
+**************************************************
+子查询一般优化成join的查询方式，同时需考虑关联键是否存在一对多的关系
+如果存在一对多的关系，则可以使用distinct关键字去重.
+
+
+***************************************************************************************
+如果涉及到表联接的过程中有group by这样的语句,可以先通过group by做为子查询，统计出结果后，再与其它表进行关联查询。
+
+这个例子中，可以把
+explain select actor.first_name,actor.last_name,count(*) from film_actor inner join actor on actor.actor_id = film_actor.actor_id group by actor.actor_id\G
+改写为
+explain select actor.first_name,actor.last_name,c.cnt from actor inner join (select actor_id,count(*) AS cnt from film_actor GROUP BY actor_id) AS c USING(actor_id)\G
+
+*************************************************************************************************
+limit常用于分页处理，时常会伴随order by从句使用，因此大多时候会使用Filesorts这样会造成大量的io问题
+1.使用有索引的列或主键进行order by操作
+2.记录上次返回的主键，在下次查询时使用主键过滤
+   使用这种方式有一个限制，就是主键一定要顺序排序和连续的，如果主键出现空缺可能会导致最终页面上显示的列表不足5条，
+   解决办法是附加一列，保证这一列是自增的并增加索引就可以了
+   
+   
+   
+   
+   
+   

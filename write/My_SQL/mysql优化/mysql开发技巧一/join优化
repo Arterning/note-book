@@ -1,0 +1,119 @@
+DDL：数据定义语言 --- CREATE、ALTER、DROP、TRUNCATE
+TPL：事务处理语言 --- COMMIT、ROLLBACK、SAVEPOINT、SET TRANSACTION
+DCL：数据控制语言 --- GRANT、REVOKE
+DML：数据操作语言 --- SELECT、UPDATE、INSERT、DELETE
+
+join从句：： inner | full outer | left outer | right outer | cross
+内连接inner join: select a.user_name,a.over,b.over from user1 a join user2 b on a.user_name=b.user_name;
+
+
+
+********************************************************************************
+左外连接
+
+left join 以左表为基础 查询
+忽然想起来有次面试问我如何用left join实现not in的功能 = =
+
+select A.内容,B.内容 from A left join B ON a.key=b.key where b.key is null
+
+not in 关键字不会使用索引 所以用left join加上关键字为null查找只存在于A表不存在于B表的数据
+
+
+EFT OUTER JOIN：包含左表中的所有数据，当某个连接谓词不在右表中时，新生成的表的右表字段为NULL。
+                对左表数据的信息进行扩展，增加右表中的字段，当某个连接谓词不在右表中时，新生成的表的右表字段为NULL。
+
+使用LEFT OUTER JOIN对NOT IN 进行优化。
+SELECT select_sxpressions FROM TABLE A LEFT  JOIN TABLE B ON A.key=B.key WHERE B.key IS NULL;
+表A中不包含表B中的数据。
+SELECT select_sxpressions FROM TABLE A LEFT JOIN TABLE B ON A.key=B.key WHERE B.key IS NOT NULL;
+表A与表B的交集，相当于INNER JOIN。
+
+********************************************************************************
+右外连接
+
+RIGHT OUTER JOIN：包含右表中的所有数据，当某个连接谓词不在左表中时，新生成的表的左表字段为NULL。
+对右表数据的信息进行扩展，增加左表中的字段，当某个连接谓词不在左表中时，新生成的表的左表字段为NULL。
+
+使用RIGHT OUTER JOIN对NOT IN 进行优化。
+SELECT select_sxpressions FROM TABLE A RIGHT  JOIN TABLE B ON A.key=B.key WHERE A.key IS NULL;
+表B中不包含表A中的数据。
+SELECT select_sxpressions FROM TABLE A RIGHT  JOIN TABLE B ON A.key=B.key WHERE A.key IS NOT NULL;
+表A与表B的交集，相当于INNER JOIN。
+
+********************************************************************************
+全连接
+
+FULL JOIN：是LEFT OUTER JOIN和RIGHT OUTER JOIN的合集。显示出两张表中的所有数据，
+            当一张表的连接谓词无法满足时，则另一张表的字段在该表中为NULL。
+
+MySQL不支持FULL JOIN
+解决方法：
+通过UNION将左连接和右连接的结果合并
+SELECT select_expressions
+FROM TABLE A LEFT JOIN TABLE B ON A.key=B.key
+UNION ALL
+SELECT select_expressions
+FROM TABLE A RIGHT JOIN TABLE B ON A.key=B.key;
+
+UNION会自动删除重复项，刷选出部分字段的时候要注意了，如果刷选出来的两个字段的值完全相同就会剩下一个。
+UNION ALL 和 UNION 不同之处在于 UNION ALL 会将左右两个查询的结果的所有的资料都列出来，无论资料值有无重复。
+
+********************************************************************************
+
+CROSS JOIN：笛卡尔连接，如果A和B是两个集合，它们的交叉连接就记为A X B。
+            一个表的每个记录与另一个表的所有记录进行连接，形成A.length*B.length个数据项的表。（无需提供ON）
+
+SELECT select_expressions  FROM TABLE A CROSS JOIN TABLE B;
+
+
+********************************************************************************
+sql技巧
+多表更新，可直接用
+UPDATE  TB1 INNER JOIN TB2 ON TB1.NAME=TB2.NAME SET TB1.OVER='AAAA';
+
+
+
+********************************************************************************
+join优化子查询
+oin优化子查询技巧：
+一般子查询写法：(数据小时，没有多大影响，如果数据量大时，则要消耗大量的查询)
+select a.user_name , a.voer , (select over from user2 where a.user_name = b,user_name) as over2 from user1 a;
+如果这两张表的记录相当多 那么这个子查询相当于对A标的每一条记录都要进行一次子查询。
+
+join优化（左连接）后的写法：
+select a.user_name , a.over , b.over from user1 a left join user2 b on a.user_name = b.user_name
+
+
+
+
+********************************************************************************
+使用join + having优化聚合子查询:
+select a.user_name,b.timestr,b.kills from user1 a join user_kills b on a.id = b.user_id
+    join user_kills c on c.user_id = b.user_id
+    group by a.user_name,btimestr,b.kills
+    having b.kills = max(c.kills);
+
+
+
+********************************************************************************
+分类聚合，在查询多种分类数据时使用到一种聚合方式
+刚仔细思考了一下最后一课的SQL，与大家分享一下，希望大家帮忙找出错误。
+    select d.user_name ,c.ctimestr,kills from
+    (select user_id ,timestr ,kills ,(
+     select count(*) from user_kills b where b.user_id = a.user_id and a.kills <= b.kills) as cnt
+     from user_kills a group by user_id,timestr,kills) c
+     join user1 d on c.user_id = d.id where cnt <= 2
+首先将第一个From后面的子查询看成一个普通表，这样就是一个普通的多表连接查询了。
+where cnt < 2便是筛选条件，选择出顺序是1，2前两条记录。
+然后在看括号里面里层括号这里所做的就是查询出这条记录在分组中根据kills排序的顺序，但是为啥是count（*）呢？
+假设孙悟空打怪 3，5，12 我用3，5,12分别与3，5,12比较
+3   3,5,12  小于3的有3条记录
+5  3,5,12   小于5的有2条记录
+12 3,5，12  小于12的有1条记录
+如此count（*）代表的就是顺序了，如果需要正序，只要将<= 改成>=就好了
+
+
+
+
+
+

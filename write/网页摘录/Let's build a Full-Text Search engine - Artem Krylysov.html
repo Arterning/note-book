@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/ -->
+<html class="no-js" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+        
+            
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            
+
+            
+            <link rel="alternate" type="application/atom+xml" title="Blog feed" href="https://artem.krylysov.com/atom.xml">
+            
+        
+
+        <title>Let's build a Full-Text Search engine - Artem Krylysov</title>
+
+        
+            <link rel="stylesheet" href="./Let&#39;s build a Full-Text Search engine - Artem Krylysov_files/foundation.min.f1ccec7b8d66726d86d21df5be5e74ac.css">
+            <link rel="stylesheet" href="./Let&#39;s build a Full-Text Search engine - Artem Krylysov_files/yozuch.a7a4413bff6dae532445368819ddd8ab.css">
+            <link rel="stylesheet" href="./Let&#39;s build a Full-Text Search engine - Artem Krylysov_files/pygments.fbe5c223b1e91565c6b8dd4d3a02549f.css">
+        
+
+        
+            
+        
+
+        
+            
+<script async="" src="./Let&#39;s build a Full-Text Search engine - Artem Krylysov_files/analytics.js.下载"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37934317-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+        
+
+    
+<script src="https://artemkrylysov.disqus.com/embed.js" data-timestamp="1598266554128"></script></head>
+<body>
+
+    <div class="row">
+        <div class="large-10 large-centered columns">
+        
+            <header>
+                <a href="https://artem.krylysov.com/"><h1>Artem Krylysov</h1></a>
+                <nav>
+                    <ul class="inline-list navigation">
+                        
+                            
+                                <li><a href="https://artem.krylysov.com/">About</a></li>
+                            
+                        
+                            
+                                <li><a href="https://artem.krylysov.com/blog/">Blog</a></li>
+                            
+                        
+                            
+                                <li><a href="https://artem.krylysov.com/archive/">Archive</a></li>
+                            
+                        
+                            
+                                <li><a href="https://artem.krylysov.com/tags/">Tags</a></li>
+                            
+                        
+                            
+                                <li><a href="https://artem.krylysov.com/atom.xml">Feed</a></li>
+                            
+                        
+                    </ul>
+                </nav>
+                <hr>
+            </header>
+        
+
+        
+    <article class="post">
+        <h2>Let's build a Full-Text Search engine</h2>
+
+        <div class="meta">
+    <ul class="inline-list">
+        <li><span class="date">July 28, 2020</span></li>
+        
+        
+        <li><a href="https://artem.krylysov.com/tag/dev/"><span class="secondary label tag">dev</span></a></li>
+        
+        <li><a href="https://artem.krylysov.com/tag/search/"><span class="secondary label tag">search</span></a></li>
+        
+        <li><a href="https://artem.krylysov.com/tag/fts/"><span class="secondary label tag">fts</span></a></li>
+        
+        <li><a href="https://artem.krylysov.com/tag/go/"><span class="secondary label tag">go</span></a></li>
+        
+        <li><a href="https://artem.krylysov.com/tag/golang/"><span class="secondary label tag">golang</span></a></li>
+        
+    </ul>
+</div>
+
+
+        <p>Full-Text Search is one of those tools people use every day without realizing it. If you ever googled "golang coverage report" or tried to find "indoor wireless camera" on an e-commerce website, you used some kind of full-text search.</p>
+<p>Full-Text Search (FTS) is a technique for searching text in a collection of documents. A document can refer to a web page, a newspaper article, an email message, or any structured text.</p>
+<p>Today we are going to build our own FTS engine. By the end of this post, we'll be able to search across millions of documents in less than a millisecond. We'll start with simple search queries like "give me all documents that contain the word <em>cat</em>" and we'll extend the engine to support more sophisticated boolean queries.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Most well-known FTS engine is <a class="reference external" href="https://lucene.apache.org/" target="_blank">Lucene</a> (as well as <a class="reference external" href="https://github.com/elastic/elasticsearch" target="_blank">Elasticsearch</a> and Solr built on top of it).</p>
+</div>
+<div class="section" id="why-fts">
+<h3>Why FTS<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#why-fts" title="Permalink to this headline"> #</a></h3>
+<p>Before we start writing code, you may ask "can't we just use <em>grep</em> or have a loop that checks if every document contains the word I'm looking for?". Yes, we can. However, it's not always the best idea.</p>
+</div>
+<div class="section" id="corpus">
+<h3>Corpus<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#corpus" title="Permalink to this headline"> #</a></h3>
+<p>We are going to search a part of the abstract of English Wikipedia. The latest dump is available at <a class="reference external" href="https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-abstract1.xml.gz" target="_blank">dumps.wikimedia.org</a>. As of today, the file size after decompression is 913 MB. The XML file contains over 600K documents.</p>
+<p>Document example:</p>
+<pre class="code xml literal-block"><code><span class="nt">&lt;title&gt;</span>Wikipedia: Kit-Cat Klock<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;url&gt;</span>https://en.wikipedia.org/wiki/Kit-Cat_Klock<span class="nt">&lt;/url&gt;</span>
+<span class="nt">&lt;abstract&gt;</span>The Kit-Cat Klock is an art deco novelty wall clock shaped like a grinning cat with cartoon eyes that swivel in time with its pendulum tail.<span class="nt">&lt;/abstract&gt;</span></code></pre>
+</div>
+<div class="section" id="loading-documents">
+<h3>Loading documents<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#loading-documents" title="Permalink to this headline"> #</a></h3>
+<p>First, we need to load all the documents from the dump. The built-in <span class="docutils literal">encoding/xml</span> package comes very handy:</p>
+<pre class="code go literal-block"><code><span class="kn">import</span> <span class="p">(</span>
+    <span class="s">"encoding/xml"</span>
+    <span class="s">"os"</span>
+<span class="p">)</span>
+
+<span class="kd">type</span> <span class="nx">document</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">Title</span> <span class="kt">string</span> <span class="s">`xml:"title"`</span>
+    <span class="nx">URL</span>   <span class="kt">string</span> <span class="s">`xml:"url"`</span>
+    <span class="nx">Text</span>  <span class="kt">string</span> <span class="s">`xml:"abstract"`</span>
+    <span class="nx">ID</span>    <span class="kt">int</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">loadDocuments</span><span class="p">(</span><span class="nx">path</span> <span class="kt">string</span><span class="p">)</span> <span class="p">([]</span><span class="nx">document</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">f</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Open</span><span class="p">(</span><span class="nx">path</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">nil</span><span class="p">,</span> <span class="nx">err</span>
+    <span class="p">}</span>
+    <span class="k">defer</span> <span class="nx">f</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+
+    <span class="nx">dec</span> <span class="o">:=</span> <span class="nx">xml</span><span class="p">.</span><span class="nx">NewDecoder</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span>
+    <span class="nx">dump</span> <span class="o">:=</span> <span class="kd">struct</span> <span class="p">{</span>
+        <span class="nx">Documents</span> <span class="p">[]</span><span class="nx">document</span> <span class="s">`xml:"doc"`</span>
+    <span class="p">}{}</span>
+    <span class="k">if</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">dec</span><span class="p">.</span><span class="nx">Decode</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">dump</span><span class="p">);</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">nil</span><span class="p">,</span> <span class="nx">err</span>
+    <span class="p">}</span>
+
+    <span class="nx">docs</span> <span class="o">:=</span> <span class="nx">dump</span><span class="p">.</span><span class="nx">Documents</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">docs</span> <span class="p">{</span>
+        <span class="nx">docs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">ID</span> <span class="p">=</span> <span class="nx">i</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">docs</span><span class="p">,</span> <span class="kc">nil</span>
+<span class="p">}</span></code></pre>
+<p>Every loaded document gets assigned a unique identifier.
+To keep things simple, the first loaded document gets assigned ID=0, the second ID=1 and so on.</p>
+</div>
+<div class="section" id="first-attempt">
+<h3>First attempt<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#first-attempt" title="Permalink to this headline"> #</a></h3>
+<div class="section" id="searching-the-content">
+<h4>Searching the content<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#searching-the-content" title="Permalink to this headline"> #</a></h4>
+<p>Now that we have all documents loaded into memory, we can try to find the ones about cats. At first, let's loop through all documents and check if they contain the substring <em>cat</em>:</p>
+<pre class="code go literal-block"><code><span class="kd">func</span> <span class="nx">search</span><span class="p">(</span><span class="nx">docs</span> <span class="p">[]</span><span class="nx">document</span><span class="p">,</span> <span class="nx">term</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[]</span><span class="nx">document</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">r</span> <span class="p">[]</span><span class="nx">document</span>
+    <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">doc</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">docs</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">Contains</span><span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">Text</span><span class="p">,</span> <span class="nx">term</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">r</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">doc</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">r</span>
+<span class="p">}</span></code></pre>
+<p>On my laptop, the search phase takes 103ms - not too bad.
+If you spot check a few documents from the output, you may notice that the function matches <em>caterpillar</em> and <em>category</em>, but doesn't match <em>Cat</em> with the capital <em>C</em>. That's not quite what I was looking for.</p>
+<p>We need to fix two things before moving forward:</p>
+<ul class="simple">
+<li><p>Make the search case-insensitive (so <em>Cat</em> matches as well).</p></li>
+<li><p>Match on a word boundary rather than on a substring (so <em>caterpillar</em> and <em>communication</em> don't match).</p></li>
+</ul>
+</div>
+<div class="section" id="searching-with-regular-expressions">
+<h4>Searching with regular expressions<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#searching-with-regular-expressions" title="Permalink to this headline"> #</a></h4>
+<p>One solution that quickly comes to mind and allows implementing both requirements is <em>regular expressions</em>.</p>
+<p>Here it is - <span class="docutils literal"><span class="pre">(?i)\bcat\b</span></span>:</p>
+<ul class="simple">
+<li><p><span class="docutils literal"><span class="pre">(?i)</span></span> makes the regex case-insensitive</p></li>
+<li><p><span class="docutils literal">\b</span> matches a word boundary (position where one side is a word character and another side is not a word character)</p></li>
+</ul>
+<pre class="code go literal-block"><code><span class="kd">func</span> <span class="nx">search</span><span class="p">(</span><span class="nx">docs</span> <span class="p">[]</span><span class="nx">document</span><span class="p">,</span> <span class="nx">term</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[]</span><span class="nx">document</span> <span class="p">{</span>
+    <span class="nx">re</span> <span class="o">:=</span> <span class="nx">regexp</span><span class="p">.</span><span class="nx">MustCompile</span><span class="p">(</span><span class="s">`(?i)\b`</span> <span class="o">+</span> <span class="nx">term</span> <span class="o">+</span> <span class="s">`\b`</span><span class="p">)</span> <span class="c1">// Don't do this in production, it's a security risk. term needs to be sanitized.
+</span>    <span class="kd">var</span> <span class="nx">r</span> <span class="p">[]</span><span class="nx">document</span>
+    <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">doc</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">docs</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">re</span><span class="p">.</span><span class="nx">MatchString</span><span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">Text</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">r</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">doc</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">r</span>
+<span class="p">}</span></code></pre>
+<p>Ugh, the search took more than 2 seconds. As you can see, things started getting slow even with 600K documents. While the approach is easy to implement, it doesn't scale well. As the dataset grows larger, we need to scan more and more documents. The time complexity of this algorithm is linear - the number of documents required to scan is equal to the total number of documents. If we had 6M documents instead of 600K, the search would take 20 seconds. We need to do better than that.</p>
+</div>
+</div>
+<div class="section" id="inverted-index">
+<h3>Inverted Index<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#inverted-index" title="Permalink to this headline"> #</a></h3>
+<p>To make search queries faster, we'll preprocess the text and build an index in advance.</p>
+<p>The core of FTS is a data structure called <em>Inverted Index</em>.
+The Inverted Index associates every word in documents with documents that contain the word.</p>
+<p>Example:</p>
+<pre class="code python literal-block"><code><span class="n">documents</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="s2">"a donut on a glass plate"</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="s2">"only the donut"</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="s2">"listen to the drum machine"</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">index</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"a"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="s2">"donut"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+    <span class="s2">"on"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="s2">"glass"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="s2">"plate"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="s2">"only"</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+    <span class="s2">"the"</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="s2">"listen"</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+    <span class="s2">"to"</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+    <span class="s2">"drum"</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+    <span class="s2">"machine"</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+<span class="p">}</span></code></pre>
+<p>Below is a real-world example of the Inverted Index. An index in a book where a term references a page number:</p>
+<img alt="" src="./Let&#39;s build a Full-Text Search engine - Artem Krylysov_files/book-index.png" style="width: 592px;">
+</div>
+<div class="section" id="text-analysis">
+<h3>Text analysis<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#text-analysis" title="Permalink to this headline"> #</a></h3>
+<p>Before we start building the index, we need to break the raw text down into a list of words (tokens) suitable for indexing and searching.</p>
+<p>The text analyzer consists of a tokenizer and multiple filters.</p>
+<img alt="" src="./Let&#39;s build a Full-Text Search engine - Artem Krylysov_files/text-analysis.png" style="width: 530px;">
+</div>
+<div class="section" id="tokenizer">
+<h3>Tokenizer<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#tokenizer" title="Permalink to this headline"> #</a></h3>
+<p>The tokenizer is the first step of text analysis. Its job is to convert text into a list of tokens. Our implementation splits the text on a word boundary and removes punctuation marks:</p>
+<pre class="code go literal-block"><code><span class="kd">func</span> <span class="nx">tokenize</span><span class="p">(</span><span class="nx">text</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[]</span><span class="kt">string</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">FieldsFunc</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="kd">func</span><span class="p">(</span><span class="nx">r</span> <span class="kt">rune</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+        <span class="c1">// Split on any character that is not a letter or a number.
+</span>        <span class="k">return</span> <span class="p">!</span><span class="nx">unicode</span><span class="p">.</span><span class="nx">IsLetter</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">!</span><span class="nx">unicode</span><span class="p">.</span><span class="nx">IsNumber</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">}</span></code></pre>
+<pre class="code go literal-block"><code><span class="p">&gt;</span> <span class="nx">tokenize</span><span class="p">(</span><span class="s">"A donut on a glass plate. Only the donuts."</span><span class="p">)</span>
+
+<span class="p">[</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"donut"</span><span class="p">,</span> <span class="s">"on"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"glass"</span><span class="p">,</span> <span class="s">"plate"</span><span class="p">,</span> <span class="s">"Only"</span><span class="p">,</span> <span class="s">"the"</span><span class="p">,</span> <span class="s">"donuts"</span><span class="p">]</span></code></pre>
+</div>
+<div class="section" id="filters">
+<h3>Filters<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#filters" title="Permalink to this headline"> #</a></h3>
+<p>In most cases, just converting text into a list of tokens is not enough. To make the text easier to index and search, we'll need to do additional normalization.</p>
+<div class="section" id="lowercase">
+<h4>Lowercase<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#lowercase" title="Permalink to this headline"> #</a></h4>
+<p>In order to make the search case-insensitive, the lowercase filter converts tokens to lower case. <em>cAt</em>, <em>Cat</em> and <em>caT</em> are normalized to <em>cat</em>.
+Later, when we query the index, we'll lower case the search terms as well. This will make the search term <em>cAt</em> match the text <em>Cat</em>.</p>
+<pre class="code go literal-block"><code><span class="kd">func</span> <span class="nx">lowercaseFilter</span><span class="p">(</span><span class="nx">tokens</span> <span class="p">[]</span><span class="kt">string</span><span class="p">)</span> <span class="p">[]</span><span class="kt">string</span> <span class="p">{</span>
+    <span class="nx">r</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">string</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">tokens</span><span class="p">))</span>
+    <span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">token</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">tokens</span> <span class="p">{</span>
+        <span class="nx">r</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">ToLower</span><span class="p">(</span><span class="nx">token</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">r</span>
+<span class="p">}</span></code></pre>
+<pre class="code go literal-block"><code><span class="p">&gt;</span> <span class="nx">lowercaseFilter</span><span class="p">([]</span><span class="kt">string</span><span class="p">{</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"donut"</span><span class="p">,</span> <span class="s">"on"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"glass"</span><span class="p">,</span> <span class="s">"plate"</span><span class="p">,</span> <span class="s">"Only"</span><span class="p">,</span> <span class="s">"the"</span><span class="p">,</span> <span class="s">"donuts"</span><span class="p">})</span>
+
+<span class="p">[</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"donut"</span><span class="p">,</span> <span class="s">"on"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"glass"</span><span class="p">,</span> <span class="s">"plate"</span><span class="p">,</span> <span class="s">"only"</span><span class="p">,</span> <span class="s">"the"</span><span class="p">,</span> <span class="s">"donuts"</span><span class="p">]</span></code></pre>
+</div>
+<div class="section" id="dropping-common-words">
+<h4>Dropping common words<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#dropping-common-words" title="Permalink to this headline"> #</a></h4>
+<p>Almost any English text contains commonly used words like <em>a</em>, <em>I</em>, <em>the</em> or <em>be</em>. Such words are called <em>stop words</em>. We are going to remove them since almost any document would match the stop words.</p>
+<p>There is no "official" list of stop words. Let's exclude the top 10 by the <a class="reference external" href="https://en.wikipedia.org/wiki/Most_common_words_in_English" target="_blank">OEC rank</a>. Feel free to add more:</p>
+<pre class="code go literal-block"><code><span class="kd">var</span> <span class="nx">stopwords</span> <span class="p">=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">struct</span><span class="p">{}{</span> <span class="c1">// I wish Go had built-in sets.
+</span>    <span class="s">"a"</span><span class="p">:</span> <span class="p">{},</span> <span class="s">"and"</span><span class="p">:</span> <span class="p">{},</span> <span class="s">"be"</span><span class="p">:</span> <span class="p">{},</span> <span class="s">"have"</span><span class="p">:</span> <span class="p">{},</span> <span class="s">"i"</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="s">"in"</span><span class="p">:</span> <span class="p">{},</span> <span class="s">"of"</span><span class="p">:</span> <span class="p">{},</span> <span class="s">"that"</span><span class="p">:</span> <span class="p">{},</span> <span class="s">"the"</span><span class="p">:</span> <span class="p">{},</span> <span class="s">"to"</span><span class="p">:</span> <span class="p">{},</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">stopwordFilter</span><span class="p">(</span><span class="nx">tokens</span> <span class="p">[]</span><span class="kt">string</span><span class="p">)</span> <span class="p">[]</span><span class="kt">string</span> <span class="p">{</span>
+    <span class="nx">r</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">string</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">tokens</span><span class="p">))</span>
+    <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">token</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">tokens</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">stopwords</span><span class="p">[</span><span class="nx">token</span><span class="p">];</span> <span class="p">!</span><span class="nx">ok</span> <span class="p">{</span>
+            <span class="nx">r</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">token</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">r</span>
+<span class="p">}</span></code></pre>
+<pre class="code go literal-block"><code><span class="p">&gt;</span> <span class="nx">stopwordFilter</span><span class="p">([]</span><span class="kt">string</span><span class="p">{</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"donut"</span><span class="p">,</span> <span class="s">"on"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"glass"</span><span class="p">,</span> <span class="s">"plate"</span><span class="p">,</span> <span class="s">"only"</span><span class="p">,</span> <span class="s">"the"</span><span class="p">,</span> <span class="s">"donuts"</span><span class="p">})</span>
+
+<span class="p">[</span><span class="s">"donut"</span><span class="p">,</span> <span class="s">"on"</span><span class="p">,</span> <span class="s">"glass"</span><span class="p">,</span> <span class="s">"plate"</span><span class="p">,</span> <span class="s">"only"</span><span class="p">,</span> <span class="s">"donuts"</span><span class="p">]</span></code></pre>
+</div>
+<div class="section" id="stemming">
+<h4>Stemming<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#stemming" title="Permalink to this headline"> #</a></h4>
+<p>Because of the grammar rules, documents may include different forms of the same word.
+Stemming reduces words into their base form. For example, <em>fishing</em>, <em>fished</em> and <em>fisher</em> may be reduced to the base form (stem) <em>fish</em>.</p>
+<p>Implementing a stemmer is a non-trivial task, it's not covered in this post. We'll take one of the <a class="reference external" href="https://github.com/kljensen/snowball" target="_blank">existing</a> modules:</p>
+<pre class="code go literal-block"><code><span class="kn">import</span> <span class="nx">snowballeng</span> <span class="s">"github.com/kljensen/snowball/english"</span>
+
+<span class="kd">func</span> <span class="nx">stemmerFilter</span><span class="p">(</span><span class="nx">tokens</span> <span class="p">[]</span><span class="kt">string</span><span class="p">)</span> <span class="p">[]</span><span class="kt">string</span> <span class="p">{</span>
+    <span class="nx">r</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">string</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">tokens</span><span class="p">))</span>
+    <span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">token</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">tokens</span> <span class="p">{</span>
+        <span class="nx">r</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nx">snowballeng</span><span class="p">.</span><span class="nx">Stem</span><span class="p">(</span><span class="nx">token</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">r</span>
+<span class="p">}</span></code></pre>
+<pre class="code go literal-block"><code><span class="p">&gt;</span> <span class="nx">stemmerFilter</span><span class="p">([]</span><span class="kt">string</span><span class="p">{</span><span class="s">"donut"</span><span class="p">,</span> <span class="s">"on"</span><span class="p">,</span> <span class="s">"glass"</span><span class="p">,</span> <span class="s">"plate"</span><span class="p">,</span> <span class="s">"only"</span><span class="p">,</span> <span class="s">"donuts"</span><span class="p">})</span>
+
+<span class="p">[</span><span class="s">"donut"</span><span class="p">,</span> <span class="s">"on"</span><span class="p">,</span> <span class="s">"glass"</span><span class="p">,</span> <span class="s">"plate"</span><span class="p">,</span> <span class="s">"only"</span><span class="p">,</span> <span class="s">"donut"</span><span class="p">]</span></code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A stem is not always a valid word. For example, some stemmers may reduce <em>airline</em> to <em>airlin</em>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="putting-the-analyzer-together">
+<h3>Putting the analyzer together<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#putting-the-analyzer-together" title="Permalink to this headline"> #</a></h3>
+<pre class="code go literal-block"><code><span class="kd">func</span> <span class="nx">analyze</span><span class="p">(</span><span class="nx">text</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[]</span><span class="kt">string</span> <span class="p">{</span>
+    <span class="nx">tokens</span> <span class="o">:=</span> <span class="nx">tokenize</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span>
+    <span class="nx">tokens</span> <span class="p">=</span> <span class="nx">lowercaseFilter</span><span class="p">(</span><span class="nx">tokens</span><span class="p">)</span>
+    <span class="nx">tokens</span> <span class="p">=</span> <span class="nx">stopwordFilter</span><span class="p">(</span><span class="nx">tokens</span><span class="p">)</span>
+    <span class="nx">tokens</span> <span class="p">=</span> <span class="nx">stemmerFilter</span><span class="p">(</span><span class="nx">tokens</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">tokens</span>
+<span class="p">}</span></code></pre>
+<p>The tokenizer and filters convert sentences into a list of tokens:</p>
+<pre class="code go literal-block"><code><span class="p">&gt;</span> <span class="nx">analyze</span><span class="p">(</span><span class="s">"A donut on a glass plate. Only the donuts."</span><span class="p">)</span>
+
+<span class="p">[</span><span class="s">"donut"</span><span class="p">,</span> <span class="s">"on"</span><span class="p">,</span> <span class="s">"glass"</span><span class="p">,</span> <span class="s">"plate"</span><span class="p">,</span> <span class="s">"only"</span><span class="p">,</span> <span class="s">"donut"</span><span class="p">]</span></code></pre>
+<p>The tokens are ready for indexing.</p>
+</div>
+<div class="section" id="building-the-index">
+<h3>Building the index<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#building-the-index" title="Permalink to this headline"> #</a></h3>
+<p>Back to the inverted index. It maps every word in documents to document IDs.
+The built-in <span class="docutils literal">map</span> is a good candidate for storing the mapping.
+The key in the map is a token (string) and the value is a list of document IDs:</p>
+<pre class="code go literal-block"><code><span class="kd">type</span> <span class="nx">index</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">][]</span><span class="kt">int</span></code></pre>
+<p>Building the index consists of analyzing the documents and adding their IDs to the map:</p>
+<pre class="code go literal-block"><code><span class="kd">func</span> <span class="p">(</span><span class="nx">idx</span> <span class="nx">index</span><span class="p">)</span> <span class="nx">add</span><span class="p">(</span><span class="nx">docs</span> <span class="p">[]</span><span class="nx">document</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">doc</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">docs</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">token</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">analyze</span><span class="p">(</span><span class="nx">doc</span><span class="p">.</span><span class="nx">Text</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">ids</span> <span class="o">:=</span> <span class="nx">idx</span><span class="p">[</span><span class="nx">token</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nx">ids</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="o">&amp;&amp;</span> <span class="nx">ids</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nx">ids</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">ID</span> <span class="p">{</span>
+                <span class="c1">// Don't add same ID twice.
+</span>                <span class="k">continue</span>
+            <span class="p">}</span>
+            <span class="nx">idx</span><span class="p">[</span><span class="nx">token</span><span class="p">]</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">ids</span><span class="p">,</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">ID</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">idx</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="nx">index</span><span class="p">)</span>
+    <span class="nx">idx</span><span class="p">.</span><span class="nx">add</span><span class="p">([]</span><span class="nx">document</span><span class="p">{{</span><span class="nx">ID</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">Text</span><span class="p">:</span> <span class="s">"A donut on a glass plate. Only the donuts."</span><span class="p">}})</span>
+    <span class="nx">idx</span><span class="p">.</span><span class="nx">add</span><span class="p">([]</span><span class="nx">document</span><span class="p">{{</span><span class="nx">ID</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">Text</span><span class="p">:</span> <span class="s">"donut is a donut"</span><span class="p">}})</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">idx</span><span class="p">)</span>
+<span class="p">}</span></code></pre>
+<p>It works! Each token in the map refers to IDs of the documents that contain the token:</p>
+<pre class="code literal-block"><code>map[donut:[1 2] glass:[1] is:[2] on:[1] only:[1] plate:[1]]</code></pre>
+</div>
+<div class="section" id="querying">
+<h3>Querying<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#querying" title="Permalink to this headline"> #</a></h3>
+<p>To query the index, we are going to apply the same tokenizer and filters we used for indexing:</p>
+<pre class="code go literal-block"><code><span class="kd">func</span> <span class="p">(</span><span class="nx">idx</span> <span class="nx">index</span><span class="p">)</span> <span class="nx">search</span><span class="p">(</span><span class="nx">text</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[][]</span><span class="kt">int</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">r</span> <span class="p">[][]</span><span class="kt">int</span>
+    <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">token</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">analyze</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">ids</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">idx</span><span class="p">[</span><span class="nx">token</span><span class="p">];</span> <span class="nx">ok</span> <span class="p">{</span>
+            <span class="nx">r</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">ids</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">r</span>
+<span class="p">}</span></code></pre>
+<pre class="code go literal-block"><code><span class="p">&gt;</span> <span class="nx">idx</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s">"Small wild cat"</span><span class="p">)</span>
+
+<span class="p">[[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">173</span><span class="p">,</span> <span class="mi">303</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="p">[</span><span class="mi">98</span><span class="p">,</span> <span class="mi">173</span><span class="p">,</span> <span class="mi">765</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span> <span class="p">[[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">173</span><span class="p">,</span> <span class="o">...</span><span class="p">]]</span></code></pre>
+<p>And finally, we can find all documents that mention cats. Searching 600K documents took less than a millisecond (18µs)!</p>
+<p>With the inverted index, the time complexity of the search query is linear to the number of search tokens. In the example query above, other than analyzing the input text, <span class="docutils literal">search</span> had to perform only three map lookups.</p>
+</div>
+<div class="section" id="boolean-queries">
+<h3>Boolean queries<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#boolean-queries" title="Permalink to this headline"> #</a></h3>
+<p>The query from the previous section returned a disjoined list of documents for each token.
+What we normally expect to find when we type <em>small wild cat</em> in a search box is a list of results that contain <em>small</em>, <em>wild</em> and <em>cat</em> at the same time. The next step is to compute the set intersection between the lists. This way we'll get a list of documents matching all tokens.</p>
+<img alt="" src="./Let&#39;s build a Full-Text Search engine - Artem Krylysov_files/venn.png" style="width: 313px;">
+<p>Luckily, IDs in our inverted index are inserted in ascending order. Since the IDs are sorted, it's possible to
+compute the intersection between two lists in linear time. The <span class="docutils literal">intersection</span> function iterates two lists simultaneously and collect IDs that exist
+in both:</p>
+<pre class="code go literal-block"><code><span class="kd">func</span> <span class="nx">intersection</span><span class="p">(</span><span class="nx">a</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">b</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="p">[]</span><span class="kt">int</span> <span class="p">{</span>
+    <span class="nx">maxLen</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span> <span class="p">&gt;</span> <span class="nx">maxLen</span> <span class="p">{</span>
+        <span class="nx">maxLen</span> <span class="p">=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="nx">r</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">maxLen</span><span class="p">)</span>
+    <span class="kd">var</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="kt">int</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">j</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="nx">b</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="p">{</span>
+            <span class="nx">i</span><span class="o">++</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="nx">b</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="p">{</span>
+            <span class="nx">j</span><span class="o">++</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">r</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+            <span class="nx">i</span><span class="o">++</span>
+            <span class="nx">j</span><span class="o">++</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">r</span>
+<span class="p">}</span></code></pre>
+<p>Updated <span class="docutils literal">search</span> analyzes the given query text, lookups tokens and computes the set intersection between lists of IDs:</p>
+<pre class="code go literal-block"><code><span class="kd">func</span> <span class="p">(</span><span class="nx">idx</span> <span class="nx">index</span><span class="p">)</span> <span class="nx">search</span><span class="p">(</span><span class="nx">text</span> <span class="kt">string</span><span class="p">)</span> <span class="p">[]</span><span class="kt">int</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">r</span> <span class="p">[]</span><span class="kt">int</span>
+    <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">token</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">analyze</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">ids</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">idx</span><span class="p">[</span><span class="nx">token</span><span class="p">];</span> <span class="nx">ok</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="nx">r</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="nx">r</span> <span class="p">=</span> <span class="nx">ids</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">r</span> <span class="p">=</span> <span class="nx">intersection</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">ids</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="c1">// Token doesn't exist.
+</span>            <span class="k">return</span> <span class="kc">nil</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">r</span>
+<span class="p">}</span></code></pre>
+<p>The Wikipedia dump contains only two documents that match <em>small</em>, <em>wild</em> and <em>cat</em> at the same time:</p>
+<pre class="code go literal-block"><code><span class="p">&gt;</span> <span class="nx">idx</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s">"Small wild cat"</span><span class="p">)</span>
+
+<span class="mi">130764</span>  <span class="nx">The</span> <span class="nx">wildcat</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">species</span> <span class="nx">complex</span> <span class="nx">comprising</span> <span class="nx">two</span> <span class="nx">small</span> <span class="nx">wild</span> <span class="nx">cat</span> <span class="nx">species</span><span class="p">,</span> <span class="nx">the</span> <span class="nx">European</span> <span class="nx">wildcat</span> <span class="p">(</span><span class="nx">Felis</span> <span class="nx">silvestris</span><span class="p">)</span> <span class="nx">and</span> <span class="nx">the</span> <span class="nx">African</span> <span class="nx">wildcat</span> <span class="p">(</span><span class="nx">F</span><span class="p">.</span> <span class="nx">lybica</span><span class="p">).</span>
+<span class="mi">131692</span>  <span class="nx">Catopuma</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">genus</span> <span class="nx">containing</span> <span class="nx">two</span> <span class="nx">Asian</span> <span class="nx">small</span> <span class="nx">wild</span> <span class="nx">cat</span> <span class="nx">species</span><span class="p">,</span> <span class="nx">the</span> <span class="nx">Asian</span> <span class="nx">golden</span> <span class="nx">cat</span> <span class="p">(</span><span class="nx">C</span><span class="p">.</span> <span class="nx">temminckii</span><span class="p">)</span> <span class="nx">and</span> <span class="nx">the</span> <span class="nx">bay</span> <span class="nx">cat</span><span class="p">.</span></code></pre>
+<p>The search is working as expected!</p>
+<p>By the way, this is the first time I hear about <em>catopuma</em>, here is one of them:</p>
+<img alt="By Karen Stout - originally posted to Flickr as Asian Golden cat, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=11413240" src="./Let&#39;s build a Full-Text Search engine - Artem Krylysov_files/asian-golden-cat-s.jpg" style="width: 300px;">
+</div>
+<div class="section" id="conclusions">
+<h3>Conclusions<a class="headerlink" href="https://artem.krylysov.com/blog/2020/07/28/lets-build-a-full-text-search-engine/#conclusions" title="Permalink to this headline"> #</a></h3>
+<p>We just built a Full-Text Search engine. Despite its simplicity, it can be a solid foundation for more advanced projects.</p>
+<p>I didn't touch on a lot of things that can significantly improve the performance and make the engine more user friendly.
+Here are some ideas for further improvements:</p>
+<ul class="simple">
+<li><p>Extend boolean queries to support <em>OR</em> and <em>NOT</em>.</p></li>
+<li><p>Store the index on disk:</p>
+<ul>
+<li><p>Rebuilding the index on every application restart may take a while.</p></li>
+<li><p>Large indexes may not fit in memory.</p></li>
+</ul>
+</li>
+<li><p>Experiment with memory and CPU-efficient data formats for storing sets of document IDs. Take a look at <a class="reference external" href="https://roaringbitmap.org/" target="_blank">Roaring Bitmaps</a>.</p></li>
+<li><p>Support indexing multiple document fields.</p></li>
+<li><p>Sort results by relevance.</p></li>
+</ul>
+<p>The full source code is available on <a class="reference external" href="https://github.com/akrylysov/simplefts" target="_blank">GitHub</a>.</p>
+</div>
+
+    </article>
+
+    
+    <div class="note minor">
+        <p>I'm not a native English speaker and I'm trying to improve my language skills. Feel free to correct me if you spot any spelling or grammatical error!</p>
+    </div>
+    
+        
+        <div class="post-nav">
+        
+            <div class="float-left">←&nbsp;<a href="https://artem.krylysov.com/blog/2018/12/12/string-interning-in-go/" title="Previous post">String interning in Go</a></div>
+        
+        
+        </div>
+        
+
+        
+<div>
+    <br>
+    <div id="disqus_thread"></div>
+    <script>
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://artemkrylysov.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+    
+
+
+
+
+        
+            <footer>
+                <hr>
+                
+                    <span class="float-left">
+                        
+    2013-2020. Powered by <a href="https://github.com/akrylysov/yozuch" target="_blank">Yozuch</a>.
+
+                    </span>
+                    <span class="float-right">
+                        
+                            <a href="https://github.com/akrylysov" target="_blank"><img class="social" title="GitHub" alt="GitHub" src="./Let&#39;s build a Full-Text Search engine - Artem Krylysov_files/github.svg"></a>
+                        
+                        
+                            <a href="https://twitter.com/akrylysov" target="_blank"><img class="social" title="Twitter" alt="Twitter" src="./Let&#39;s build a Full-Text Search engine - Artem Krylysov_files/twitter.svg"></a>
+                        
+                    </span>
+                
+            </footer>
+        
+        </div>
+    </div>
+
+
+</body></html>
