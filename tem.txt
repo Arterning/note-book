@@ -1,0 +1,26 @@
+解决SSH连接Vultr VPS主机经常出现断开连接失败
+UseDNS修改配置
+修改服务器配置：
+
+/etc/ssh/sshd_config
+
+将UseDNS yes 改为 no，保存。
+
+最后，我们重启SSH然后检查是否稳定一些。
+
+ClientAliveInterval ..
+ClientAliveCount Max ..
+
+docker-compose or docker compose ..
+
+install nvm ..ok
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+install msf
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+  chmod 755 msfinstall && \
+  ./msfinstall
+
+
