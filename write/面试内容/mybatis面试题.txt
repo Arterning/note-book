@@ -1,0 +1,48 @@
+Mybatis的Xml映射文件中，不同的Xml映射文件，id是否可以重复？
+不同的Xml映射文件，如果配置了namespace，那么id可以重复；如果没有配置namespace，那么id不能重复；毕竟namespace不是必须的，只是最佳实践而已。 
+原因就是namespace+id是作为Map<String, MappedStatement>的key使用的，如果没有namespace，就剩下id，那么，id重复会导致数据互相覆盖。有了namespace，自然id就可以重复，namespace不同，namespace+id自然也就不同。 
+
+
+
+Mybatis是如何进行分页的？分页插件的原理是什么？
+分页插件的基本原理是使用Mybatis提供的插件接口，实现自定义插件，在插件的拦截方法内拦截待执行的sql，然后重写sql，根据dialect方言，添加对应的物理分页语句和物理分页参数。 
+举例：select * from student，拦截sql后重写为：select t.* from (select * from student) t limit 0, 10 
+
+
+MyBatis工作原理
+1. 加载配置文件
+2. 构造SqlSessionFactory
+3. 构造SqlSession
+
+Mybatis是否支持延迟加载？如果支持，它的实现原理是什么？
+它的原理是，使用CGLIB创建目标对象的代理对象，当调用目标方法时，进入拦截器方法，比如调用a.getB().getName()，拦截器invoke()方法发现a.getB()是null值，那么就会单独发送事先保存好的查询关联B对象的sql，把B查询上来，然后调用a.setB(b)，于是a的对象b属性就有值了，接着完成a.getB().getName()方法的调用。这就是延迟加载的基本原理。 
+Hibernate，支持延迟加载的原理都是一样的。都是动态代理
+
+
+述Mybatis的Xml映射文件和Mybatis内部数据结构之间的映射关系？
+答：Mybatis将所有Xml配置信息都封装到All-In-One重量级对象Confifiguration内部。在Xml映射文件中， <parameterMap> 标签会被解析为ParameterMap对象，其每个子元素会被解析为ParameterMapping对象。 <resultMap> 标签会被解析为ResultMap对象，其每个子元素会被解析为ResultMapping对象。每一个 <select> 、 <insert> 、 <update> 、 <delete> 标签均会被解析为MappedStatement对象，标签内的sql会被解析为BoundSql对象。 
+
+
+mybatis foreach 批量操作
+
+
+
+动态sql标签 
+trim|where|set|foreach|if|choose|when|otherwise|bind。
+其执行原理为，使用OGNL从sql参数对象中计算表达式的值，根据表达式的值动态拼接sql，以此来完成动态sql的功能。 
+
+
+
+
+Mybatis的功能架构分为三层： 
+API接口层：提供给外部使用的接口API，开发人员通过这些本地API来操纵数据库。接口层一接收到调用请求就会调用数据处理层来完成具体的数据处理。 
+数据处理层：负责具体的SQL查找、SQL解析、SQL执行和执行结果映射处理等。它主要的目的是根据调用的请求完成一次数据库操作。 
+基础支撑层：负责最基础的功能支撑，包括连接管理、事务管理、配置加载和缓存处理，这些都是共用的东西，将他们抽取出来作为最基础的组件。为上层的数据处理层提供最基础的支撑。
+
+
+
+
+
+
+
+

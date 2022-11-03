@@ -1,0 +1,6 @@
+hydra
+https://zhuanlan.zhihu.com/p/397779150
+kali有自带的密码字典
+
+hydra IP -l loginname -P pass.txt PROTROCL
+hydra 127.0.0.1 -l root -P pass.txt ssh

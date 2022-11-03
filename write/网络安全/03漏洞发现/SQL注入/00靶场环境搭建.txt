@@ -1,0 +1,5 @@
+【问题解决】Sql-li-labs报错Error:Call to undefined function mysql_connect()，以及没有sql语句错误提示的解决
+https://blog.csdn.net/dive668/article/details/115611396
+
+因为小皮面板phpstudy默认安装的是7.x版本的php，高版本的php已经不再支持sql-li-labs其中一些命令，故为了兼容sql-li-labs，我们要采用低版本的php。
+在软件管理，找到低版本的phpstudy，安装5.x版本的php

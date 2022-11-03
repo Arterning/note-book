@@ -1,0 +1,17 @@
+msf出现Database not connected等问题
+root@kali:~# msfdb init
+
+
+meterpreter之getsystem命令提权
+一开始提权失败 后来发现需要绕过UAC
+在meterpreter shell界面，我们可以通过shell命令，进入cmd命令提示符，使用net user查看当前用户，发现当前用户实际是在管理组administrators组中，那为什么还提权不了呢？
+原来，windows操作系统在vista以后增加了一个UAC的功能，英文全称User Access Control，该功能对管理员组的用户起到一定限制，进而保护计算机安全，当我们需要运行一些重要的程序，只有管理员权限才能运行的程序时，UAC功能都会弹出一个对话框，对用户进行询问，当用户点击了同意按钮，程序才会以管理员或system权限运行。因此，我们要想提权成功，首先要绕过windows的UAC限制，接下来我们来看常用的绕过UAC的套路。
+
+use exploit/windows/local/ask
+set session 2
+run
+设置配置，点击run后，靶机上会弹出一个对话框提示。
+靶机上点击是，攻击机上会返回一个新的session，我们查看uid发现还是lovely用户，但此时再使用getsystem命令，即可成功的提权，得到SYSTEM权限。
+
+
+https://blog.csdn.net/redwand/article/details/107527710
