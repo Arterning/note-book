@@ -1,0 +1,23 @@
+核心:获得数据库账号密码,可以在web和本地都尝试
+
+在利用系统溢出漏洞无果的情况下,可以采用数据库进行提权,但需要知道数据库提权的前提条件:服务器开启数据库服务及获得最高权限用户密码,除Access数据库外,其他数据库基本都存在数据库提权的可能
+
+MySQL
+UDF
+MOF
+
+一般情况下 不允许root账号外连
+这个时候如果在外部运行暴力破解root肯定没用
+我们可以使用上传一个php暴力破解脚本然后执行
+
+data目录
+mysql.user
+user.frm
+user.myd
+user.myi
+mysql的用户名和密码存放在user.myd文件中
+
+select user,password from mysql.user;
+
+
+

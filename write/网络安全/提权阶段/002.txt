@@ -1,0 +1,36 @@
+windows漏洞扫描工具-windowsvulnscan和wesng，本质是比较windows系统版本、systeminfo补丁信息来查看漏洞利用情况，EDR可以用；提权的话通常是系统内核溢出漏洞来提权，见内网安全攻防
+
+python wes.py sys.txt
+
+
+信息收集-补丁筛选-利用MSF或特定EXP(推荐使用MSF)-执行-⻄瓜到手
+没有打补丁,不一定有漏洞 以为目标有可能用的是盗版或者阉割版。。
+
+Vulmap(使用环境为poweshell,对web提权不友好),Wes(主要用于web提权),
+WindowsVulnScan(也是POSWESHELL脚本,也可以将目标systeminfo信息按照他的格式写入KB.json文件中,这样就可以用到WEB环境)对比,exp在哪获取?(可以在github或者百度上搜索)
+
+使用MSF生成好木⻢,将木⻢通过webshell上传到目标站点,再通过webshell执行木⻢文件
+如果是阿里云有用户组,则我们需要添加开放端口,我们可以不使用反弹shell,也可以使用隧道技术绕过
+隧道技术就是可以绕过端口限制的。
+
+
+本地提权比web提权要简单
+以为web提权依靠web shell
+web shell因为他本身功能有限。。
+
+
+at 15:13 /interactive cmd.exe
+可以作用于win7之前的系统
+这个属于逻辑漏洞
+但是如果有，一定要尝试  因为这个非常简单高效
+at运行的cmd直接就有了System权限！！
+
+sc也是一样的 创建的服务直接有了System权限
+sc Create fuckyou binPath="cmd /k start" type= own type interact
+sc start syscmd
+
+PsExec 是一个轻型的 telnet 替代工具，它使您无需手动安装客户端软件即可执行其他系统上的进程，并且可以获得与控制台应用程序相当的完全交互性 这个是官方提供的工具 可以免杀
+psexec.exe -accepteula -s -i -d notepad.exe.exe -accepteula -s -i -d notepad.exe
+使用的前提为下载PSTools,针对Windows2008
+我们可以再来执行个cmd
+psexec.exe -accepteula -s -i -d cmd.exe
