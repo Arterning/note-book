@@ -23,4 +23,136 @@ curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/t
   chmod 755 msfinstall && \
   ./msfinstall
 
+这个是使用nano进行编辑提交的页面，退出方法为：
+Ctrl + X然后输入y再然后回车，就可以退出了
+如果你想把默认编辑器换成别的：
+方法一、在GIT配置中设置 core.editor: git config --global core.editor "vim"
 
+
+方法二、编辑~/.gitconfig文件。在core中添加editor = vim。如此以后在使用git的时候就自动使用vim作为编辑器
+
+git提交后出现nano界面,解决方法
+
+smartIDE可以玩一下
+
+
+打开配置文件，postgresql.conf然后listen_addresses = '*'在CONNECTIONS AND AUTHENTICATION部分中添加。这指示服务器在所有网络接口上进行侦听。
+
+sudo nano /etc/postgresql/11/main/postgresql.conf
+修改如下内容：
+
+#------------------------------------------------------------------------------
+# CONNECTIONS AND AUTHENTICATION
+#------------------------------------------------------------------------------
+
+# - Connection Settings -
+
+listen_addresses = '*'     # what IP address(es) to listen on;
+保存文件并重新启动PostgreSQL服务以使更改生效：
+
+psql命令有两种格式，分别是：
+
+psql postgres://username:password@host:port/dbname  
+
+psql -U username -h hostname -p port -d dbname
+
+修改登录PostgreSQL密码
+
+#ALTER USER postgres WITH PASSWORD 'xxxxxxxxxxx';
+ALTER ROLE
+注：
+
+密码postgres要用引号引起来,命令最后有分号
+
+登录PostgreSQL
+
+#sudo -u postgres psql
+
+\h：查看SQL命令的解释，比如\h select。
+
+\?：查看psql命令列表。
+
+\l：列出所有数据库。
+
+\c [database_name]：连接其他数据库。
+
+\d：列出当前数据库的所有表格。
+
+\d [table_name]：列出某一张表格的结构。
+
+\du：列出所有用户。
+
+\e：打开文本编辑器。
+
+\conninfo：列出当前数据库和连接的信息。
+
+Mysql连接报错：1130-host ... is not allowed to connect to this MySql server如何处理
+ 
+　　这个问题是因为在数据库服务器中的mysql数据库中的user的表中没有权限(也可以说没有用户)，下面将记录我遇到问题的过程及解决的方法。
+
+　　在搭建完LNMP环境后用Navicate连接出错
+
+　　遇到这个问题首先到mysql所在的服务器上用连接进行处理
+
+　　1、连接服务器: mysql -u root -p
+
+　　2、看当前所有数据库：show databases;
+
+　　3、进入mysql数据库：use mysql;
+
+　　4、查看mysql数据库中所有的表：show tables;
+
+　　5、查看user表中的数据：select Host, User,Password from user;
+
+　　6、修改user表中的Host:update user set Host='%' where User='root';
+
+　　7、最后刷新一下：flush privileges;
+
+#一定要记得在写sql的时候要在语句完成后加上" ; "下面是图示说明
+
+PowerDesigner 是数据库建模软件
+
+Debian 10安装了一个称为UFW的防火墙配置工具。它是用于管理iptables防火墙规则的用户友好型前端。它的主要目标是使防火墙的管理变得更容易，简单。
+
+sudo ufw status verbose命令将会打印防火墙的状态。Status: inactive表示防火墙状态为非活动状态。Status: active表示UFW已激活。
+
+sudo ufw status verbose
+verbose表示打印详细信息
+您可以运行命令sudo ufw app list列出服务器上所有可用的应用程序配置文件。sudo ufw app info命令可以查找指定配置文件包含的防火墙规则详细信息。
+
+之前postgresql数据库一直无法连接 原来还是防火墙没有开放这端口
+ufw allow 5432
+ufw delete allow 5432
+
+alter user postgres with password ''
+
+
+
+
+naviat破解
+https://www.ykbkw.top/post/18.html
+
+
+ssh config配置文件
+
+Host 192.168.1.178
+  HostName 192.168.1.178
+  User kali
+
+Host 192.168.56.10
+  HostName 192.168.56.10
+  User vagrant
+
+Host vagrantos.com
+  HostName vagrantos.com
+  User vagrant
+
+Host gitee.com
+  Identityfile id_rsa.gitee
+  HostName gitee.com
+  User git
+
+Host github.com
+  Identityfile id_rsa.github
+  HostName github.com
+  User git
