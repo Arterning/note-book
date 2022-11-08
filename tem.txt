@@ -156,3 +156,59 @@ Host github.com
   Identityfile id_rsa.github
   HostName github.com
   User git
+
+
+mysql 开启远程访问权限
+方式一：改表法
+顾名思义,该方法就是直接修改更改"mysql"数据库里的"user"表里的"host"项，从"localhost"改为"%"
+update user set host='%' where user='root';
+
+方式二：授权法
+通过GRANT命令可以授予主机远程访问权限
+grant all privileges on db.* to 'user'
+--赋予任何主机访问权限：
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
+--允许指定主机(IP地址)访问权限：
+GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'192.168.1.3' IDENTIFIED BY 'root' WITH GRANT OPTION;
+通过GRANT命令赋权后,需要通过FLUSH PRIVILEGES刷新权限表使修改生效：
+FLUSH PRIVILEGES;
+
+再次查看MySQL远程访问权限配置
+select  User,authentication_string,Host from user;
+
+出于安全性考虑，尤其是正式环境下
+
+1.不推荐直接给root开启远程访问权限。
+本案例仅以root用户作为例子做开启远程访问权限的配置,此为演示环境!
+
+2.建议做权限细分和限制
+正式环境中，推荐通过创建Mysql用户并给对应的用户赋权的形式来开放远程服务权限，并指定IP地址，赋权时根据用户需求，在GRANT命令中只开放slect、update等权限，做到权限粒度最小化。
+
+
+微软app无法正常打开的解决方法
+安装windows terminal 和 wsl ubuntu linux
+在某博客看到的方法，供参考，可以尝试一下，我的也是这么解决的
+1、打开“运行”输入 inetcpl.cpl （“WINDOWS”+“R”键，输入 inetcpl.cpl亦可）
+2、点开高级往下拉，勾上"使用TLS 1.2"选项，或者点还原高级设置。
+
+https://jtxiao.com/main/posts/wslwindows-subsystem-for-linux%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/
+
+install mosh
+https://ideawrights.com/mosh-windows-wsl/
+
+
+mosh的安装和配置
+https://www.cnblogs.com/journeyonmyway/p/8908483.html
+install mosh client
+sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:keithw/mosh
+sudo apt-get update
+sudo apt-get install mosh
+https://www.linode.com/docs/guides/install-mosh-server-as-ssh-alternative-on-linux/
+
+
+
+ufw allow 60001
+mosh root@ip -p 60001
+
+
