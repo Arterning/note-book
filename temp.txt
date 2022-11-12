@@ -359,3 +359,68 @@ git reset HEAD --hard
 
 
 
+cat fileA >>fileB
+
+
+
+回去做一下镜像
+一个是hystreia镜像
+一个是ngin防火墙镜像
+
+
+
+C端 研究如何做UI 做好的UI 好的创意 关注一下three js remotion movyjs等等这些音频视频处理 这块 感觉比较酷
+B端 擅长网络安全 高性能服务器 代理软件作为切入口 自己写一个配置中心 擅长分布式服务 写这种公共组件提高能力
+
+个人github展示
+go 写一个命令行工具给自己使用
+写一个web 
+写一个app?
+
+docker image repo
+https://cr.console.aliyun.com/cn-hangzhou/instance/repositories
+
+
+docker tag
+https://www.cnblogs.com/pzk7788/p/10180919.html
+
+
+
+
+1. 登录阿里云Docker Registry
+$ docker login --username=14684*****@qq.com registry.cn-hangzhou.aliyuncs.com
+用于登录的用户名为阿里云账号全名，密码为开通服务时设置的密码。
+
+您可以在访问凭证页面修改凭证密码。
+
+2. 从Registry中拉取镜像
+$ docker pull registry.cn-hangzhou.aliyuncs.com/china_ningning_boy/docker:[镜像版本号]
+3. 将镜像推送到Registry
+$ docker login --username=14684*****@qq.com registry.cn-hangzhou.aliyuncs.com
+$ docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/china_ningning_boy/docker:[镜像版本号]
+$ docker push registry.cn-hangzhou.aliyuncs.com/china_ningning_boy/docker:[镜像版本号]
+请根据实际镜像信息替换示例中的[ImageId]和[镜像版本号]参数。
+
+4. 选择合适的镜像仓库地址
+从ECS推送镜像时，可以选择使用镜像仓库内网地址。推送速度将得到提升并且将不会损耗您的公网流量。
+
+如果您使用的机器位于VPC网络，请使用 registry-vpc.cn-hangzhou.aliyuncs.com 作为Registry的域名登录。
+
+5. 示例
+使用"docker tag"命令重命名镜像，并将它通过专有网络地址推送至Registry。
+
+$ docker images
+REPOSITORY                                                         TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+registry.aliyuncs.com/acs/agent                                    0.7-dfb6816         37bb9c63c8b2        7 days ago          37.89 MB
+$ docker tag 37bb9c63c8b2 registry-vpc.cn-hangzhou.aliyuncs.com/acs/agent:0.7-dfb6816
+使用 "docker push" 命令将该镜像推送至远程。
+
+$ docker push registry-vpc.cn-hangzhou.aliyuncs.com/acs/agent:0.7-dfb6816
+
+
+https://www.cnblogs.com/52fhy/p/10164553.html
+
+
+Docker123456
+
+
