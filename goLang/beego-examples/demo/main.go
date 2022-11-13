@@ -11,6 +11,8 @@ import (
 	_ "demo/test"
 	T "demo/tools"
 	"fmt"
+
+	"github.com/shopspring/decimal"
 )
 
 /*
@@ -34,4 +36,7 @@ func main() {
 	fmt.Println(T.Mul(8, 9))
 
 	T.Fuck()
+
+	var quantity = decimal.NewFromInt(3)
+	fmt.Println(quantity)
 }
