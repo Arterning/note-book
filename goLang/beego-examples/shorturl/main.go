@@ -5,6 +5,7 @@ import (
 	"github.com/beego/samples/shorturl/controllers"
 )
 
+// go run main.go
 func main() {
 	beego.Router("/", &controllers.MainController{})
 	beego.Router("/v1/shorten", &controllers.ShortController{})
