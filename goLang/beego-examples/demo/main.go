@@ -26,6 +26,25 @@ func init() {
 	fmt.Println("main init...")
 }
 
+
+//接口只是定义方法 实现方法需要结构体
+type Usber interface { 
+	start(string, string) string
+	stop()
+}
+
+type struct Phone {
+    Name string
+}
+
+func (p Phone) start(){
+    fmt.Println(p.Name,"start")
+}
+
+func (p Phone) stop() {
+	fmt.Println("stop")
+}
+
 // go run main.go
 func main() {
 	sum := calc.Add(10, 2)
@@ -39,4 +58,7 @@ func main() {
 
 	var quantity = decimal.NewFromInt(3)
 	fmt.Println(quantity)
+
+	p = Phone{Name:'lai',}
+	p.start()
 }
