@@ -1,3 +1,11 @@
+/*
+ * @Author: ning.huang ning.huang
+ * @Date: 2022-11-14 09:08:27
+ * @LastEditors: ning.huang ning.huang
+ * @LastEditTime: 2022-11-14 09:40:42
+ * @FilePath: \code\goLang\beego-examples\WebDAV\main.go
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 // Copyright 2017 Beego Samples authors
 //
 // Licensed under the Apache License, Version 2.0 (the "License"): you may
@@ -16,8 +24,9 @@
 package main
 
 import (
+	"dav/controllers"
+
 	"github.com/astaxie/beego"
-	"github.com/beego/samples/WebDAV/controllers"
 )
 
 func main() {
