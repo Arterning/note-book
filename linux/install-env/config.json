@@ -16,7 +16,7 @@
 "alpn": "h3",
 "acl": "acl/routes.acl",
 "mmdb": "acl/Country.mmdb",
-"auth_str": "Huangning@1234%",
+"auth_str": "pass",
 "server_name": "wechat.com",
 "insecure": true,
 "recv_window_conn": 6291456,
