@@ -11,7 +11,9 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
+//index.js是webpack的入口文件
+//React.StrictMode用于检查组件代码不太合理的地方
+
+//用于记录页面的性能的
 reportWebVitals();

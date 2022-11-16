@@ -42,6 +42,7 @@
 			}
 
 			//保存表单数据到状态中
+			//saveFormData的返回值是个函数 这就是函数keli
 			saveFormData = (dataType)=>{
 				return (event)=>{
 					this.setState({[dataType]:event.target.value})

@@ -68,3 +68,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+安装脚手架
+npm install -g create-react-app
+
+创建项目
+create-react-app hello-react
+
+# 建议不要直接使用 cnpm 安装依赖，会有各种诡异的 bug。可以通过如下操作解决 npm 下载速度慢的问题
+npm install --registry=https://registry.npm.taobao.org
+
+npm start
+
+应用加壳技术
+给网页的外面加一层安卓的壳生成apk文件
+现在也比较主流。。。不用去写java object-c switf了。。
+
+如果要做应用加壳 必须配置好manifest.json
+meta description是给搜索引擎收录用的
+
+
+
