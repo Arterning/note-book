@@ -4,6 +4,7 @@ import PubSub from 'pubsub-js'
 
 export default class Search extends Component {
 
+	//注意方法前面的async
 	search = async()=>{
 		//获取用户的输入(连续解构赋值+重命名)
 		const {keyWordElement:{value:keyWord}} = this
@@ -30,6 +31,7 @@ export default class Search extends Component {
 			},
 			error => {
 				console.log('联系服务器失败了',error);
+				//这里返回一个初始状态的Promsise实例
 				return new Promise(()=>{})
 			}
 		).then(
@@ -40,7 +42,10 @@ export default class Search extends Component {
 		//发送网络请求---使用fetch发送（优化）
 		try {
 			const response= await fetch(`/api1/search/users2?q=${keyWord}`)
+
+			//为什么又要await一次？我草为什么response也是个promise实例。。
 			const data = await response.json()
+
 			console.log(data);
 			PubSub.publish('atguigu',{isLoading:false,users:data.items})
 		} catch (error) {
