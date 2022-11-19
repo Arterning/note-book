@@ -429,3 +429,36 @@ Docker123456
 无头CMS是从底层向上构建为内容储存库，使通过对在任何设备上显示一个RESTful API内容访问的后端仅内容管理系统（CMS）。
 术语“无头”来自将“头”（前端，即网站）从“主体”（后端，即内容存储库）上切下的概念。无头CMS保留了用于添加内容的接口，以及RESTful API（JSON，XML）以在需要时交付内容。由于采用了这种方法，无头CMS并不关心内容的显示方式和位置。无头CMS仅关注一个重点：存储和交付结构化内容。
 
+
+多线程之Fork/Join
+https://juejin.cn/post/6920035052541706247
+
+
+关于java多线程的使用 这里有一个比较好的总结 来自廖雪峰的网站
+https://www.liaoxuefeng.com/wiki/1252599548343744/1306581155184674
+
+
+关于pdf转image缓慢的问题的讨论
+https://issues.apache.org/jira/browse/PDFBOX-4649
+https://stackoverflow.com/questions/49100210/why-is-pdfbox-pdfrenderer-slow
+
+
+Fly.io 使用体验
+Posted on 01/26/2022 by Ein Verne | View revision history
+Fly.io 是一个应用部署平台，和 [[Netlify]]、[[Vercel]] 不同之处在于 Fly.io 提供了数据库，这就使得在线托管一个小型动态网站成为了可能。Fly.io 是一个 [[Y combinator]] 孵化的项目。
+
+关于收费
+Fly.io 是提供一定限额的免费使用额度的，他们的目标就是让小型的应用可以免费运行，而在需要扩展的时候支付一定的费用，而这笔费用也不会太昂贵。Fly.io 的应用会根据使用情况单独计费。
+
+Fly.io 会根据单个用户或者组织计费，官方也说了，如果想要更多免费的应用，那么你可以创建多个组织。
+
+https://zhuanlan.zhihu.com/p/63963140
+
+https://crates.io/crates/sonic-server
+
+
+
+Vercel 推出 webpack 替代品 Turbopack
+
+
+
