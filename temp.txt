@@ -461,4 +461,114 @@ https://crates.io/crates/sonic-server
 Vercel 推出 webpack 替代品 Turbopack
 
 
+https://stackoverflow.com/questions/14531179/threading-issue-in-pdfbox-during-image-generation
+
+
+try with resource
+https://www.jianshu.com/p/258c5ce1a2bd
+
+如何处理InterruptedException异常
+https://juejin.cn/post/7043802690366734350
+
+SpringBoot线程池的使用
+https://juejin.cn/post/7040650693228625933
+
+
+sshkey-gen -R ip
+
+windows下开发需要设置go proxy
+这样下载包快一点
+go env -w GOPROXY=https://goproxy.cn
+
+https://www.topgoer.com/
+
+非技术分享下找远程工作的经验
+https://eleduck.com/posts/82fB4Q
+
+
+我想不管什么公司都需要大家对这家公司有一个基本的判断，不论他是区块链行业或者其他实体行业，不能根据行业来判定一类公司靠不靠谱，而应该根据每家公司的理念、想法、目标和对一个普通员工的态度来判断。" 特别认同这句话，赞！
+
+https://www.v2ex.com/
+linkedin
+dianya
+
+https://v2ex.com/t/887135
+
+https://www.v2ex.com/t/895349#reply1
+
+https://eleduck.com/posts/W9fNmY
+
+
+
+远程办公的一些工具
+https://eleduck.com/posts/pqfOzZ
+
+https://eleduck.com/posts/POGfvp
+
+https://eleduck.com/posts/eYgfdk
+Some useful sites for remote jobs
+头像
+Jay47阅读1评论2 个月前
+https://ca.indeed.com/?r=us
+https://himalayas.app/jobs
+https://www.flexjobs.com/
+https://justremote.co/
+https://remoteok.com/
+
+https://eleduck.com/posts/jAfJj3
+
+
+
+
+
+开始自由职业已经有4个多月，目前状态还算可以，一家长期合作的区块链公司，正好也是我想要的方向，合作也很愉快。 业余时间偶尔有些小想法搞搞自己的产品，也算是半个独立开发者，疫情快过去了，还可以去钓钓鱼。
+
+在这之前我的节奏非常乱，合作也没那么愉快，这说起来话就长了(这里写了很多，想想还是删了吧)，……总之凡事没那么容易，冷暖自知。 后来我在选人和选客户时都很慎重，很多人什么项目都接，甚至廉价出卖劳动力，当然每个人都有自己迫于生活的选择。
+
+我觉得自由职业是个长期积累的过程，有价值的连接会慢慢沉淀，产生更有价值的正回馈。拥有选择机会，具备选择的能力，才是真正的力量，也是真正的自由，这也是我自由职业的动力。
+
+自由职业者、远程办公这始终是在出卖自己的时间来获取固定的收益，是数字游民的初级阶段，更高级的阶段是去做能产生被动收入的产品，比如卖自己的代码、服务、知识、内容等，这些是可复制的。 就像我们写代码一样，把需要多次计算的复杂逻辑抽象出来复用，这才是有价值的事，应该往这个方向去努力。不过，首先还是要踏踏实实的，在初级阶段打怪修炼。
+
+最后点题，自由职业状态是对人才的考核筛选，这部分人需要有强烈的学习能力，主动沟通和独立解决问题的能力，惊人的自控能力和意志力，这种状态越久你他娘的越是个人才！
+
+自从做了网上兼职和远程服务，整个人提升很多，从以前的闷头写代码，到与客户交流，商讨更加产品方案，直接是全方位的自我提升
+
+不再是坐班时的那个“螺丝钉”
+
+
+
+https://a-programmers-guide-to-english.harryyu.me/
+
+
+https://eleduck.com/posts/3Efr5X
+
+
+
+
+
+
+https://eleduck.com/posts/60Xfbd
+
+
+https://eleduck.com/posts/embfAD
+
+
+https://eleduck.com/posts/qzfjjR
+
+
+可能支持远程办公的国内公司
+头像
+187****1334432阅读3评论1 年前
+我这几天准备换工作，在BOSS直聘和智联招聘上挂上简历，同时开放太原、北京、上海。对于北京上海的工作都是只能远程办公。一番过滤，还真的发现有些公司是可以远程的。下面我列出来我发现的：
+如意云
+元拓信息（在无锡有项目，2个月的那种）
+网新恒天软件（需要英语口语）
+凯捷中国
+有需要的小伙伴可以联系下。祝好运！
+
+
+
+https://eleduck.com/posts/b2fdYb
+
+
 
