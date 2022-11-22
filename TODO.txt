@@ -1,0 +1,5 @@
+//TODO
+1. go block chain app
+2. go study, spend a lot of time
+3. rust study, spend not too many time
+4. remote java work is not good, turn to go or other ...
