@@ -9,6 +9,10 @@ func main() {
 	c0 := make(chan string)
 	c1 := make(chan string)
 	go sourceGopher(c0)
+	//我们假设filter是一个非常耗时的操作 我们可以启动多个go routine
+	go filterGopher(c0, c1)
+	go filterGopher(c0, c1)
+	go filterGopher(c0, c1)
 	go filterGopher(c0, c1)
 	printGopher(c1)
 }
