@@ -1,11 +1,8 @@
 /*
- * @Author: ning.huang ning.huang
- * @Date: 2022-11-14 11:08:48
- * @LastEditors: ning.huang ning.huang
- * @LastEditTime: 2022-11-14 11:29:46
- * @FilePath: \code\goLang\tcp-scanner\multi2.go
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
+不要通过共享内存来通信，而应该通过通信来共享内存
+这里的共享内存就是ports这个带有缓存的管道。。也就是说go是通过管道通信来共享ports内存。。ports内存必须是要保证是线程安全的
+因为同时会有多个线程读取ports
+*/
 package main
 
 import (
