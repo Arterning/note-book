@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=IntelliJ IDEA
-Comment=IntelliJ IDEA
-Exec=/home/ning/idea-IC/bin/idea.sh
-Icon=/home/ning/idea-IC/bin/idea.png
-Terminal=true
-Type=Application
-Categories=Developer;
