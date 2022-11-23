@@ -1,3 +1,5 @@
+这里是扩展内容 属于视频教程里面的最后内容
+
 ## 1. setState
 
 ### setState更新状态的2种写法
@@ -176,7 +178,7 @@
 
 ### Component的2个问题 
 
-> 1. 只要执行setState(),即使不改变状态数据, 组件也会重新render()
+> 1. 只要执行setState(),即使不改变状态数据(旧的state可能和新的state一样), 组件也会重新render()
 >
 > 2. 只当前组件重新render(), 就会自动重新render子组件 ==> 效率低
 
@@ -226,9 +228,9 @@
 
 ### render props
 
-	<A render={(data) => <C data={data}></C>}></A>
+	<A render={(data) => <B data={data}></B>}></A>
 	A组件: {this.props.render(内部state数据)}
-	C组件: 读取A组件传入的数据显示 {this.props.data} 
+	B组件: 读取A组件传入的数据显示 {this.props.data} 
 
 
 
