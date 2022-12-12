@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'passkeep.apps.PasskeepConfig',
+    'rest_framework' #注册
 ]
 
 MIDDLEWARE = [

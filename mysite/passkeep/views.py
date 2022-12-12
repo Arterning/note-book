@@ -7,6 +7,10 @@ from django.template import loader
 from .forms import TokenForm
 from django.http import HttpResponseRedirect
 
+from .serializer import TokenInfoSerializer
+from rest_framework import viewsets
+
+
 def index(request):
     return HttpResponse("Hello, world. You're at the passkeep index.")
 
@@ -60,3 +64,7 @@ def detail(request, token_id):
     elif request.method == 'DELETE':
         pass
     return HttpResponse("You're looking at question %s." % token_id)
+
+class TokenViewSet(viewsets.ModelViewSet):
+    queryset = TokenInfo.objects.all().order_by('id')
+    serializer_class = TokenInfoSerializer
