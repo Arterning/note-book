@@ -1,0 +1,1 @@
+.article{font-size:15px;padding:0 10px}.article .title{margin:20rpx 0;text-align:center}.article .date{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between}

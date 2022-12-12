@@ -1,0 +1,1 @@
+.content{font-size:30rpx}.content .logo image{width:750rpx;height:320rpx}.content .message{margin:10rpx 20rpx}.content .message .phone{line-height:80rpx;border-bottom:1px solid #eee}.content .message .address{line-height:80rpx;border-bottom:1px solid #eee}.content map{width:750rpx;height:750rpx}
