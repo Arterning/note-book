@@ -1,15 +1,8 @@
 <h1>add token form</h1>
 
-<form action="/tokens/" method="post">
+<form action="/passkeep/addToken/" method="post">
 
-    <label for="url">URL: </label>
-    <input id="url" type="text" name="url" value="{{ url }}">
-
-    <label for="name">Name: </label>
-    <input id="name" type="text" name="name" value="{{ name }}">
-
-    <label for="token">Token: </label>
-    <input id="token" type="text" name="token" value="{{ token }}">
-
-    <input type="submit" value="OK">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
 </form>
