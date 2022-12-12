@@ -17,6 +17,12 @@ def all(request):
     return HttpResponse(template.render(context, request))
 
 def detail(request, token_id):
+    if request.method == 'POST':
+        pass
+    elif request.method == 'PUT':
+        pass
+    elif request.method == 'DELETE':
+        pass
     return HttpResponse("You're looking at question %s." % token_id)
 
 def update(request, token_id):
