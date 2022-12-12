@@ -8,3 +8,5 @@ class TokenInfo(models.Model):
     created_date = models.DateTimeField('date created')
     modified_date = models.DateTimeField('date modified')
 
+    def __str__(self):
+        return self.url
