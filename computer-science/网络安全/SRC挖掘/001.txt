@@ -1,0 +1,32 @@
+漏洞平台：
+
+补天漏洞响应平台：https://www.butian.net/
+
+漏洞银行：https://www.bugbank.cn/
+
+阿里云漏洞响应平台：https://security.alibaba.com/i
+
+春秋 SRC 部落：https://www.ichunqiu.com/src
+
+腾讯应急响应中心：https://security.tencent.com/index.php
+
+教育行业漏洞报告平台：https://src.sjtu.edu.cn/
+
+
+教育漏洞平台挖掘：
+验证出来漏洞就行，不要去看别人的数据，免得要去吃国家饭
+常规检测：主要使用工具进行探测，一般使用 Xray AWVS 等一些工具进行扫描，再配合某些平台的默认弱口令密码使用脚本收集带有 edu.cn 的域名，再使用 Xray 批量检测
+
+4.收集信息：
+4.1 通过编写 python 爬虫来收集学校信息
+4.2 通过 fofa（https://fofa.so/）搜索带关键词的信息 例如："edu.cn" "edu.cn" && country="CN"
+
+
+使用一些品牌的默认弱口令去测试 列举了一些比较大的厂商的默认账号和密码 
+例如：juniper 登录地址:https://192.168.1.1 用户名:netscreen 密码:netscreen
+Cisco 登录地址:https://192.168.0.1 用户名:admin 密码:cisco
+Huawei 登录地址:http://192.168.0.1 用户名:admin 密码:Admin@123
+深信服 VPN：51111 端口 delanrecover
+华为 VPN：账号：root 密码：mduadmin
+华为防火墙：admin Admin@123 eudemon
+

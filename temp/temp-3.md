@@ -69,6 +69,14 @@ WebDAV 基于 HTTP 协议的通信协议，在GET、POST、HEAD等几个HTTP标�
 来源：知乎
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
+
+# Keepass使用的加密算法
+KeePass的密码数据库默认使用了高强度的AES加密算法，AES已经被应用到各种安全领域甚至军方级别的系统，安全性对个人来说其实已经完全不必担心了。
+AES加密/解密算法是一种可逆的对称加密算法
+AES的全称是Advanced Encryption Standard，意思是高级加密标准。它的出现主要是为了取代DES加密算法的
+
+
+
 # other
 1. bitwarden官网 https://bitwarden.com/
 
@@ -76,3 +84,4 @@ WebDAV 基于 HTTP 协议的通信协议，在GET、POST、HEAD等几个HTTP标�
 
 3. 用了六年 Keepass 了，发现大家都在推荐 Bitwarden https://www.v2ex.com/t/894022
 
+4. 改变网页背景颜色的插件 https://chrome.google.com/webstore/detail/care-your-eyes/fidmpnedniahpnkeomejhnepmbdamlhl/related?hl=zh-CN

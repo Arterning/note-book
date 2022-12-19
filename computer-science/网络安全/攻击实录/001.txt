@@ -1,0 +1,6 @@
+win10 note book
+192.168.1.100
+
+直接nmap扫描
+nmap -T4 -A -v --script "D:\\Tool\\vulscan-master\\vulscan.nse" 192.168.1.100
+然后上goby扫描
