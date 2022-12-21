@@ -70,3 +70,9 @@ Metadata叫做元数据，它是对象存储一个非常独特的概念。
 文件存储的最大特点，就是所有存储资源都是多级路径方式进行访问的。例如：
 C:\Program Files (x86)\Tencent\WeChat\WeChat.exe
 \\NJUST-Server\学习资料\通信原理\第一章作业.doc
+
+
+
+
+# 参考
+- https://zhuanlan.zhihu.com/p/166289089
