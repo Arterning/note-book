@@ -1,0 +1,20 @@
+boost performance
+
+and one or both might apply
+并且其中一项或两项可能适用
+
+
+Your page content depends on external data: Use getStaticProps.
+Your page paths depend on external data: Use getStaticPaths (usually in addition to getStaticProps).
+
+ // { fallback: false } means other routes should 404.
+
+
+ We recommend using Static Generation (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
+
+On the other hand, Static Generation is not a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
+
+如果你的页面需要显示需要经常变化的数据 那么这个页面就不适合提前渲染
+
+
+
