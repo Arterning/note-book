@@ -1,0 +1,209 @@
+{
+    "authentication":{
+        "purchaseLink":"",
+        "brandName":"中联数字大米",
+        "commodityId":"1",
+        "commodityImageUrl":null,
+        "commodityName":"美香大米",
+        "varietyId":"16",
+        "unit":"2.5kg/袋",
+        "harvestDate":"2021-09-20",
+        "chainCode":"SY0DY00000003",
+        "hashCode":"abc123456789",
+        "brandId":null,
+        "queryRecord": [
+            {
+                "visitTime": "2022-06-29 08:00:00",
+                "address": "湖南省益阳市南县"
+            },
+            {
+                "visitTime": "2022-06-29 08:00:00",
+                "address": "湖南省益阳市桃江县"
+            },
+            {
+                "visitTime": "2022-06-29 08:00:00",
+                "address": "湖南省益阳市安化县"
+            },
+            {
+                "visitTime": "2022-06-29 08:00:00",
+                "address": "湖南省益阳市沅江"
+            }
+        ]
+    },
+    "product": {
+        "commodityId":"1",
+        "brandName":"中联数字大米",
+        "commodityName":"美香大米",
+        "varietyId":"16",
+        "unit":"2.5kg/袋",
+        "qualityLevel":"优质一等",
+        "standardCode":"GB/T1354",
+        "expirationDate":"12",
+        "commodityAddress":"安徽省芜湖市",
+        "commodityDesc":"中联数字大米产自“四大米市”之一的安徽省芜湖市，素有“江南鱼米之乡”的美誉。这里光照充足，雨量充沛，四季分明。年平均气温15～16℃，日照时数2000小时左右，水稻生产季节平均气温≥25℃，抽水灌浆期昼夜温差10℃左右，降雨充沛，年降雨量1200毫米，无霜期每年达219～240天，能保证中晚稻有130天的生育期，有利于优质稻米生产。中联数字大米由中联重科旗下中联智慧农业股份有限公司出品。其实现数字农业技术赋能的水稻全程标准化种植，围绕作物健康生长，低成本、多维度采集农业海量数据，搭建以作物模型为驱动的大数据管理体系，实现生产全过程的信息感知、定量决策、精准投入作业和智能作业。通过专家组测产验收，运用中联数字化种植技术的农户比周边农户施药少了、化肥减量了，既帮助农户节省了种植成本，又有效实现了节肥减药的目标，加工成的数字大米晶莹剔透、香味扑鼻，品质更优、口感更好。",
+        "commodityVideoLink":"http://syxt.junsor.net/img/JZXMYPT.mp4",
+        "poster": "https://ncstatic.clewm.net/free/2022/0701/09/d49bf976638e7935fbbd33a1fc542bdc.png?x-oss-process=image/auto-orient,1"
+    },
+    "quality": {
+        "checkDate":"2021-09-25 00:00:00",
+        "checkOrg":"华测检测认证集团北京有限公司",
+        "qualified":"合格",
+        "checkImages":null,
+        "checkResults":[
+            "../../static/img/template/quality/1.png",
+            "../../static/img/template/quality/2.png",
+            "../../static/img/template/quality/3.png",
+            "../../static/img/template/quality/4.png"
+        ]
+    },
+    "plant": {
+        "farmId":"62941040527360",
+        "farmName":"中联峨桥智慧农业示范基地",
+        "farmLocation":"安徽省芜湖市峨桥镇淮九路与浮峨路交叉口向南100米",
+        "longitude":"118.297699",
+        "latitude":"31.162425",
+        "realWeatherDto":{
+            "temper": "25.15",
+            "humidity": "60.25",
+            "wind": "1.40",
+            "rain": "0.00"
+        },
+        "farmRecords":[
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"浸种",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/浸种.jpg"]
+            },
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"播种",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/播种.jpg"]
+            },
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"施肥",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/施肥-基肥.jpg"]
+            },
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"灌溉",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/灌溉.jpg"]
+            },
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"喷药",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/喷药-除草.jpg"]
+            },
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"移栽",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/移栽.jpg"]
+            },
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"施肥",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/施肥-分蘖肥.jpg"]
+            },
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"喷药",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/喷药-防虫治病.jpg"]
+            },
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"晒田",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/晒田.jpg"]
+            },
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"施肥",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/施肥-穗肥.jpg"]
+            },
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"喷药",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/喷药-防虫治病.jpg"]
+            },
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"灌溉",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/灌溉.jpg"]
+            },
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"喷药",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/喷药-防虫治病.jpg"]
+            },
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"晒田",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/晒田.jpg"]
+            },
+            {
+                "farmRecordTime":"2022-03-01",
+                "operationType":"收割",
+                "temper":"13.35",
+                "weather":"小雨",
+                "recorder":"智小农",
+                "recordImageId":["/static/img/template/plant/收割.jpg"]
+            }
+        ]
+    },
+    "machining": {
+        "riceFactoryId":"2",
+        "riceFactoryName":"繁昌县华园米业有限责任公司",
+        "riceFactoryLocation":"安徽省芜湖市繁昌区沈弄浮峨路峨山镇爱心幼儿园西250米",
+        "processData":[
+            {"operationType":"加工","operationDate":"2021-10-15","images":null},
+            {"operationType":"包装","operationDate":"2021-10-18","images":null}]
+    },
+    "enterprise": {
+        "enterpriseId":"1",
+        "enterpriseName":"中联智慧农业股份有限公司",
+        "address":"安徽省芜湖市三山经济开发区峨溪路16号",
+        "enterpriseDesc": "这是企业描述",
+        "imageUrls":["84747730752000", "84747734684160", "84747737960960"]
+    }
+}

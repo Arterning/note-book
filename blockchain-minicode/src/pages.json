@@ -1,0 +1,588 @@
+{
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/home/index",
+			"name": "home",
+			"meta": {
+				"title": "首页"
+			},
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/personal/index",
+			"name": "personal",
+			"meta": {
+				"title": "我的"
+			},
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/login/index",
+			"name": "login",
+			"meta": {
+				"title": "登录"
+			},
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/login/LoginExtra",
+			"aliasPath": "/loginExtra",
+			"name": "loginExtra",
+			"meta": {
+				"title": "注册"
+			},
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		},
+		{
+			"path": "pages/select-role/index",
+			"aliasPath": "/selectRole",
+			"name": "selectRole",
+			"meta": {
+				"title": "选择角色"
+			},
+			"style": {
+				"navigationBarTitleText": "选择角色"
+			}
+		},
+		{
+			"path": "pages/application/index",
+			"name": "application",
+			"aliasPath": "/application",
+			"meta": {
+				"title": "入驻申请"
+			},
+			"style": {
+				"navigationBarTitleText": "入驻申请"
+			}
+		},
+		{
+			"path": "pages/review-progress/index",
+			"name": "reviewProgress",
+			"meta": {
+				"title": "审核进度"
+			},
+			"style": {
+				"navigationBarTitleText": "审核进度",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/review-progress/ReviewDetail",
+			"name": "reviewDetail",
+			"aliasPath": "/reviewDetail",
+			"meta": {
+				"title": "审核详情"
+			},
+			"style": {
+				"navigationBarTitleText": "审核详情"
+			}
+		},
+		{
+			"path": "pages/message/index",
+			"name": "message",
+			"meta": {
+				"title": "消息中心"
+			},
+			"style": {
+				"navigationBarTitleText": "消息中心",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/material/index",
+			"name": "material",
+			"meta": {
+				"title": "溯源素材"
+			},
+			"style": {
+				"navigationBarTitleText": "素材类型"
+			}
+		},
+		{
+			"path": "pages/commodityText/index",
+			"name": "commodityText",
+			"aliasPath": "/commodityText",
+			"meta": {
+				"title": "商品文字介绍"
+			},
+			"style": {
+				"navigationBarTitleText": "商品文字介绍"
+			}
+		},
+		{
+			"path": "pages/commodityVideo/index",
+			"name": "commodityVideo",
+			"aliasPath": "/commodityVideo",
+			"meta": {
+				"title": "商品视频介绍"
+			},
+			"style": {
+				"navigationBarTitleText": "商品视频介绍"
+			}
+		},
+		{
+			"path": "pages/commodityOthers/index",
+			"name": "commodityOthers",
+			"aliasPath": "/commodityOthers",
+			"meta": {
+				"title": "更多素材"
+			},
+			"style": {
+				"navigationBarTitleText": "更多素材"
+			}
+		},
+		{
+			"path": "pages/commodity/CommodityDetail",
+			"name": "CommodityDetail",
+			"meta": {
+				"title": "商品详情"
+			},
+			"style": {
+				"navigationBarTitleText": "商品详情"
+			}
+		},
+		{
+			"path": "pages/commodity/CommManagemant",
+			"name": "CommManagemant",
+			"meta": {
+				"title": "商品管理"
+			},
+			"style": {
+				"navigationBarTitleText": "商品管理",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/commodity/BrandGoodsManagement",
+			"name": "BrandGoodsManagement",
+			"meta": {
+				"title": "品牌商品管理"
+			},
+			"style": {
+				"navigationBarTitleText": "品牌商品管理",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/commodity/AddBrand",
+			"name": "AddBrand",
+			"meta": {
+				"title": "添加品牌"
+			},
+			"style": {
+				"navigationBarTitleText": "添加品牌"
+			}
+		},
+		{
+			"path": "pages/commodity/AddCommodity",
+			"name": "AddCommodity",
+			"meta": {
+				"title": "添加商品"
+			},
+			"style": {
+				"navigationBarTitleText": "添加商品"
+			}
+		},
+		{
+			"path": "pages/employee/index",
+			"name": "Employee",
+			"meta": {
+				"title": "员工管理"
+			},
+			"style": {
+				"navigationBarTitleText": "员工管理",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/employee/Detail",
+			"name": "EmployeeDetail",
+			"meta": {
+				"title": "员工信息"
+			},
+			"style": {
+				"navigationBarTitleText": "员工信息"
+			}
+		},
+		{
+			"path": "pages/report/List",
+			"name": "ReportList",
+			"meta": {
+				"title": "检测报告"
+			},
+			"style": {
+				"navigationBarTitleText": "检测报告",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/report/Upload",
+			"name": "ReportUpload",
+			"aliasPath": "/reportUpload",
+			"meta": {
+				"title": "上传报告"
+			},
+			"style": {
+				"navigationBarTitleText": "上传报告"
+			}
+		},
+		{
+			"path": "pages/report/index",
+			"name": "Report",
+			"aliasPath": "/Report",
+			"meta": {
+				"title": "报告详情"
+			},
+			"style": {
+				"navigationBarTitleText": "报告详情"
+			}
+		},
+		{
+			"path": "pages/report/BlockChainReport",
+			"name": "BlockChainReport",
+			"meta": {
+				"title": "报告详情"
+			},
+			"style": {
+				"navigationBarTitleText": "报告详情"
+			}
+		},
+		{
+			"path": "pages/404/index",
+			"name": "404",
+			"meta": {
+				"title": "404"
+			},
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/appSourceCode/index",
+			"name": "AppSourceCode",
+			"meta": {
+				"title": "申请溯源码"
+			},
+			"style": {
+				"navigationBarTitleText": "申请溯源码",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/appSourceCode/SourceCodeForm",
+			"name": "SourceCodeForm",
+			"meta": {
+				"title": "申请溯源码"
+			},
+			"style": {
+				"navigationBarTitleText": "申请溯源码"
+			}
+		},
+		{
+			"path": "pages/appSourceCode/activation/index",
+			"name": "CodeActivation",
+			"meta": {
+				"title": "激活溯源码"
+			},
+			"style": {
+				"navigationBarTitleText": "激活溯源码",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/appSourceCode/activation/Detail",
+			"name": "CodeActivationDetail",
+			"aliasPath": "/CodeActivationDetail",
+			"meta": {
+				"title": "绑定数据"
+			},
+			"style": {
+				"navigationBarTitleText": "绑定数据",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/appSourceCode/Detail",
+			"name": "Detail",
+			"meta": {
+				"title": "订单详情"
+			},
+			"style": {
+				"navigationBarTitleText": "订单详情"
+			}
+		}
+	],
+	"subPackages": [{
+		"root": "subPages",
+		"pages": [{
+				"path": "grain-in/index",
+				"name": "grainIn",
+				"meta": {
+					"title": "收粮清单"
+				},
+				"style": {
+					"navigationBarTitleText": "收粮清单",
+					"enablePullDownRefresh": true
+				}
+			},
+			{
+				"path": "grain-in/Record",
+				"name": "grainInRecord",
+				"aliasPath": "/grainInRecord",
+				"meta": {
+					"title": "收粮信息"
+				},
+				"style": {
+					"navigationBarTitleText": "收粮信息",
+					"enablePullDownRefresh": true
+				}
+			},
+			{
+				"path": "select-enterprise/index",
+				"name": "selectEnterprise",
+				"meta": {
+					"title": "选择品牌商"
+				},
+				"style": {
+					"navigationBarTitleText": "选择品牌商",
+					"enablePullDownRefresh": true
+				}
+			},
+			{
+				"path": "select-farm/index",
+				"name": "selectFarm",
+				"meta": {
+					"title": "选择来源农场"
+				},
+				"style": {
+					"navigationBarTitleText": "选择来源农场",
+					"enablePullDownRefresh": true
+				}
+			},
+			{
+				"path": "drying/index",
+				"name": "drying",
+				"meta": {
+					"title": "烘干管理"
+				},
+				"style": {
+					"navigationBarTitleText": "烘干管理",
+					"enablePullDownRefresh": true
+				}
+			},
+			{
+				"path": "drying/Info",
+				"name": "dryingInfo",
+				"aliasPath": "/dryingInfo",
+				"meta": {
+					"title": "烘干信息"
+				},
+				"style": {
+					"navigationBarTitleText": "烘干信息"
+				}
+			},
+			{
+				"path": "select-grain-in/index",
+				"name": "selectGrainIn",
+				"aliasPath": "/selectGrainIn",
+				"meta": {
+					"title": "选择稻谷清单"
+				},
+				"style": {
+					"navigationBarTitleText": "选择稻谷清单",
+					"enablePullDownRefresh": true
+				}
+			},
+			{
+				"path": "machining/index",
+				"name": "machining",
+				"meta": {
+					"title": "加工管理"
+				},
+				"style": {
+					"navigationBarTitleText": "加工管理",
+					"enablePullDownRefresh": true
+				}
+			},
+			{
+				"path": "machining/Info",
+				"name": "machiningInfo",
+				"aliasPath": "/machiningInfo",
+				"meta": {
+					"title": "加工信息"
+				},
+				"style": {
+					"navigationBarTitleText": "加工信息"
+				}
+			},
+			{
+				"path": "packing/index",
+				"name": "packing",
+				"meta": {
+					"title": "包装管理"
+				},
+				"style": {
+					"navigationBarTitleText": "包装管理",
+					"enablePullDownRefresh": true
+				}
+			},
+			{
+				"path": "packing/Info",
+				"name": "packingInfo",
+				"aliasPath": "/packingInfo",
+				"meta": {
+					"title": "包装信息"
+				},
+				"style": {
+					"navigationBarTitleText": "包装信息"
+				}
+			},
+			{
+				"path": "select-commodity/index",
+				"name": "selectCommodity",
+				"meta": {
+					"title": "选择商品"
+				},
+				"style": {
+					"navigationBarTitleText": "选择商品",
+					"enablePullDownRefresh": true
+				}
+			},
+			{
+				"path": "myRice/ProcessFlow",
+				"name": "RiceProcessFlow",
+				"meta": {
+					"title": "查看溯源信息"
+				},
+				"style": {
+					"navigationBarTitleText": "查看溯源信息"
+				}
+			},
+			{
+				"path": "process/plant",
+				"name": "Plant",
+				"meta": {
+					"title": "种植过程"
+				},
+				"style": {
+					"navigationBarTitleText": "种植过程"
+				}
+			},
+			{
+				"path": "process/index",
+				"name": "Process",
+				"meta": {
+					"title": "智慧芜湖大米区块链溯源"
+				},
+				"style": {
+					"navigationBarTitleText": "智慧芜湖大米区块链溯源",
+					"navigationBarBackgroundColor": "#fff"
+				}
+			},
+			{
+				"path": "partnership/index",
+				"name": "Partnership",
+				"meta": {
+					"title": "合作米厂列表"
+				},
+				"style": {
+					"navigationBarTitleText": "合作米厂列表",
+					"enablePullDownRefresh": true
+				}
+			},
+			{
+				"path": "partnership/List",
+				"name": "partnershipList",
+				"aliasPath": "/partnershipList",
+				"meta": {
+					"title": "选择合作米厂"
+				},
+				"style": {
+					"navigationBarTitleText": "选择合作米厂"
+				}
+			},
+			{
+				"path": "partnership/City",
+				"name": "City",
+				"meta": {
+					"title": "城市选择"
+				},
+				"style": {
+					"navigationBarTitleText": "城市选择"
+				}
+			},
+			{
+				"path": "partnership/Detail",
+				"name": "partnershipDetail",
+				"aliasPath": "/partnershipDetail",
+				"meta": {
+					"title": "企业详情"
+				},
+				"style": {
+					"navigationBarTitleText": "企业详情"
+				}
+			},
+			{
+				"path": "statistics/index",
+				"name": "Statistics",
+				"meta": {
+					"title": "溯源数据"
+				},
+				"style": {
+					"navigationBarTitleText": "溯源数据"
+				}
+			}
+		]
+	}],
+	"preloadRule": {
+		"pages/home/index": {
+			"packages": [
+				"subPages"
+			], // 进入首页，即加载分包（参见：https://uniapp.dcloud.io/collocation/pages?id=preloadrule）
+			"network": "all"
+		}
+	},
+	"tabBar": {
+		"list": [{
+				"pagePath": "pages/home/index",
+				"text": "首页",
+				"iconPath": "/static/img/home.png",
+				"selectedIconPath": "/static/img/home-active.png"
+			},
+			{
+				"pagePath": "pages/personal/index",
+				"text": "我的",
+				"iconPath": "/static/img/personal-active.png",
+				"selectedIconPath": "/static/img/personal.png"
+			}
+		],
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"height": "98rpx",
+		"color": "#999",
+		"selectedColor": "#00c853",
+		"fontSize": "10px"
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+
+	"easycom": {
+		"autoscan": false, // 关掉自动扫描（参考：https://uniapp.dcloud.io/collocation/pages?id=easycom）
+		"custom": {
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	}
+}
