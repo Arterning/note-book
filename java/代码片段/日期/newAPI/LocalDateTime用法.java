@@ -47,5 +47,78 @@ public class LocalDateTime用法 {
     }
 
     
+
+    base4() {
+         // 自定义格式化:
+         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+         System.out.println(dtf.format(LocalDateTime.now()));
+ 
+         // 用自定义格式解析:
+         LocalDateTime dt2 = LocalDateTime.parse("2019/11/30 15:16:17", dtf);
+         System.out.println(dt2);
+    }
+
+
+    /**
+     * 
+     * 对日期和时间进行加减的非常简单的链式调用：
+     */
+    base5() {
+        LocalDateTime dt = LocalDateTime.of(2019, 10, 26, 20, 30, 59);
+        System.out.println(dt);
+        // 加5天减3小时:
+        LocalDateTime dt2 = dt.plusDays(5).minusHours(3);
+        System.out.println(dt2); // 2019-10-31T17:30:59
+        // 减1月:
+        LocalDateTime dt3 = dt2.minusMonths(1);
+        System.out.println(dt3); // 2019-09-30T17:30:59
+    }
+
+    /**
+     * 对日期和时间进行调整则使用withXxx()方法
+     * 注意到调整月份时，会相应地调整日期，即把2019-10-31的月份调整为9时，日期也自动变为30。
+     */
+    base6() {
+        LocalDateTime dt = LocalDateTime.of(2019, 10, 26, 20, 30, 59);
+        System.out.println(dt);
+        // 日期变为31日:
+        LocalDateTime dt2 = dt.withDayOfMonth(31);
+        System.out.println(dt2); // 2019-10-31T20:30:59
+        // 月份变为9:
+        LocalDateTime dt3 = dt2.withMonth(9);
+        System.out.println(dt3); // 2019-09-30T20:30:59
+
+
+
+        // 本月第一天0:00时刻:
+        LocalDateTime firstDay = LocalDate.now().withDayOfMonth(1).atStartOfDay();
+        System.out.println(firstDay);
+
+        // 本月最后1天:
+        LocalDate lastDay = LocalDate.now().with(TemporalAdjusters.lastDayOfMonth());
+        System.out.println(lastDay);
+
+        // 下月第1天:
+        LocalDate nextMonthFirstDay = LocalDate.now().with(TemporalAdjusters.firstDayOfNextMonth());
+        System.out.println(nextMonthFirstDay);
+
+        // 本月第1个周一:
+        LocalDate firstWeekday = LocalDate.now().with(TemporalAdjusters.firstInMonth(DayOfWeek.MONDAY));
+        System.out.println(firstWeekday);
+    }
+
+
+    /**
+     * 判断两个LocalDateTime的先后，可以使用isBefore()、isAfter()方法，对于LocalDate和LocalTime类似
+     */
+    base7() {
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime target = LocalDateTime.of(2019, 11, 19, 8, 15, 0);
+        System.out.println(now.isBefore(target));
+        System.out.println(LocalDate.now().isBefore(LocalDate.of(2019, 11, 19)));
+        System.out.println(LocalTime.now().isAfter(LocalTime.parse("08:15:00")));
+    }
+
+
     
 }
