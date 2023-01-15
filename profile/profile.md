@@ -10,6 +10,7 @@
 - Github: [Arterning](https://github.com/Arterning)
 - Expect: Front end engineer
 - Hope: Remote work
+- Konw: react,vue,nodejs,typescript,java,typescript
 
 # 工作经历
 
@@ -50,3 +51,6 @@ In the example above, we would take the returns of the S&P 500 at a rate of 60%.
 - 使用 JDBC 替换原本的 hibernate
 
 # 中软国际公司（2017/7 ~ 2019/3）
+
+- 负责公司应用监控平台的搭建和部署
+- 负责运维公司服务器和安装漏洞补丁
