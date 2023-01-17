@@ -1,6 +1,14 @@
 var fs = require("fs");
 
 console.log("准备写入文件");
+/**
+ * 发现一个特点
+ * nodejs的回调函数都是err在前 data在后这种风格的
+ */
+nodejs.func("hello", function(err, data) {
+   //hello welcome to 回调地狱
+});
+
 fs.writeFile('input.txt', '我是通 过fs.writeFile 写入文件的内容',  function(err) {
    if (err) {
        return console.error(err);

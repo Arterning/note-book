@@ -1,3 +1,6 @@
+/**
+ * 我讨厌xml 都用node javascript了 还扯什么xml 给老子滚！
+ */
 var xmlreader = require("xmlreader");
 var fs = require("fs");
 var xml_string = '<response id="1" shop="aldi">'			+ 		'This is some other content'			+		'<who name="james">James May</who>'			+ 		'<who name="sam">'			+			'Sam Decrock'			+			'<location>Belgium</location>'			+		'</who>'			+ 		'<who name="jack">Jack Johnsen</who>'			+		'<games age="6">'			+			'<game>Some great game</game>'			+			'<game>Some other great game</game>'			+		'</games>'			+		'<note>These are some notes</note>'			+	'</response>';
