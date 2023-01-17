@@ -6,6 +6,13 @@
     padding: 0;                   /* 定义内边距*/
   }
 
+/* TODO */
+:root {
+  --background-color: white;
+  --link-color: darkred;
+  --text-color: black;
+}
+
 .example {
     /**
     布局定位属性：display、position、float、clear、visbility、overflow、(建议display第一个写，毕竟关系到模式)
