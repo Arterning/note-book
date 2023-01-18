@@ -41,13 +41,3 @@ http://localhost:8080/v1/expand/?shorturl=5laZG
   "UrlLong": "http://google.com"
 }
 ```
-
-go mod init shorturl
-
-go run main.go
-提示你需要go get...
-
-go get github.com/astaxie/beego
-go get github.com/beego/samples/shorturl/controllers
-
-go mod download
