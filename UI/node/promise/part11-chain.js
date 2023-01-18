@@ -17,7 +17,7 @@ p.then(value => {
         resolve('200 ok');
     })
 }).then(value => {
-    console.log(value);
+    console.log(value);//200 ok
 }).then(value => {
-    console.log(value);
+    console.log(value);//undefined
 })
