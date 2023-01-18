@@ -17,6 +17,32 @@ fs.readFile('../file/1.html',(err, data1) => {
     })
 })
 
+function readFileByPromise() {
+
+    try {
+        let data1;
+        let data2;
+        let data3;
+        mineReadFile('../file/1.html')
+        .then(value1 => {
+            data1 = value1;
+            return mineReadFile('../file/2.html')//return new promise
+        })
+        .then(value2 => {
+            data2 = value2;
+            return mineReadFile('../file/3.html')//return new promise
+        })
+        .then(value3 => {
+            data3 = value3;
+        });
+        //const data4 = await mineReadFile('../file/4.html'); 
+        console.log(data1 + ',' + data2 + ',' + data3);
+    } catch (error) {
+        console.log(error);
+    }
+   
+}
+
 /**
  * async await的写法
  */
