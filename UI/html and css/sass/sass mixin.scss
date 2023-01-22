@@ -1,0 +1,45 @@
+/**
+
+可以把他当成一个大型的结构体
+使用@include使用
+**/
+
+@mixin test {
+    color: pink;
+}
+
+
+.wrapper {
+    @include test;
+    width: 10px;
+}
+
+
+//接受参数的minxin
+@mixin test-function($color, $hover, $visited){
+    color:$color;
+    &:hover{
+        color: $hover
+    };
+    &:visited{
+        color:$visited
+    };
+}
+
+
+a {
+    @include test-function(blue, red, yellow)
+}
+
+//compiled css
+a {
+    color : blue;
+}
+
+a:hover {
+    color:red;
+}
+
+a:visited {
+    color:yellow;
+}
