@@ -46,7 +46,7 @@ class Student {
     // ...
 
     @OneToMany(mappedBy = "student")
-    Set<CourseRating> ratings;
+    Set<CourseRegistration> ratings;
 
     // ...
 }
@@ -56,7 +56,7 @@ class Course {
     // ...
 
     @OneToMany(mappedBy = "course")
-    Set<CourseRating> ratings;
+    Set<CourseRegistration> ratings;
 
     // ...
 }
