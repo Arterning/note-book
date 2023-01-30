@@ -1,9 +1,0 @@
-coverage.txt
-coverage.html
-*.swp
-.tools
-mocks
-bin
-test/report
-.vscode
-test/testdata/enwiki-latest-abstract1.xml
