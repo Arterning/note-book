@@ -119,3 +119,14 @@ function bar() {
 可以看到实际上就是用Promsise把结果包装了一下
 然后await相当于then 把结果获取出来
  */
+
+/**
+ * 
+ * 之所以当时对为什么叫async有疑惑
+ * 因为await代表会等待 应该叫做同步 sync才对啊？
+ * 
+ * 有了上面的解释就好说了
+ * 只有await那一行是同步
+ * 加了async的整个函数依然是异步的，只是new了一个Promise对象
+ * 只有在调用方调用task的时候前面加了await 才会等待Promise里面的结果
+ */
