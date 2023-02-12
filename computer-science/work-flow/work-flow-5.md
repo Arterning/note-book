@@ -1,18 +1,19 @@
+# git 撤销修改
 
-# git撤销修改
 git checkout -- readme.txt
 撤销所有修改
 git checkout ..
 
 # mysql 各个版本
+
 1. MySQL Community Server 社区版本，开源免费，但不提供官方技术支持。
-2. MySQL Enterprise Edition 企业版本，需付费，可以试用30天。
-3. MySQL Cluster 集群版，开源免费。可将几个MySQL Server封装成一个Server。
+2. MySQL Enterprise Edition 企业版本，需付费，可以试用 30 天。
+3. MySQL Cluster 集群版，开源免费。可将几个 MySQL Server 封装成一个 Server。
 4. MySQL Cluster CGE 高级集群版，需付费。
-5. MySQL Workbench（GUI TOOL）一款专为MySQL设计的ER/数据库建模工具。它是著名的数据库设计工具DBDesigner4的继任者。MySQL Workbench又分为两个版本，分别是社区版（MySQL Workbench OSS）、商用版（MySQL Workbench SE）。
+5. MySQL Workbench（GUI TOOL）一款专为 MySQL 设计的 ER/数据库建模工具。它是著名的数据库设计工具 DBDesigner4 的继任者。MySQL Workbench 又分为两个版本，分别是社区版（MySQL Workbench OSS）、商用版（MySQL Workbench SE）。
 
+# docker 基础命令
 
-# docker基础命令
 ```shell
 uname -r
 
@@ -34,7 +35,7 @@ systemctl enable docker
 systemctl stop docker
 
 #检索
-docker search tomcat 
+docker search tomcat
 docker search redis
 
 #tag可选 tag就是镜像的版本
@@ -55,7 +56,7 @@ docker run -p 8888:8080 --name mytomcat -d tomcat:latest -v /root/docker/tomcat/
 
 
 #查看运行中的容器
-docker ps  
+docker ps
 docker ps -a
 
 #停止指定的容器
@@ -67,8 +68,8 @@ docker rm 容器id
 
 ```
 
-
 # 其他
+
 潜伏
 人间正道是沧桑
 长征
@@ -91,13 +92,10 @@ docker rm 容器id
 
 “打仗不是纸上谈兵，画一个箭头就可以达到目的地的
 
-
 经常看到有些函数的参数用下划线开头，有什么特殊意义吗？
-一般有两个作用：
-1.不易被其他用户重新定义导致错误
-2.程序内部调用的函数，一般用户不会使用
+一般有两个作用： 1.不易被其他用户重新定义导致错误 2.程序内部调用的函数，一般用户不会使用
 
 只是一种特殊的命名风格吧
 
-helloGithub项目
-介绍有趣的github项目
+helloGithub 项目
+介绍有趣的 github 项目

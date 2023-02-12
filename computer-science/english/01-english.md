@@ -1,3 +1,19 @@
+# doc
+
+## spring
+
+- https://docs.spring.io/spring-framework/docs/current/reference/html/index.html
+
+- https://spring.io/guides/gs/scheduling-tasks/
+
+# sentence
+
+(in that the presence of setter methods and appropriate constructors on classes makes them easier to wire together in a test without having to set up service locator registries and similar structures).
+
+（因为类上存在 setter 方法和适当的构造函数使它们更容易在测试中连接在一起，而无需设置服务定位器注册表和类似结构）。
+
+# 词汇
+
 - Appendix 附录
 - advocates 主张
 - integral
