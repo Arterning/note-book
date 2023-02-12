@@ -4,6 +4,10 @@
 
 # psotgres 数据库
 
+这里使用 EnterpriseDB 来下载安装，EnterpriseDB 是全球唯一一家提供基于 PostgreSQL 企业级产品与服务的厂商。
+
+下载地址：https://www.enterprisedb.com/downloads/postgres-postgresql-downloads。
+
 官网下载可执行程序 直接执行
 
 # 编程语言
