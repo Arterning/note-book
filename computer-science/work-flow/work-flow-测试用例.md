@@ -48,3 +48,51 @@ Mockito 是一个 Java 库，用于模拟对象以实现单元测试。MockitoJU
 如果没有使用 MockitoJUnitRunner，则需要手动使用 MockitoAnnotations.initMocks(this) 方法初始化模拟对象，而使用 MockitoJUnitRunner 后，Mockito 将自动完成这一步。
 
 因此，添加 @RunWith(MockitoJUnitRunner.class) 注解是为了方便地使用 Mockito 进行测试，并不强制要求使用该注解。
+
+# spring repository 测试
+
+```java
+@Entity
+public class Person {
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private String firstName;
+
+    private String lastName;
+
+    // Getters and setters omitted for brevity
+}
+
+public interface PersonRepository extends JpaRepository<Person, Long> {
+    Optional<Person> findByLastName(String lastName);
+}
+
+
+// 在这个测试中，你可以使用 TestEntityManager 插入一个 Person 实体并且查询它，以验证 PersonRepository 的数据访问功能是否正确。
+@DataJpaTest
+public class PersonRepositoryTest {
+
+    @Autowired
+    private TestEntityManager entityManager;
+
+    @Autowired
+    private PersonRepository personRepository;
+
+    @Test
+    public void findByLastName_shouldReturnPerson() {
+        // given
+        Person peterPan = new Person("Peter", "Pan");
+        entityManager.persist(peterPan);
+        entityManager.flush();
+
+        // when
+        Optional<Person> result = personRepository.findByLastName("Pan");
+
+        // then
+        assertThat(result).isNotEmpty().get().isEqualToComparingFieldByField(peterPan);
+    }
+}
+
+```
