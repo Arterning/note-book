@@ -7,6 +7,6 @@ DROP INDEX [indexName] ON mytable;
 CREATE UNIQUE INDEX indexName ON mytable(username(length)) 
 
 
-显示索引信息
-你可以使用 SHOW INDEX 命令来列出表中的相关的索引信息。可以通过添加 \G 来格式化输出信息。
+-- 显示索引信息
+-- 你可以使用 SHOW INDEX 命令来列出表中的相关的索引信息。可以通过添加 \G 来格式化输出信息。
 mysql> SHOW INDEX FROM table_name\G
