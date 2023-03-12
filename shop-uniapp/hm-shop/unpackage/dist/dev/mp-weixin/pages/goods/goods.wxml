@@ -1,0 +1,1 @@
+<view class="bgc"><goods-list vue-id="576f0adc-1" list="{{list}}" bind:__l="__l"></goods-list><block wx:if="{{listEnd}}"><view class="fotter"><text>我是有底线的！！！</text></view></block></view>
