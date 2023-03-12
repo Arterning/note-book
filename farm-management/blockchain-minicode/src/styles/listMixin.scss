@@ -1,0 +1,85 @@
+/*
+ * @Description  : 列表查询页面共用样式
+ * @Autor        : Hemingway
+ * @Date         : 2021-09-15 10:39:56
+ * @LastEditors  : Please set LastEditors
+ * @LastEditTime : 2021-11-25 15:22:22
+ * @FilePath     : \blockchain-minicode\src\styles\listMixin.scss
+ */
+
+
+// 筛选按钮
+.icon {
+    margin-left: 32rpx;
+}
+
+::v-deep .uni-calendar--fixed {
+    bottom: 300rpx !important;
+}
+
+
+// 筛选组件插槽
+.screen-wrapper {
+    padding-bottom: 24rpx;
+    background-color: $uni-bg-color-page;
+
+    .screen-wrapper--inner {
+        padding-bottom: 12rpx;
+        background-color: #fff;
+        border-radius: 0 0 24rpx 24rpx;
+
+        .title {
+            padding: 0 24rpx;
+            height: 84rpx;
+            display: flex;
+            justify-content: space-between;
+            line-height: 84rpx;
+            font-size: 26rpx;
+            font-weight: bold;
+        }
+
+        .section {
+            margin: 0;
+            padding: 0 24rpx 20rpx;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+
+            ::v-deep .uni-date__x-input {
+                font-size: 24rpx;
+            }
+        }
+    }
+}
+
+::v-deep .segmented-control {
+    margin: 24rpx 16rpx 8rpx;
+    background-color: #fff;
+}
+
+// 列表
+::v-deep .uni-list {
+    background-color: transparent !important;
+}
+
+// 卡片插槽
+.card__footer {
+    height: 104rpx;
+    font-size: 28rpx;
+    // font-weight: 600;
+    color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card__footer::after {
+    content: '';
+    border-top: 1rpx solid #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: scaleY(0.5);
+}
