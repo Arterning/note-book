@@ -1,0 +1,18 @@
+/**
+写的时候，他们的顺序尽量不要颠倒,按照lvha的顺序。
+a:link  未访问的链接
+a:visited  已访问的链接
+a:hover  鼠标移动到链接上
+a:active  选定的链接
+**/
+
+a {   /* a是标签选择器  所有的链接 */
+    font-weight: 700;
+    font-size: 16px;
+    color: gray;
+       text-decoration: none; /* 清除链接默认的下划线*/
+}
+
+ a:hover {   /* :hover 是链接伪类选择器 鼠标经过 */
+    color: red; /*  鼠标经过的时候，由原来的 灰色 变成了红色 */
+ }

@@ -1,0 +1,15 @@
+/**
+这个没搞明白
+这和@include有什么区别？
+
+**/
+
+.error {
+    border: 1px solid pink;
+    background-color: blue;
+}
+
+.aError {
+    @extend .error;
+    width: 10px;
+}

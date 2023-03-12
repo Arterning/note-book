@@ -1,0 +1,28 @@
+/**
+使用sass可以轻松的把多个内容嵌套在一起
+而不用像css一样需要分开写
+这应该是最有用的特性
+**/
+
+
+#content {
+    div {
+        h1 {
+            border: 1px solid pink;
+        }
+
+        p {
+            width:100px;
+        }
+    }
+}
+
+
+//compiled css
+#content div h1 {
+    border: 1px solid pink;
+}
+
+#content div p {
+    width: 100px;
+}
