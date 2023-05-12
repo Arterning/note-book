@@ -1,8 +1,0 @@
-/**
-
-1. 导入外部scss文件 不需要添加后缀 .scss
-2. 不可以导入css文件
-3. scss编译的时候 优先把import导入的内容进行编译再导出到css文件
-4. 可以只导入scss文件内的局部内容 比如
-@import "./part/abc" 只导入part.scss下的abc样式
-**/

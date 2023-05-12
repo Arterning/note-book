@@ -1,7 +1,0 @@
--- WHERE SALARY::text LIKE '200%'	找出 SALARY 字段中以 200 开头的数据。
--- WHERE SALARY::text LIKE '%200%'	找出 SALARY 字段中含有 200 字符的数据。
--- WHERE SALARY::text LIKE '_00%'	找出 SALARY 字段中在第二和第三个位置上有 00 的数据。
--- WHERE SALARY::text LIKE '2 % %'	找出 SALARY 字段中以 2 开头的字符长度大于 3 的数据。
--- WHERE SALARY::text LIKE '%2'	找出 SALARY 字段中以 2 结尾的数据
--- WHERE SALARY::text LIKE '_2%3'	找出 SALARY 字段中 2 在第二个位置上并且以 3 结尾的数据
--- WHERE SALARY::text LIKE '2___3'	找出 SALARY 字段中以 2 开头，3 结尾并且是 5 位数的数据
