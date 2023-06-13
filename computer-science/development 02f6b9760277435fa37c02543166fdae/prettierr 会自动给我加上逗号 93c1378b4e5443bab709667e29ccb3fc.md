@@ -1,0 +1,18 @@
+# prettierr 会自动给我加上逗号
+
+Created time: June 13, 2023 11:23 AM
+Tags: Prettier
+
+# 为什么我每次保存 prettierr 会自动给我加上逗号？我该如何配置
+
+Prettier 是一个代码格式化工具，它通过自动维护代码的格式来帮助提高代码的可读性和一致性。
+
+如果你不想让 Prettier 自动加入逗号，你可以在项目的配置文件中（例如 .prettierrc 文件）中禁用它。可以在配置文件中添加以下代码：
+
+`{
+  "trailingComma": "none"
+}`
+
+这样，Prettier 就不会在末尾自动添加逗号了。请注意，你需要重新加载项目才能生效。
+
+如果你想使用不同的配置，请参阅 Prettier 的官方文档，以了解有关如何配置 Prettier 的更多信息。
