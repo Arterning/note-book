@@ -2,11 +2,12 @@
 
 # 基本概念
 举个例子，假如一个应用程序在名为myapp的目录中，并且docker-compose.yml如下所示：
+
 ```yml
 version: '2'
 services:
   web:
-    build: .
+    build: ../docker-compose
     ports:
       - "8000:8000"
   db:
