@@ -1,0 +1,51 @@
+try-catch-fifinally 
+
+当方法中发生异常，异常处之后的代码不会再执行，如果之前获取了一些本地资源需要释放，则需要在方法正常结束时和 catch 语句中都调用释放本地资源的代码，显得代码比较繁琐，fifinally 语句可以解决这个问题。 
+
+代码会进入 catch 代码块，之后进入 fifinally 代码块；若读取文件时未发生异常，则会跳过 catch 代码块直接进入 fifinally 代码块。所以无论代码中是否发生异常，fifianlly 中的代码都会执行。 
+
+即使 catch 中包含了 return 语句，fifinally 子句依然会执行。若 fifinally 中也包含 return 语句，fifinally 中的 return 会覆盖前面的 return. 
+
+
+Error 和 Exception 区别是什么？
+Error 类型的错误通常为虚拟机相关错误，如系统崩溃，内存不足，堆栈溢出等，编译器不会对这类错误进行检测，JAVA 应用程序也不应对这类错误进行捕获，一旦这类错误发生，通常应用程序会被终止，仅靠应用程序本身无法恢复； 
+Exception 类的错误是可以在应用程序中进行捕获并处理的，通常遇到这种错误，应对其进行处理，使应用程序可以继续正常运行。
+
+
+
+JVM 是如何处理异常的？
+JVM 会顺着调用栈去查找看是否有可以处理异常的代码，如果有，则调用异常处理代码。当 JVM发现可以处理异常的代时，会把发生的异常传递给它。如果 JVM 没有找到可以处理该异常的代码块，JVM 就会将该异常转交给默认的异常处理器（默认处理器为 JVM 的一部分），默认异常处理器打印出异常信息并终止应用程序。 
+
+
+NoClassDefFoundError 和 ClassNotFoundException 区别？
+NoClassDefFoundError 是一个 Error 类型的异常，是由 JVM 引起的，不应该尝试捕获这个异常。 
+引起该异常的原因是 JVM 或 ClassLoader 尝试加载某类时在内存中找不到该类的定义，该动作发生在运行期间，即编译时该类存在，但是在运行时却找不到了，可能是变异后被删除了等原因导致； 
+ClassNotFoundException 是一个受查异常，需要显式地使用 try-catch 对其进行捕获和处理，或在方法签名中用 throws 关键字进行声明。当使用 Class.forName, ClassLoader.loadClass 或ClassLoader.fifindSystemClass 动态加载类到内存的时候，通过传入的类路径参数没有找到该类，就会抛出该异常；另一种抛出该异常的可能原因是某个类已经由一个类加载器加载至内存中，另一个加载器又尝试去加载它。
+
+
+常见的 RuntimeException 有哪些？
+ClassCastException(类转换异常) 
+IndexOutOfBoundsException(数组越界) 
+NullPointerException(空指针) 
+
+除 RuntimeException 及其子类外，其他的Exception 异常都属于受检异常。编译器会检查此类异常，也就是说当编译器检查到应用中的某 处可能会此类异常时，将会提示你处理本异常——要么使用try-catch捕获，要么使用方法签名中用 throws 关键字抛出，否则编译不通过。
+比如NumberFormatException
+
+
+常见Error
+java.lang.OutOfMemoryError：内存不足错误。当可用内存不足以让Java虚拟机分配给一个对象时抛出该错误。 
+java.lang.StackOverflflowError：堆栈溢出错误。当一个应用递归调用的层次太深而导致堆栈溢出或者陷入死循环时抛出该错误。 
+
+
+包装异常时不要抛弃原始的异常
+
+异常会影响性能
+
+
+
+
+
+
+
+
+

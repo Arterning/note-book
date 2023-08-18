@@ -1,0 +1,5 @@
+ThreadLoal是以空间换取时间,
+Synchronized是以时间换取空间.
+
+ThreadLocal应用举例
+hibernate中的session就是存放在ThreadLocal中

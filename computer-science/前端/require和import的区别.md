@@ -26,7 +26,6 @@ export * from 'fs'
 
 1. 引入 export default 导出的模块不用加 {},引入非 export default 导出的模块需要加 {}
 2. 一个文件只能导出一个 default 模块。
-3. 
 
 # 总结
 require是CommonJS的规范 是为服务器开发设计的
