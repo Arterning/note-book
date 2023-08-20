@@ -1,3 +1,17 @@
+# 换行符配置
+
+core.autocrf
+- true 提交时改成LF，检出时改成CRLF:
+- input:提交时改成LF，检出时不改
+- false: 提交时是什么就是什么，不改换行符，检出时也不改
+
+core.safecrf
+- true: 拒绝提交包含混合换行符的文件
+- false: 允许提交包含混合换行符的文件
+- warn: 提交包含混合换行符的文件时给出警告
+(会提示 Fatal:xxx)
+
+
 # 00-git配置信息管理.md
 
 

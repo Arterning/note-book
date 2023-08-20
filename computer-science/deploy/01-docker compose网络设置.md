@@ -27,11 +27,12 @@ services:
 
 # Link
 前文讲过，默认情况下，服务之间可使用服务名称相互访问。links允许我们定义一个别名，从而使用该别名访问其他服务。举个例子：
+
 ```yml
 version: '2'
 services:
   web:
-    build: .
+    build: docker/01
     links:
       - "db:database"
   db:

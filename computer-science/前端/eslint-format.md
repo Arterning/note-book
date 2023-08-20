@@ -1,7 +1,17 @@
 
 
 ## webstorm
+设置eslint 格式化
+
 ![img.png](img.png)
+
+设置Nodejs路径为wsl ubuntu的路径
+
+![img_1.png](img_1.png)
+
+这样点击package.json中的运行图标即可运行项目，不用敲击命令
+
+我喜欢这样，越简单越好。
 
 ## vscode
 
