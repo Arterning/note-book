@@ -1,3 +1,27 @@
+
+
+## Redis 发布订阅 是订阅 runoobChat 频道。
+redis 127.0.0.1:6379> SUBSCRIBE runoobChat
+
+
+往 runoobChat 频道发送消息
+redis 127.0.0.1:6379> PUBLISH runoobChat "Redis PUBLISH test"
+redis 127.0.0.1:6379> PUBLISH runoobChat "Learn redis by runoob.com"
+
+
+
+## 事务
+MULTI 开始一个事务， 然后将多个命令入队到事务中， 最后由 EXEC 命令触发事务
+
+
+## Rdis PipeLine
+管道（pipeline）可以一次性发送多条命令给服务端，服务端依次处理完完毕后，通过一条响应一次性将结果返回
+pipeline是非原子性
+事务是原子性的
+https://juejin.cn/post/6844904127001001991
+
+## question
+
 https://cloud.tencent.com/developer/article/1814536
 
 
@@ -129,10 +153,30 @@ Redis 的同步机制了解么？
 主（Master）和从（Slave）分别部署在不同的服务器上，当主节点服务器写入数据时，同时也会将数据同步至从节点服务器，通常情况下，主节点负责写入数据，而从节点负责读取数据。
 
 
+## 缓存穿透 缓存击穿 缓存雪崩
 
-http://c.biancheng.net/redis/slaveof.html
-http://c.biancheng.net/redis/sentinel-model.html
+缓存穿透是指数据库原本就没有的数据，请求如入无人之境，直奔数据库
+
+而缓存击穿，则是指数据库有数据，缓存也本应该有数据，但是突然缓存过期了，这层保护屏障被击穿了，请求直奔数据库
+
+缓存雪崩则是指很多缓存同一个时间失效了，流量全部涌入数据库，造成数据库极大的压力。
 
 
+## 如何保证缓存与数据库双写的一致性
 
-https://cloud.tencent.com/developer/article/1691979
+读的时候，先读缓存，缓存没有的话，就读数据库，然后取出数据后放入缓存，
+
+同时返回请求。
+更新的时候，先删除缓存，然后再更新数据库。
+
+
+先删除缓存，再更新数据库。
+如果数据库更新失败了，那么数据库中是旧数据，缓存是空的，那么数据不会不一致。
+
+因为读的时候缓存没有了，所以读了数据库中的旧数据，然后更新到缓存中。
+
+
+```javascript
+cache.invalidate()
+db.update()
+```
