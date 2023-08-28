@@ -514,5 +514,3 @@ import { PostService } from '../services/post.service';
 export class AppModule {}
 ```
 接下来我们就可以切换不同的方式，在原来的全文搜索中传入`search`字符来尝试全文搜索啦！
-
-![202302010734992.png](https://cdn.nlark.com/yuque/0/2023/png/309347/1676989842823-241f0320-8102-4fb7-af4e-39351a42074d.png#averageHue=%232c2c2c&clientId=u83104e58-bdda-4&from=ui&id=u11d990cd&originHeight=1888&originWidth=2942&originalType=binary&ratio=1.5625&rotation=0&showTitle=false&size=503427&status=done&style=none&taskId=u2678ba2f-620a-4638-b3ac-e06010303c0&title=)

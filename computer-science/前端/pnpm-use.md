@@ -11,3 +11,11 @@
 3. **工程设置：** pnpm 需要每个项目的配置文件来决定如何处理依赖。在某些情况下，这可能需要一些额外的配置工作。
 
 总体而言，pnpm 的目标是在提供一种更加高效的依赖管理方式的同时，尽可能地减少磁盘使用。然而，使用 pnpm 时仍然需要谨慎，特别是在处理复杂的项目结构和依赖关系时，建议在小范围内进行测试以确保一切正常。
+
+## npm 包安装失败“npm ERR！错误：EACCES：权限被拒绝
+
+```bash
+ pnpm config set unsafe-perm true
+```
+
+- https://github.com/microsoft/WSL/issues/14
