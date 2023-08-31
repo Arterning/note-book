@@ -13,23 +13,21 @@
 2. sdafsdkf
 3. sdfsdaf
 
-插入一个连接
-<http://www.google.com>
+## 超链接
+- [google.com](google)
 
 
-插入图片
-![图片描述](https://cdn.nlark.com/yuque/0/2022/png/29571232/1671589939837-4883124e-3cf2-462b-aea8-b01bc1dfaa4a.png)
-
-![aa](https://cdn.nlark.com/yuque/0/2022/png/29571232/1671589939837-4883124e-3cf2-462b-aea8-b01bc1dfaa4a.png)
+## 插入图片
+![love](love.png)
 
 
 下面是一个分割线
 ---
 
-名人语录的引用
+## 引用
 >huangning是天才------鲁迅
 
-这是一个代码块。
+## 代码块
 ```java
 import java.util.*;
 public class T{
