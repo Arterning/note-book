@@ -1,0 +1,196 @@
+{
+  "main": {
+    "id": "fd4bf5a3c30b4da3",
+    "type": "split",
+    "children": [
+      {
+        "id": "0331f59247c2130a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5fc8461da49004f3",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "549b634f483af6ff",
+    "type": "split",
+    "children": [
+      {
+        "id": "7222e4c9360fda2b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "127f56f716322723",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "dbbf81ff3ba0cd44",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7e651e520b35996a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 220.5
+  },
+  "right": {
+    "id": "6ee6a3f8df298175",
+    "type": "split",
+    "children": [
+      {
+        "id": "2507473d7d0ae0d9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "843126e593026dd7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "interview/backEnd/spring/SpringCloud面试题.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "135cf76f4916d172",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "interview/backEnd/spring/SpringCloud面试题.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d6a291e957ceea1a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "98f11f78cfba5c1f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "interview/backEnd/spring/SpringCloud面试题.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "127f56f716322723",
+  "lastOpenFiles": [
+    "interview/backEnd/spring/SpringBoot面试题.md",
+    "interview/backEnd/spring/Spring面试题.md",
+    "interview/backEnd/other/参考.md",
+    "interview/backEnd/java/jvm面试题.md",
+    "interview/backEnd/java/java源码分析面试题.md",
+    "interview/backEnd/java/java异常面试题.md",
+    "interview/backEnd/java/java集合面试题.md",
+    "interview/backEnd/db/redis.md",
+    "interview/backEnd/db/mysql.md",
+    "interview/backEnd/db/mq.md",
+    "interview/backEnd/数据结构/LRU原理.md",
+    "interview/backEnd/数据结构/LRU新增.png",
+    "interview/backEnd/数据结构/LRU访问006.png",
+    "interview/backEnd/数据结构/LRU访问002.png",
+    "interview/backEnd/数据结构/LinkedHashMap结构.png",
+    "interview/backEnd/分布式知识/什么是分区容错性.md",
+    "interview 1/其他总结.md",
+    "2023-10-06.md",
+    "命名规范.md",
+    "love.png",
+    "README.md",
+    "Untitled.canvas",
+    "markdown.md",
+    "Untitled 1.canvas",
+    "computer-science/arch/system/网关技术选型，为什么选择 Openresty.md",
+    "computer-science/arch/system/外部接口大量超时，把整个系统拖垮，引发雪崩！如何解决？熔断.md",
+    "computer-science/arch/system/如何设计一个高并发系统？.md",
+    "computer-science/arch/system/人人都是架构师？！谈何容易！.md",
+    "computer-science/arch/system/海量数据业务有哪些优化手段？.md",
+    "computer-science/arch/system/【高并发、高性能、高可用】系统设计经验.md",
+    "computer-science/arch/system/为什么是 HTTP2 ，而不是HTTP2.0 ？.md",
+    "computer-science/arch/system/中台不是万能药！.md",
+    "computer-science/arch/system/gRPC 网关，针对 HTTP 2.0 长连接性能优化，提升吞吐量.md",
+    "computer-science/前端/img.png",
+    "computer-science/前端/img_1.png",
+    "computer-science/tool",
+    "web-dev",
+    "img/星球介绍.jpg",
+    "opensource",
+    "computer-science/middleware/redis",
+    "computer-science/middleware/mysql",
+    "computer-science/middleware/mq",
+    "computer-science/middleware",
+    "interview 1/tech",
+    "interview 1/skill",
+    "img",
+    "articles/经济/jj_3_2022-01-01_11-27.png",
+    "articles/经济/jj_5_巨大的贫富差距.png"
+  ]
+}
