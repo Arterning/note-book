@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "0331f59247c2130a",
+        "id": "df6ae47eedfd9453",
         "type": "tabs",
         "children": [
           {
-            "id": "5fc8461da49004f3",
+            "id": "37cda90371f4023c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "computer-science/tool/docker/deploy.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "border box",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "interview/backEnd/spring/SpringCloud面试题.md",
+                "file": "computer-science/tool/docker/deploy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "interview/backEnd/spring/SpringCloud面试题.md",
+                "file": "computer-science/tool/docker/deploy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "interview/backEnd/spring/SpringCloud面试题.md"
+                "file": "computer-science/tool/docker/deploy.md"
               }
             }
           }
@@ -142,54 +146,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "127f56f716322723",
+  "active": "37cda90371f4023c",
   "lastOpenFiles": [
-    "interview/backEnd/spring/SpringBoot面试题.md",
-    "interview/backEnd/spring/Spring面试题.md",
-    "interview/backEnd/other/参考.md",
-    "interview/backEnd/java/jvm面试题.md",
-    "interview/backEnd/java/java源码分析面试题.md",
-    "interview/backEnd/java/java异常面试题.md",
-    "interview/backEnd/java/java集合面试题.md",
-    "interview/backEnd/db/redis.md",
-    "interview/backEnd/db/mysql.md",
-    "interview/backEnd/db/mq.md",
-    "interview/backEnd/数据结构/LRU原理.md",
+    "computer-science/后端/node/node install.md",
+    "computer-science/tool/docker/deploy.md",
+    "computer-science/tool/docker",
+    "computer-science/tool/linux/nohup.md",
+    "computer-science/tool/linux/端口占用.md",
+    "computer-science/tool/linux",
+    "computer-science/前端/eslint-format.md",
+    "computer-science/前端/tailwind.md",
+    "computer-science/前端/img_1.png",
+    "computer-science/前端/img.png",
+    "computer-science/思考/merged.md",
+    "computer-science/template/03.md",
+    "computer-science/template/02.md",
+    "computer-science/template/01.md",
+    "interview 1/middleware/mq/关于消息队列，面试官一般都会问哪些.md",
+    "computer-science/deploy/01-docker compose网络设置.md",
+    "computer-science/deploy/k8s教程.md",
+    "computer-science/deploy/01-环境安装.md",
+    "computer-science/deploy/01-为什么需要配置挂载文件.md",
+    "computer-science/tool/命令行代理设置.md",
+    "computer-science/tool/安全证书配置/关于nginx安装openssl自签名证书.md",
+    "computer-science/tool/安全证书配置/openssl用法详解.md",
+    "computer-science/tool/安全证书配置/doc.md",
+    "computer-science/tool/git/git 基本设置.md",
+    "computer-science/tool/git/git 仓库瘦身.md",
+    "computer-science/tool/git/git 使用.md",
+    "computer-science/tool/git/密钥配置.md",
+    "computer-science/tool/git/git 合并仓库保留历史记录.md",
+    "2023-10-07.md",
+    "2023-10-06.md",
+    "Untitled.canvas",
+    "love.png",
+    "computer-science/前端/vue",
     "interview/backEnd/数据结构/LRU新增.png",
     "interview/backEnd/数据结构/LRU访问006.png",
     "interview/backEnd/数据结构/LRU访问002.png",
     "interview/backEnd/数据结构/LinkedHashMap结构.png",
-    "interview/backEnd/分布式知识/什么是分区容错性.md",
-    "interview 1/其他总结.md",
-    "2023-10-06.md",
-    "命名规范.md",
-    "love.png",
-    "README.md",
-    "Untitled.canvas",
-    "markdown.md",
     "Untitled 1.canvas",
-    "computer-science/arch/system/网关技术选型，为什么选择 Openresty.md",
-    "computer-science/arch/system/外部接口大量超时，把整个系统拖垮，引发雪崩！如何解决？熔断.md",
-    "computer-science/arch/system/如何设计一个高并发系统？.md",
-    "computer-science/arch/system/人人都是架构师？！谈何容易！.md",
-    "computer-science/arch/system/海量数据业务有哪些优化手段？.md",
-    "computer-science/arch/system/【高并发、高性能、高可用】系统设计经验.md",
-    "computer-science/arch/system/为什么是 HTTP2 ，而不是HTTP2.0 ？.md",
-    "computer-science/arch/system/中台不是万能药！.md",
-    "computer-science/arch/system/gRPC 网关，针对 HTTP 2.0 长连接性能优化，提升吞吐量.md",
-    "computer-science/前端/img.png",
-    "computer-science/前端/img_1.png",
     "computer-science/tool",
     "web-dev",
     "img/星球介绍.jpg",
     "opensource",
-    "computer-science/middleware/redis",
-    "computer-science/middleware/mysql",
-    "computer-science/middleware/mq",
-    "computer-science/middleware",
-    "interview 1/tech",
-    "interview 1/skill",
-    "img",
+    "interview 1/middleware/redis",
+    "interview 1/middleware/mysql",
+    "interview 1/middleware/mq",
+    "interview 1/middleware",
     "articles/经济/jj_3_2022-01-01_11-27.png",
     "articles/经济/jj_5_巨大的贫富差距.png"
   ]
