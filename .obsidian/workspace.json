@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "2839dee3b5b52006",
+        "id": "f1ddae5e830cb12b",
         "type": "tabs",
         "children": [
           {
-            "id": "dd5d9a4bbfadca4c",
+            "id": "1b816425917e958a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "computer-science/碎片/docker start minio.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "computer-science/碎片/docker start minio.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "computer-science/碎片/docker start minio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "computer-science/碎片/docker start minio.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,37 +138,39 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dd5d9a4bbfadca4c",
+  "active": "1b816425917e958a",
   "lastOpenFiles": [
-    "computer-science/后端/nginx/解决跨域问题.md",
-    "computer-science/碎片/docker start minio.md",
-    "computer-science/后端/nginx/VPS 使用的配置.md",
-    "computer-science/后端/nginx/nginx 多个webapp.md",
-    "computer-science/后端/nginx/负载均衡.md",
-    "computer-science/碎片/数据库里如何存储 Markdown, Textile 这样的语法文本.md",
-    "computer-science/后端/nginx",
-    "interview 1/应该如何理解高并发，我提供一个思路，助力大家从容应对面试.md",
-    "interview 1/总结/ES 总结.md",
-    "interview 1/总结/其他总结.md",
-    "interview 1/总结/Redis 总结.md",
-    "interview 1/总结/MQ 总结.md",
-    "interview 1/总结/Mysql总结.md",
-    "interview 1/总结",
+    "computer-science/后端/spring/避免NPE.md",
+    "computer-science/后端/spring/spring boot 基本使用.md",
+    "computer-science/后端/spring/spring boot 配置文件.md",
+    "computer-science/后端/spring/spring test.md",
     "computer-science/后端/数据库选择.md",
     "computer-science/后端/QPS 等概念和指标.md",
-    "computer-science/后端/redis/redis 分布式锁.md",
+    "computer-science/碎片/work note.md",
+    "computer-science/碎片/pnpm 切换node 版本.md",
+    "computer-science/碎片/docker start minio.md",
+    "computer-science/碎片/数据库里如何存储 Markdown, Textile 这样的语法文本.md",
+    "2023-10-07.md",
+    "computer-science/前端/gastby/基本使用.md",
+    "computer-science/后端/spring",
+    "computer-science/前端/gastby",
+    "interview 1/应该如何理解高并发，我提供一个思路，助力大家从容应对面试.md",
+    "interview 1/tech/操作系统那点破事.md",
+    "interview 1/middleware/mq/关于消息队列，面试官一般都会问哪些.md",
+    "2023-10-06.md",
+    "interview 1/middleware/mysql/讲一讲 MySQL 数据备份杀手锏 binlog.md",
+    "interview 1/总结/Redis 总结.md",
+    "interview 1/总结/Mysql总结.md",
+    "interview 1/总结/MQ 总结.md",
+    "interview 1/总结/ES 总结.md",
+    "interview 1/总结/其他总结.md",
+    "interview/frontEnd/base64.md",
+    "interview/frontEnd/BFC.md",
+    "interview/frontEnd/webpack.md",
+    "interview/frontEnd/闭包.md",
+    "computer-science/后端/nginx",
+    "interview 1/总结",
     "computer-science/后端/redis",
-    "computer-science/后端/mysql/mysql锁优化.md",
-    "computer-science/后端/mysql/join和where条件.md",
-    "computer-science/后端/node/Node js 做服务端优缺点.md",
-    "computer-science/后端/redis/redis 发布订阅模型.md",
-    "computer-science/后端/redis/redis 队列.md",
-    "computer-science/后端/node/node install.md",
-    "computer-science/后端/node/express.md",
-    "computer-science/后端/node/ch06-node.md",
-    "computer-science/后端/node/ch05-TS学习路线.md",
-    "computer-science/后端/node/ch04-require和import的区别.md",
-    "computer-science/后端/node/ch03-pnpm.md",
     "computer-science/后端/mysql/010_索引结构_2022/010_索引结构_2022-01-04_21-22.png",
     "computer-science/后端/mysql/012_自适应哈希索引_2022/012_自适应哈希索引_2022-01-04_21-32.png",
     "computer-science/后端/mysql/012_InnoDB索引查询原理_2022/012_InnoDB索引查询原理_2022-01-04_21-29.png",
@@ -189,12 +183,10 @@
     "computer-science/前端/img.png",
     "Untitled.canvas",
     "love.png",
-    "computer-science/前端/vue",
     "interview/backEnd/数据结构/LRU新增.png",
     "interview/backEnd/数据结构/LRU访问006.png",
     "interview/backEnd/数据结构/LRU访问002.png",
     "interview/backEnd/数据结构/LinkedHashMap结构.png",
-    "Untitled 1.canvas",
-    "computer-science/tool"
+    "Untitled 1.canvas"
   ]
 }
