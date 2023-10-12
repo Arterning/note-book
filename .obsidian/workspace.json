@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "f1ddae5e830cb12b",
+        "id": "15102e67fe234763",
         "type": "tabs",
         "children": [
           {
-            "id": "1b816425917e958a",
+            "id": "55d6f15ababf1170",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "computer-science/后端/阻塞和非阻塞的概念.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "怪异",
+                "query": "合并多个仓库",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "computer-science/后端/阻塞和非阻塞的概念.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "computer-science/后端/阻塞和非阻塞的概念.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "computer-science/后端/阻塞和非阻塞的概念.md"
+              }
             }
           }
         ]
@@ -138,55 +146,55 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1b816425917e958a",
+  "active": "55d6f15ababf1170",
   "lastOpenFiles": [
-    "computer-science/后端/spring/避免NPE.md",
-    "computer-science/后端/spring/spring boot 基本使用.md",
-    "computer-science/后端/spring/spring boot 配置文件.md",
-    "computer-science/后端/spring/spring test.md",
-    "computer-science/后端/数据库选择.md",
-    "computer-science/后端/QPS 等概念和指标.md",
-    "computer-science/碎片/work note.md",
-    "computer-science/碎片/pnpm 切换node 版本.md",
-    "computer-science/碎片/docker start minio.md",
-    "computer-science/碎片/数据库里如何存储 Markdown, Textile 这样的语法文本.md",
-    "2023-10-07.md",
-    "computer-science/前端/gastby/基本使用.md",
-    "computer-science/后端/spring",
-    "computer-science/前端/gastby",
-    "interview 1/应该如何理解高并发，我提供一个思路，助力大家从容应对面试.md",
-    "interview 1/tech/操作系统那点破事.md",
-    "interview 1/middleware/mq/关于消息队列，面试官一般都会问哪些.md",
-    "2023-10-06.md",
-    "interview 1/middleware/mysql/讲一讲 MySQL 数据备份杀手锏 binlog.md",
-    "interview 1/总结/Redis 总结.md",
-    "interview 1/总结/Mysql总结.md",
-    "interview 1/总结/MQ 总结.md",
-    "interview 1/总结/ES 总结.md",
-    "interview 1/总结/其他总结.md",
-    "interview/frontEnd/base64.md",
-    "interview/frontEnd/BFC.md",
-    "interview/frontEnd/webpack.md",
-    "interview/frontEnd/闭包.md",
-    "computer-science/后端/nginx",
-    "interview 1/总结",
-    "computer-science/后端/redis",
+    "computer-science/文件命名规范.md",
+    "computer-science/后端/阻塞和非阻塞的概念.md",
+    "computer-science/前端/node interpreter.png",
+    "computer-science/前端/run eslint on save.png",
+    "computer-science/前端/tailwind.md",
+    "computer-science/前端/vue/Vue Layout作用.md",
+    "computer-science/前端/react/react-spring.md",
+    "computer-science/前端/react/react-hook.md",
+    "computer-science/前端/react/react-base.md",
+    "computer-science/前端/react/react useRef.md",
+    "computer-science/前端/react/react styled component.md",
+    "computer-science/前端/react/react router.md",
+    "computer-science/前端/react/react render props.md",
+    "computer-science/前端/react/react props state.md",
+    "computer-science/前端/react/react 胶水代码.md",
+    "computer-science/前端/react/react 箭头函数和普通函数.md",
+    "computer-science/前端/react/pure-component.md",
+    "computer-science/前端/react/gasby.md",
+    "computer-science/前端/react/component-communicate.md",
+    "computer-science/前端/vue/Vue 前端权限控制.md",
+    "tutorial/tutorial-extras/img/localeDropdown.png",
+    "tutorial/tutorial-extras/img/docsVersionDropdown.png",
+    "tutorial/tutorial-extras/translate-your-site.md",
+    "tutorial/tutorial-extras/manage-docs-versions.md",
+    "tutorial/tutorial-basics/create-a-page.md",
+    "tutorial/tutorial-basics/_category_.json",
+    "tutorial/tutorial-basics/markdown-features.mdx",
+    "tutorial/tutorial-basics/deploy-your-site.md",
+    "tutorial/tutorial-basics/create-a-document.md",
+    "tutorial/tutorial-basics/create-a-blog-post.md",
+    "tutorial/tutorial-basics/congratulations.md",
+    "tutorial/tutorial-extras/_category_.json",
+    "tutorial/tutorial-extras/img",
+    "tutorial/tutorial-basics",
+    "tutorial/tutorial-extras",
+    "tutorial/intro.md",
+    "tutorial",
+    "FrontEnd/vue",
+    "computer-science/前端/react/webpack",
+    "computer-science/前端/react/eslint",
+    "love.png",
     "computer-science/后端/mysql/010_索引结构_2022/010_索引结构_2022-01-04_21-22.png",
     "computer-science/后端/mysql/012_自适应哈希索引_2022/012_自适应哈希索引_2022-01-04_21-32.png",
     "computer-science/后端/mysql/012_InnoDB索引查询原理_2022/012_InnoDB索引查询原理_2022-01-04_21-29.png",
-    "computer-science/后端/mysql/mysql 内部实现",
-    "computer-science/碎片",
-    "computer-science/tool/k8s",
-    "computer-science/tool/docker",
-    "computer-science/tool/linux",
-    "computer-science/前端/img_1.png",
-    "computer-science/前端/img.png",
     "Untitled.canvas",
-    "love.png",
     "interview/backEnd/数据结构/LRU新增.png",
     "interview/backEnd/数据结构/LRU访问006.png",
-    "interview/backEnd/数据结构/LRU访问002.png",
-    "interview/backEnd/数据结构/LinkedHashMap结构.png",
     "Untitled 1.canvas"
   ]
 }

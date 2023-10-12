@@ -3,11 +3,11 @@
 ## webstorm
 设置eslint 格式化
 
-![img.png](img.png)
+![run eslint on save.png](run%20eslint%20on%20save.png)
 
 设置Nodejs路径为wsl ubuntu的路径
 
-![img_1.png](img_1.png)
+![node interpreter.png](node%20interpreter.png)
 
 这样点击package.json中的运行图标即可运行项目，不用敲击命令
 
