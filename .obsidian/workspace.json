@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "364c6026c7f75f26",
+        "id": "7fcc3e17fe4a9f02",
         "type": "tabs",
         "children": [
           {
-            "id": "5ae6e53c2317165e",
+            "id": "297e938544ee3c34",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "computer-science/projects/wipi/关于void.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "computer-science/projects/wipi/关于void.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "computer-science/projects/wipi/关于void.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "computer-science/projects/wipi/关于void.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,23 +138,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "127f56f716322723",
+  "active": "297e938544ee3c34",
   "lastOpenFiles": [
-    "computer-science/projects/wipi/后台系统.md",
-    "computer-science/projects/nest-todo/nest-todo.md",
-    "资源.md",
-    "命名规范.md",
     "2023-10-07.md",
-    "markdown template.md",
-    "README.md",
+    "2023-10-06.md",
+    "命名规范.md",
+    "资源.md",
+    "love.png",
     "markdown.md",
+    "markdown template.md",
     "Pasted image 20231016195651.png",
+    "README.md",
+    "work note.md",
+    "interview/backEnd/分布式知识/什么是分区容错性.md",
+    "computer-science/projects/nest-todo/nest-todo.md",
+    "computer-science/projects/wipi/ts类型定义.md",
+    "computer-science/projects/wipi/统一修改所有文件的换行符.md",
+    "computer-science/projects/wipi/关于void.md",
+    "computer-science/projects/wipi/后台系统.md",
+    "computer-science/projects/wipi/配置系统.md",
     "computer-science/projects/wipi/首页代码.md",
     "computer-science/projects/wipi/wipi  的报错.md",
-    "computer-science/projects/wipi/关于void.md",
-    "computer-science/projects/wipi/统一修改所有文件的换行符.md",
     "computer-science/projects/wipi/section和aside.md",
-    "computer-science/projects/wipi/ts类型定义.md",
     "computer-science/projects/wipi/useTrail动画.md",
     "computer-science/projects/wipi/window.postMessage 方法的作用.md",
     "computer-science/前端/svelet.md",
@@ -175,10 +172,6 @@
     "computer-science/前端/react/react render props.md",
     "computer-science/前端/react/react 胶水代码.md",
     "computer-science/前端/react/react-spring.md",
-    "computer-science/前端/es6/箭头函数的this.md",
-    "computer-science/前端/es6/常用api.md",
-    "computer-science/前端/es6/js和java stream对比.md",
-    "computer-science/前端/es6/ch05-拷贝.md",
     "computer-science/前端/性能",
     "computer-science/前端/node interpreter.png",
     "computer-science/前端/run eslint on save.png",
@@ -189,7 +182,6 @@
     "tutorial/tutorial-extras/_category_.json",
     "tutorial/tutorial-extras/img",
     "tutorial/tutorial-basics",
-    "love.png",
     "computer-science/后端/mysql/010_索引结构_2022/010_索引结构_2022-01-04_21-22.png",
     "computer-science/后端/mysql/012_自适应哈希索引_2022/012_自适应哈希索引_2022-01-04_21-32.png",
     "computer-science/后端/mysql/012_InnoDB索引查询原理_2022/012_InnoDB索引查询原理_2022-01-04_21-29.png",
