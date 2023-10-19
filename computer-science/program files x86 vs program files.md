@@ -1,0 +1,8 @@
+早些时候，Windows 操作系统只有 32 位版本。如果您今天仍在使用 32 位 Windows，您会注意到您的计算机上只有一种程序文件。它是“ _C:\Program Files_ ”文件夹。这里提到的Program Files文件夹是我们安装程序和存储数据的默认位置。通俗地说，这些程序将安装在 Program Files 文件夹中。
+
+流行的 64 位 Windows 版本也仅将程序安装到 Program Files 文件夹中。但 64 位版本的 Windows 也支持 32 位程序，并且 Microsoft 不希望 32 位和 64 位软件混合在同一位置。每当用户在具有 64 位 CPU 的系统上安装任何程序时，该程序的文件夹通常都会包含 64 位内容。每当 32 位程序尝试使用 64 位组件时，它都会面临许多问题。所以开发人员对 Windows 的做法非常聪明。Windows将32位程序和64位程序分开创建了两个不同的目录。程序文件存储所有 64 位程序，程序文件 (x86) 存储所有 32 位程序。_x86_代表不同的处理器类型，即 286、386、486、586/Pentium。
+
+
+Earlier on, the Windows OS has 32-bit version only. If you are still using a 32-bit of Windows today, you will notice that you only have one kind of Program Files on your computer. It “_C:\Program Files_” folder. The Program Files folder that is mentioned here is the default location where the programs we install and store their data. In layman terms, the programs will get installed on the Program Files folder.
+
+The popular 64-bit Windows versions also install the programs to the Program Files folder only. But the 64-bit versions of Windows also support 32-bit programs, and Microsoft doesn’t want 32-bit and 64-bit software mixing up in the same location. Whenever any program is installed by the user on a system with a 64-bit CPU, the folder of it usually goes for the 64-bit content. Whenever a 32-bit program tries to utilize the 64-bit component, it is going to face many issues and problems. So what the developers did with the Windows was very smart. The Windows separated and created two different directories of the 32-bit program and 64-bit program. The Program Files stores all the 64-bit programs and the Program Files (x86) stores all the 32-bit programs. _x86_ stands for different processor types, i.e. 286, 386, 486, 586/Pentium.
