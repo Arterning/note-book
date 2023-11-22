@@ -48,6 +48,7 @@ CSS Animation就是为了解决这些问题而提出的
 
 ```css
 div:hover {
+// 动画时间 动画对应的关键帧 动画无线循环展示
   animation: 1s rainbow infinite;
 }
 ```

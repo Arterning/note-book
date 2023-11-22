@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "d4ddeebdaefb19db",
+        "id": "3d50f3a59edd584f",
         "type": "tabs",
         "children": [
           {
-            "id": "229ffb56e3e85aeb",
+            "id": "d172726696d9367c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "computer-science/DNS记录类型.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "CNAME",
+                "query": "git 换行符",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "computer-science/DNS记录类型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "computer-science/DNS记录类型.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "computer-science/DNS记录类型.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,55 +138,55 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "229ffb56e3e85aeb",
+  "active": "d172726696d9367c",
   "lastOpenFiles": [
+    "css/margin auto的含义.md",
+    "css/tailwind 丝滑连招.md",
+    "css/css 大全.md",
+    "css/css 定位.md",
+    "css/css 布局属性和定位属性的区别.md",
+    "css/css 编写思路.md",
+    "css/在flex和grid布局出现之前，css如果要实现block元素的横向排列，是不是只能用float.md",
+    "css/像素单位.md",
+    "css/内外边距的设置.md",
+    "css/怪异盒模型.md",
+    "css/浮动和清除浮动.md",
+    "UI设计/如何让页面更有高级感.md",
+    "UI设计",
+    "css/position是static，top left right left 起作用吗.md",
+    "css/flex盒子也可以设置position为absolute或者relative吗.md",
+    "css/flex盒子和block盒子有什么区别？.md",
+    "css/css 自定义属性.md",
+    "css/css 全局设置.md",
+    "css/css 过渡和动画.md",
+    "资源.md",
+    "替换API内容.md",
+    "命名规范.md",
+    "全栈开发工具.md",
+    "css",
+    "Pasted image 20231122140844.png",
+    "interview/总结/Redis 总结.md",
+    "interview/总结/Mysql总结.md",
+    "interview/总结/MQ 总结.md",
+    "interview/总结/ES 总结.md",
+    "computer-science/后端/mysql/010_索引结构_2022/010_索引结构_2022-01-04_21-22.png",
+    "Pasted image 20231031144631.png",
+    "Pasted image 20231031104350.png",
+    "computer-science/后端/java/guava",
+    "computer-science/后端/java",
+    "computer-science/后端/documents/guava",
+    "computer-science/后端/documents",
     "Pasted image 20231019155517.png",
-    "computer-science/文件命名规范.md",
-    "computer-science/DNS记录类型.md",
-    "computer-science/program files x86 vs program files.md",
-    "computer-science/后端/nest/0-basic/01-基本概念/decorator及依赖注入实现.md",
-    "computer-science/后端/nest/0-basic/03-原理实现/README.md",
-    "computer-science/后端/nest/0-basic/03-原理实现/nestjs技术分享.md",
-    "computer-science/后端/nest/0-basic/02-核心概念/8 - 自定义 provider.md",
-    "computer-science/后端/nest/0-basic/02-核心概念/7 - 自定义装饰器.md",
-    "computer-science/后端/nest/0-basic/02-核心概念/6 - 异常过滤器.md",
-    "computer-science/后端/nest/0-basic/02-核心概念/5 - 管道.md",
-    "computer-science/后端/nest/0-basic/02-核心概念/4 - 拦截器.md",
-    "computer-science/后端/nest/0-basic/02-核心概念/3 - 守卫.md",
-    "computer-science/后端/nest/0-basic/02-核心概念/2 - 中间件.md",
-    "computer-science/后端/nest/0-basic/02-核心概念/1 - nestjs 生命周期.md",
-    "computer-science/后端/nest/0-basic/02-核心概念/0 - 项目初始化.md",
-    "computer-science/后端/nest/0-basic/01-基本概念/ExecutionContext.md",
-    "computer-science/开发技巧/开发技巧.md",
-    "work note.md",
     "computer-science/开发技巧",
-    "computer-science/后端/数据库选择.md",
-    "computer-science/后端/什么是IO密集型和CPU密集型.md",
-    "computer-science/后端/QPS 等概念和指标.md",
-    "computer-science/后端/node/ch05-TS学习路线.md",
-    "computer-science/template/03.md",
-    "computer-science/template/02.md",
-    "computer-science/template/01.md",
     "computer-science/projects/nest-cms-api",
     "love.png",
     "Pasted image 20231016195651.png",
     "computer-science/projects/nest-todo",
     "computer-science/projects/新建文件夹",
-    "computer-science/projects/wipi",
-    "computer-science/projects",
-    "computer-science/前端/性能",
     "computer-science/前端/node interpreter.png",
     "computer-science/前端/run eslint on save.png",
     "tutorial/tutorial-extras/img/localeDropdown.png",
-    "tutorial/tutorial-extras/img/docsVersionDropdown.png",
-    "tutorial/tutorial-basics/_category_.json",
-    "tutorial/tutorial-basics/markdown-features.mdx",
-    "tutorial/tutorial-extras/_category_.json",
-    "computer-science/后端/mysql/010_索引结构_2022/010_索引结构_2022-01-04_21-22.png",
-    "computer-science/后端/mysql/012_自适应哈希索引_2022/012_自适应哈希索引_2022-01-04_21-32.png",
-    "computer-science/后端/mysql/012_InnoDB索引查询原理_2022/012_InnoDB索引查询原理_2022-01-04_21-29.png",
     "Untitled.canvas",
-    "interview/backEnd/数据结构/LRU新增.png",
     "Untitled 1.canvas"
   ]
 }

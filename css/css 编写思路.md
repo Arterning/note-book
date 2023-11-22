@@ -17,6 +17,14 @@
 接着考虑项目居中items-center
 
 
+
+# 新的思路
+write css 顺序，从盒子模型从外到内，布局->定位->margin->border->padding->content->bg-color->text
+
+当然也可以从内到外
+
+
+
 ## 如何更加有质感
 
 - 考虑使用圆角让元素更加美观rounded-lg
