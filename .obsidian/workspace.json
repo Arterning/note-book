@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3d50f3a59edd584f",
+        "id": "1848a934d308356b",
         "type": "tabs",
         "children": [
           {
-            "id": "d172726696d9367c",
+            "id": "46533616d12d3dfc",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -39,6 +39,14 @@
             }
           },
           {
+            "id": "7e651e520b35996a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
             "id": "dbbf81ff3ba0cd44",
             "type": "leaf",
             "state": {
@@ -51,14 +59,6 @@
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
-            }
-          },
-          {
-            "id": "7e651e520b35996a",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {}
             }
           }
         ]
@@ -138,54 +138,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d172726696d9367c",
+  "active": "46533616d12d3dfc",
   "lastOpenFiles": [
-    "css/margin auto的含义.md",
-    "css/tailwind 丝滑连招.md",
-    "css/css 大全.md",
-    "css/css 定位.md",
-    "css/css 布局属性和定位属性的区别.md",
-    "css/css 编写思路.md",
-    "css/在flex和grid布局出现之前，css如果要实现block元素的横向排列，是不是只能用float.md",
-    "css/像素单位.md",
-    "css/内外边距的设置.md",
-    "css/怪异盒模型.md",
-    "css/浮动和清除浮动.md",
-    "UI设计/如何让页面更有高级感.md",
-    "UI设计",
-    "css/position是static，top left right left 起作用吗.md",
-    "css/flex盒子也可以设置position为absolute或者relative吗.md",
-    "css/flex盒子和block盒子有什么区别？.md",
-    "css/css 自定义属性.md",
-    "css/css 全局设置.md",
-    "css/css 过渡和动画.md",
+    "php/php整合apache.md",
+    "php",
+    "Python中的asgi.md",
+    "declare.md",
+    "TypeScript namespace.md",
+    "TS的.d.ts和declare用法.md",
+    "最近几年，Headless 这个概念有点流行.md",
+    "Supabase 服务使用.md",
+    "Token 无感刷新.md",
+    "work note.md",
     "资源.md",
-    "替换API内容.md",
-    "命名规范.md",
-    "全栈开发工具.md",
-    "css",
-    "Pasted image 20231122140844.png",
-    "interview/总结/Redis 总结.md",
-    "interview/总结/Mysql总结.md",
-    "interview/总结/MQ 总结.md",
-    "interview/总结/ES 总结.md",
-    "computer-science/后端/mysql/010_索引结构_2022/010_索引结构_2022-01-04_21-22.png",
-    "Pasted image 20231031144631.png",
+    "主键使用自增ID还是UUID.md",
+    "markdown.md",
+    "markdown template.md",
+    "Prisma lib 构建客户端.md",
+    "scss.md",
     "Pasted image 20231031104350.png",
+    "Pasted image 20231019155517.png",
+    "Pasted image 20231016195651.png",
+    "Nodejs 事件循环.md",
+    "git script.md",
+    "love.png",
+    "域名续费他妈的怎么这么贵.md",
+    "替换API内容.md",
+    "全栈开发工具.md",
+    "命名规范.md",
+    "2023-10-23.md",
+    "2023-10-07.md",
+    "2023-10-06.md",
+    "Pasted image 20231128154626.png",
+    "css/inline block也可以横向排列.md",
+    "css/flex盒子和block盒子有什么区别？.md",
+    "scripts",
+    "Pasted image 20231122140844.png",
+    "Pasted image 20231031144631.png",
+    "UI设计",
+    "css",
+    "computer-science/后端/mysql/010_索引结构_2022/010_索引结构_2022-01-04_21-22.png",
     "computer-science/后端/java/guava",
     "computer-science/后端/java",
     "computer-science/后端/documents/guava",
     "computer-science/后端/documents",
-    "Pasted image 20231019155517.png",
     "computer-science/开发技巧",
     "computer-science/projects/nest-cms-api",
-    "love.png",
-    "Pasted image 20231016195651.png",
-    "computer-science/projects/nest-todo",
-    "computer-science/projects/新建文件夹",
     "computer-science/前端/node interpreter.png",
     "computer-science/前端/run eslint on save.png",
-    "tutorial/tutorial-extras/img/localeDropdown.png",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
