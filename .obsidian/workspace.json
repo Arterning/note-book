@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cd83a910227c8ee4",
+        "id": "7bbe71b97927af48",
         "type": "tabs",
         "children": [
           {
-            "id": "ef542fd5bde70ba9",
+            "id": "1d34fb8ec3b189d9",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "projects/twitter clone page ui.md",
+                "file": "projects/reinventWheel/full text search in go.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "projects/twitter clone page ui.md",
+                "file": "projects/reinventWheel/full text search in go.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "projects/twitter clone page ui.md"
+                "file": "projects/reinventWheel/full text search in go.md"
               }
             }
           }
@@ -144,12 +144,27 @@
   },
   "active": "127f56f716322723",
   "lastOpenFiles": [
+    "projects/WiPi Api.md",
+    "projects/reinventWheel/full text search in go.md",
+    "projects/reinventWheel",
+    "projects/twitter clone page ui.md",
     "projects/twitter clone.md",
     "projects/trello clone page ui.md",
     "projects/trello clone.md",
+    "projects/Nest Todo.md",
+    "projects/ecommerce-clone web.md",
+    "projects/ecommerce-clone.md",
+    "projects/airbnb-clone.md",
+    "projects/work/Smart Agriculture.md",
+    "projects/work/Backstop Solutions.md",
+    "projects/work",
+    "Pasted image 20231219212553.png",
+    "Pasted image 20231219211523.png",
+    "Pasted image 20231219210037.png",
+    "Pasted image 20231219205810.png",
+    "Pasted image 20231219203511.png",
     "Pasted image 20231219151142.png",
     "Pasted image 20231219150959.png",
-    "projects/twitter clone page ui.md",
     "Pasted image 20231219144029.png",
     "Pandoc 使用.md",
     "projects",
@@ -167,28 +182,14 @@
     "主键使用自增ID还是UUID.md",
     "markdown.md",
     "markdown template.md",
-    "Prisma lib 构建客户端.md",
-    "scss.md",
     "Pasted image 20231031104350.png",
     "Pasted image 20231019155517.png",
-    "Pasted image 20231016195651.png",
-    "Nodejs 事件循环.md",
-    "git script.md",
-    "love.png",
-    "域名续费他妈的怎么这么贵.md",
-    "替换API内容.md",
-    "全栈开发工具.md",
-    "Pasted image 20231128154626.png",
     "scripts",
-    "Pasted image 20231122140844.png",
-    "Pasted image 20231031144631.png",
     "UI设计",
     "css",
     "computer-science/后端/java/guava",
     "computer-science/后端/java",
     "computer-science/后端/documents/guava",
-    "computer-science/后端/documents",
-    "computer-science/开发技巧",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
