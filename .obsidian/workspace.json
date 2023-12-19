@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1848a934d308356b",
+        "id": "cd83a910227c8ee4",
         "type": "tabs",
         "children": [
           {
-            "id": "46533616d12d3dfc",
+            "id": "ef542fd5bde70ba9",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "projects/twitter clone page ui.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "projects/twitter clone page ui.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "projects/twitter clone page ui.md"
+              }
             }
           }
         ]
@@ -138,8 +142,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "46533616d12d3dfc",
+  "active": "127f56f716322723",
   "lastOpenFiles": [
+    "projects/twitter clone.md",
+    "projects/trello clone page ui.md",
+    "projects/trello clone.md",
+    "Pasted image 20231219151142.png",
+    "Pasted image 20231219150959.png",
+    "projects/twitter clone page ui.md",
+    "Pasted image 20231219144029.png",
+    "Pandoc 使用.md",
+    "projects",
     "php/php整合apache.md",
     "php",
     "Python中的asgi.md",
@@ -165,27 +178,17 @@
     "域名续费他妈的怎么这么贵.md",
     "替换API内容.md",
     "全栈开发工具.md",
-    "命名规范.md",
-    "2023-10-23.md",
-    "2023-10-07.md",
-    "2023-10-06.md",
     "Pasted image 20231128154626.png",
-    "css/inline block也可以横向排列.md",
-    "css/flex盒子和block盒子有什么区别？.md",
     "scripts",
     "Pasted image 20231122140844.png",
     "Pasted image 20231031144631.png",
     "UI设计",
     "css",
-    "computer-science/后端/mysql/010_索引结构_2022/010_索引结构_2022-01-04_21-22.png",
     "computer-science/后端/java/guava",
     "computer-science/后端/java",
     "computer-science/后端/documents/guava",
     "computer-science/后端/documents",
     "computer-science/开发技巧",
-    "computer-science/projects/nest-cms-api",
-    "computer-science/前端/node interpreter.png",
-    "computer-science/前端/run eslint on save.png",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
