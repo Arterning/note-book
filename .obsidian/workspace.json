@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "7bbe71b97927af48",
+        "id": "9703a3187fb4fafe",
         "type": "tabs",
         "children": [
           {
-            "id": "1d34fb8ec3b189d9",
+            "id": "c0c5ea16a5317c2c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "projects/NextBlog Projects.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "projects/reinventWheel/full text search in go.md",
+                "file": "projects/NextBlog Projects.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "projects/reinventWheel/full text search in go.md",
+                "file": "projects/NextBlog Projects.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "projects/reinventWheel/full text search in go.md"
+                "file": "projects/NextBlog Projects.md"
               }
             }
           }
@@ -142,30 +146,38 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "127f56f716322723",
+  "active": "c0c5ea16a5317c2c",
   "lastOpenFiles": [
+    "projects/NextShop Projects.md",
+    "projects/NextBlog Projects.md",
+    "projects/Nest Todo.md",
     "projects/WiPi Api.md",
+    "projects/next-js-tailwind-blog/UI Design.md",
     "projects/reinventWheel/full text search in go.md",
-    "projects/reinventWheel",
+    "projects/work/Smart Agriculture.md",
+    "projects/work/Backstop Solutions.md",
+    "projects/love-hui/LoveHui System Design.md",
     "projects/twitter clone page ui.md",
     "projects/twitter clone.md",
     "projects/trello clone page ui.md",
     "projects/trello clone.md",
-    "projects/Nest Todo.md",
+    "projects/love-hui",
+    "projects/next-js-tailwind-blog",
+    "Pasted image 20231219212553.png",
+    "Pasted image 20231219210037.png",
+    "Pasted image 20231219203511.png",
+    "Pasted image 20231219150959.png",
+    "Pasted image 20231128154626.png",
+    "Pasted image 20231031144631.png",
+    "Pasted image 20231019155517.png",
+    "Pasted image 20231016195651.png",
+    "projects/reinventWheel",
     "projects/ecommerce-clone web.md",
     "projects/ecommerce-clone.md",
     "projects/airbnb-clone.md",
-    "projects/work/Smart Agriculture.md",
-    "projects/work/Backstop Solutions.md",
     "projects/work",
-    "Pasted image 20231219212553.png",
     "Pasted image 20231219211523.png",
-    "Pasted image 20231219210037.png",
     "Pasted image 20231219205810.png",
-    "Pasted image 20231219203511.png",
-    "Pasted image 20231219151142.png",
-    "Pasted image 20231219150959.png",
-    "Pasted image 20231219144029.png",
     "Pandoc 使用.md",
     "projects",
     "php/php整合apache.md",
@@ -178,18 +190,10 @@
     "Supabase 服务使用.md",
     "Token 无感刷新.md",
     "work note.md",
-    "资源.md",
-    "主键使用自增ID还是UUID.md",
-    "markdown.md",
-    "markdown template.md",
-    "Pasted image 20231031104350.png",
-    "Pasted image 20231019155517.png",
     "scripts",
     "UI设计",
     "css",
     "computer-science/后端/java/guava",
-    "computer-science/后端/java",
-    "computer-science/后端/documents/guava",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
