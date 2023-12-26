@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "9703a3187fb4fafe",
+        "id": "ba4f426a5822f189",
         "type": "tabs",
         "children": [
           {
-            "id": "c0c5ea16a5317c2c",
+            "id": "0b562f03799c8165",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/NextBlog Projects.md",
+                "file": "Nestjs/官网地址.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git 换行符",
+                "query": "declare",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "projects/NextBlog Projects.md",
+                "file": "Nestjs/官网地址.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "projects/NextBlog Projects.md",
+                "file": "Nestjs/官网地址.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "projects/NextBlog Projects.md"
+                "file": "Nestjs/官网地址.md"
               }
             }
           }
@@ -133,8 +133,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -146,23 +145,45 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c0c5ea16a5317c2c",
+  "active": "0b562f03799c8165",
   "lastOpenFiles": [
-    "projects/NextShop Projects.md",
-    "projects/NextBlog Projects.md",
-    "projects/Nest Todo.md",
-    "projects/WiPi Api.md",
-    "projects/next-js-tailwind-blog/UI Design.md",
-    "projects/reinventWheel/full text search in go.md",
-    "projects/work/Smart Agriculture.md",
-    "projects/work/Backstop Solutions.md",
-    "projects/love-hui/LoveHui System Design.md",
-    "projects/twitter clone page ui.md",
-    "projects/twitter clone.md",
-    "projects/trello clone page ui.md",
-    "projects/trello clone.md",
-    "projects/love-hui",
-    "projects/next-js-tailwind-blog",
+    "Nestjs/核心原理.md",
+    "Nestjs/官网地址.md",
+    "Prisma usage.md",
+    "php/php整合apache.md",
+    "react-hook-tutorial/README.md",
+    "Nestjs",
+    "react-hook-tutorial/CHANGELOG.md",
+    "react-hook-tutorial/附02：React扩展阅读.md",
+    "react-hook-tutorial/附01：React基础知识.md",
+    "react-hook-tutorial/19 useTransition基础用法.md",
+    "react-hook-tutorial/13 useImperativeHandle基础用法.md",
+    "react-hook-tutorial/12 useRef基础用法.md",
+    "react-hook-tutorial/11 useMemo基础用法.md",
+    "react-hook-tutorial/10 useCallback基础用法.md",
+    "react-hook-tutorial/09 useReducer高级用法.md",
+    "react-hook-tutorial/08 useReducer基础用法.md",
+    "react-hook-tutorial/07 useContext高级用法.md",
+    "react-hook-tutorial/06 useContext基础用法.md",
+    "react-hook-tutorial/05 useEffect高级用法.md",
+    "react-hook-tutorial/04 useEffect基础用法.md",
+    "react-hook-tutorial/03 useState高级用法.md",
+    "react-hook-tutorial/02 useState基础用法.md",
+    "react-hook-tutorial/01 React Hook 简介.md",
+    "react-hook-tutorial/00 前言.md",
+    "react-hook-tutorial/LICENSE",
+    "react-hook-tutorial/18 示例：React使用Echarts所用到的hooks.md",
+    "react-hook-tutorial/17 React Hook 总结.md",
+    "react-hook-tutorial/16 自定义hook.md",
+    "react-hook-tutorial",
+    "computer-science/projects/nest-todo/Untitled.canvas",
+    "chat-gpt",
+    "projects/nest-composite",
+    "projects/wipi",
+    "projects/next-composite",
+    "projects/netflix-clone",
+    "projects/ecommerce-clone",
+    "projects/twitter-clone",
     "Pasted image 20231219212553.png",
     "Pasted image 20231219210037.png",
     "Pasted image 20231219203511.png",
@@ -171,29 +192,8 @@
     "Pasted image 20231031144631.png",
     "Pasted image 20231019155517.png",
     "Pasted image 20231016195651.png",
-    "projects/reinventWheel",
-    "projects/ecommerce-clone web.md",
-    "projects/ecommerce-clone.md",
-    "projects/airbnb-clone.md",
-    "projects/work",
     "Pasted image 20231219211523.png",
     "Pasted image 20231219205810.png",
-    "Pandoc 使用.md",
-    "projects",
-    "php/php整合apache.md",
-    "php",
-    "Python中的asgi.md",
-    "declare.md",
-    "TypeScript namespace.md",
-    "TS的.d.ts和declare用法.md",
-    "最近几年，Headless 这个概念有点流行.md",
-    "Supabase 服务使用.md",
-    "Token 无感刷新.md",
-    "work note.md",
-    "scripts",
-    "UI设计",
-    "css",
-    "computer-science/后端/java/guava",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]

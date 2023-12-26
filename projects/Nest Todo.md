@@ -41,6 +41,19 @@ export default AuthContext;
 ```
 
 
+
+create nest project command
+
+```bash
+
+npx create-nest-app@latest {app_name}  
+%% not the above... %%
+
+$ npm i -g @nestjs/cli
+$ nest new project-name
+
+```
+
 ## API
 
 Let's say the todo entity

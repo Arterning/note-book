@@ -48,5 +48,7 @@ declare module AnimalLib {
 上面示例中，declare 关键字给出了 module 或 namespace 的类型描述。
 
 
+我们经常把declare定义在`xx.d.ts`文件中
+
 [declare 关键字 | 阮一峰 TypeScript 教程 (p6p.net)](https://typescript.p6p.net/typescript-tutorial/declare.html#declare-module-declare-namespace)
 
