@@ -42,7 +42,17 @@ type this
                 "    );",
                 "};"
         ],
-        "description": "react function component"
+        "description": "react function component",
+	"ES function": {
+			"prefix": "df",
+			"body": [
+					"export const ${1} = () => {",
+					"",
+					"",
+					"};"
+			],
+			"description": "react function component"
+			},
 }
 }
 
