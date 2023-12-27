@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ba4f426a5822f189",
+        "id": "8036001116688b48",
         "type": "tabs",
         "children": [
           {
-            "id": "0b562f03799c8165",
+            "id": "9fb466afd671f4dd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Nestjs/官网地址.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Nestjs/官网地址.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Nestjs/官网地址.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Nestjs/官网地址.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -145,45 +137,46 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0b562f03799c8165",
+  "active": "9fb466afd671f4dd",
   "lastOpenFiles": [
-    "Nestjs/核心原理.md",
+    "开发技巧/VS Code 快速生成html模板.md",
+    "开发技巧/VS Code snippets.md",
+    "开发技巧",
+    "deno/install and basic usage.md",
+    "bun/install and basic usage.md",
+    "关于npm包如何使用js和ts.md",
+    "deno",
+    "bun",
+    "1703642856811.png",
+    "node/ES6 模块与 CommonJS 模块的差异.md",
+    "node/node install.md",
+    "node/Node JS 事件循环.md",
+    "node/Node js 做服务端优缺点.md",
+    "node/node version.md",
+    "node/TS学习路线.md",
+    "node/express usage.md",
+    "node/why you should use pnpm.md",
+    "node/npm set option.md",
+    "node/npm --save option meaning.md",
+    "node/关于package.json中type属性的含义.md",
+    "computer-science/k8s tutorial.md",
+    "computer-science/maven的pom文件 relativePath.md",
+    "computer-science/program files x86 vs program files.md",
+    "computer-science/DNS记录类型.md",
+    "computer-science/文件命名规范.md",
+    "computer-science/痛点就在于部署.md",
+    "computer-science/权限系统设计.md",
     "Nestjs/官网地址.md",
+    "Nestjs/核心原理.md",
     "Prisma usage.md",
-    "php/php整合apache.md",
-    "react-hook-tutorial/README.md",
     "Nestjs",
-    "react-hook-tutorial/CHANGELOG.md",
-    "react-hook-tutorial/附02：React扩展阅读.md",
-    "react-hook-tutorial/附01：React基础知识.md",
-    "react-hook-tutorial/19 useTransition基础用法.md",
-    "react-hook-tutorial/13 useImperativeHandle基础用法.md",
-    "react-hook-tutorial/12 useRef基础用法.md",
-    "react-hook-tutorial/11 useMemo基础用法.md",
-    "react-hook-tutorial/10 useCallback基础用法.md",
-    "react-hook-tutorial/09 useReducer高级用法.md",
-    "react-hook-tutorial/08 useReducer基础用法.md",
-    "react-hook-tutorial/07 useContext高级用法.md",
-    "react-hook-tutorial/06 useContext基础用法.md",
-    "react-hook-tutorial/05 useEffect高级用法.md",
-    "react-hook-tutorial/04 useEffect基础用法.md",
-    "react-hook-tutorial/03 useState高级用法.md",
-    "react-hook-tutorial/02 useState基础用法.md",
-    "react-hook-tutorial/01 React Hook 简介.md",
-    "react-hook-tutorial/00 前言.md",
     "react-hook-tutorial/LICENSE",
-    "react-hook-tutorial/18 示例：React使用Echarts所用到的hooks.md",
-    "react-hook-tutorial/17 React Hook 总结.md",
-    "react-hook-tutorial/16 自定义hook.md",
     "react-hook-tutorial",
     "computer-science/projects/nest-todo/Untitled.canvas",
     "chat-gpt",
     "projects/nest-composite",
     "projects/wipi",
     "projects/next-composite",
-    "projects/netflix-clone",
-    "projects/ecommerce-clone",
-    "projects/twitter-clone",
     "Pasted image 20231219212553.png",
     "Pasted image 20231219210037.png",
     "Pasted image 20231219203511.png",
@@ -193,7 +186,6 @@
     "Pasted image 20231019155517.png",
     "Pasted image 20231016195651.png",
     "Pasted image 20231219211523.png",
-    "Pasted image 20231219205810.png",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
