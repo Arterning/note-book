@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "68292c3f3aa3c82f",
+        "id": "62b1e1de64b66ea2",
         "type": "tabs",
         "children": [
           {
-            "id": "d7d23bf17a665a7b",
+            "id": "9462f9a2711d9169",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "projects/airbnb-clone.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -52,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "swr",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "articles/历史/大部分底层孩子对自己的困境毫无感知.md",
+                "file": "projects/airbnb-clone.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "articles/历史/大部分底层孩子对自己的困境毫无感知.md",
+                "file": "projects/airbnb-clone.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,12 +125,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "articles/历史/大部分底层孩子对自己的困境毫无感知.md"
+                "file": "projects/airbnb-clone.md"
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -142,54 +146,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "127f56f716322723",
+  "active": "9462f9a2711d9169",
   "lastOpenFiles": [
+    "projects/Nest Todo.md",
+    "projects/CRUD Design Pattern.md",
+    "projects/airbnb-clone.md",
+    "projects/ecommerce-clone/ecommerce-clone.md",
+    "projects/ecommerce-clone/ecommerce-clone web.md",
+    "projects/love-hui/LoveHui System Design.md",
+    "projects/twitter-clone/twitter clone.md",
+    "projects/twitter-clone/file upload.md",
+    "projects/twitter-clone/twitter clone page ui.md",
+    "projects/twitter-clone/Use SWR to fetch user info.md",
+    "projects/trello/trello use rect-query.md",
+    "node/TS学习路线.md",
+    "projects/twitter-clone/base64和对象存储.md",
+    "Pasted image 20231122140844.png",
+    "Pasted image 20231031104350.png",
+    "Pasted image 20231019155517.png",
+    "Pasted image 20231016195651.png",
+    "images/Pasted image 20231227171155.png",
+    "images/Pasted image 20231229100259.png",
+    "images/Pasted image 20231229152243.png",
+    "GitHub/My Issue solved.md",
+    "域名续费他妈的怎么这么贵.md",
+    "GitHub",
+    "全栈开发工具.md",
+    "命名规范.md",
+    "关于npm包如何使用js和ts.md",
+    "projects/next-admin/Conver Form Data.md",
+    "projects/NextShop Projects.md",
+    "projects/NextBlog Projects.md",
+    "articles/历史/大部分底层孩子对自己的困境毫无感知.md",
     "articles/历史/电影投资的背后，是韭菜的撒币梦.md",
     "articles/历史/崇祯有翻盘的可能.md",
     "articles/历史/《永不消逝的电波》原型，死守秘密的地下党，死前高呼毛主席万岁.md",
     "articles/口才/如何锻炼口才.md",
-    "articles/军事/小小的集装箱有多神奇.md",
-    "articles/军事/军用卡车为什么区分凸头和扁头.md",
     "articles/经济/jj_5_巨大的贫富差距.png",
-    "articles/经济/jj_4_什么是经济规律.md",
-    "articles/经济/jj_3_政府亲近类资产和政府厌恶类资产.md",
-    "articles/经济/jj_3_认清国债收益率是大类资产价格波动的原因.md",
     "articles/经济/jj_3_2022-01-01_11-33.png",
     "articles/经济/jj_3_2022-01-01_11-27.png",
-    "articles/经济/jj_2_UBI_直接给国民发钱.md",
-    "articles/经济/jj_1_经济危机的本质是什么.md",
-    "Token 无感刷新.md",
-    "Supabase 服务使用.md",
-    "README.md",
-    "css/scss basic.md",
-    "开发技巧/VS Code snippets.md",
-    "开发技巧/VS Code 快速生成html模板.md",
-    "前端/vue/Vuex.md",
-    "前端/vue/Vue 路由.md",
-    "前端/vue/vite 解决跨域问题.md",
-    "前端/vue/数据代理.md",
-    "前端/svelet.md",
-    "前端/tailwind.md",
-    "前端/run eslint on save.png",
-    "前端/react state props ref.md",
-    "前端/node interpreter.png",
-    "前端/eslint-format.md",
-    "english/01-english.md",
     "state management/Hox",
     "state management",
-    "images/Pasted image 20231229100259.png",
     "state management/ReactQuery",
     "projects/page-form",
-    "Pasted image 20231219211523.png",
-    "Pasted image 20231219205810.png",
-    "Pasted image 20231219151142.png",
-    "Pasted image 20231128154626.png",
     "images",
     "projects/next-admin",
     "开发技巧",
     "deno",
     "bun",
-    "Nestjs",
     "computer-science/projects/nest-todo/Untitled.canvas",
     "Untitled.canvas",
     "Untitled 1.canvas"
