@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "90f38ca4677cd871",
+        "id": "68292c3f3aa3c82f",
         "type": "tabs",
         "children": [
           {
-            "id": "10d0400cbb6fcf0a",
+            "id": "d7d23bf17a665a7b",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,13 +81,14 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "articles/历史/大部分底层孩子对自己的困境毫无感知.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -97,6 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "articles/历史/大部分底层孩子对自己的困境毫无感知.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,10 +120,13 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "articles/历史/大部分底层孩子对自己的困境毫无感知.md"
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -137,55 +142,55 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "10d0400cbb6fcf0a",
+  "active": "127f56f716322723",
   "lastOpenFiles": [
-    "Prisma lib 构建客户端.md",
+    "articles/历史/电影投资的背后，是韭菜的撒币梦.md",
+    "articles/历史/崇祯有翻盘的可能.md",
+    "articles/历史/《永不消逝的电波》原型，死守秘密的地下党，死前高呼毛主席万岁.md",
+    "articles/口才/如何锻炼口才.md",
+    "articles/军事/小小的集装箱有多神奇.md",
+    "articles/军事/军用卡车为什么区分凸头和扁头.md",
+    "articles/经济/jj_5_巨大的贫富差距.png",
+    "articles/经济/jj_4_什么是经济规律.md",
+    "articles/经济/jj_3_政府亲近类资产和政府厌恶类资产.md",
+    "articles/经济/jj_3_认清国债收益率是大类资产价格波动的原因.md",
+    "articles/经济/jj_3_2022-01-01_11-33.png",
+    "articles/经济/jj_3_2022-01-01_11-27.png",
+    "articles/经济/jj_2_UBI_直接给国民发钱.md",
+    "articles/经济/jj_1_经济危机的本质是什么.md",
+    "Token 无感刷新.md",
+    "Supabase 服务使用.md",
+    "README.md",
+    "css/scss basic.md",
+    "开发技巧/VS Code snippets.md",
+    "开发技巧/VS Code 快速生成html模板.md",
+    "前端/vue/Vuex.md",
+    "前端/vue/Vue 路由.md",
+    "前端/vue/vite 解决跨域问题.md",
+    "前端/vue/数据代理.md",
+    "前端/svelet.md",
+    "前端/tailwind.md",
+    "前端/run eslint on save.png",
+    "前端/react state props ref.md",
+    "前端/node interpreter.png",
+    "前端/eslint-format.md",
+    "english/01-english.md",
+    "state management/Hox",
+    "state management",
+    "images/Pasted image 20231229100259.png",
+    "state management/ReactQuery",
+    "projects/page-form",
     "Pasted image 20231219211523.png",
     "Pasted image 20231219205810.png",
     "Pasted image 20231219151142.png",
     "Pasted image 20231128154626.png",
-    "Pasted image 20231031104350.png",
-    "Pasted image 20231219150959.png",
-    "Pasted image 20231219203511.png",
-    "Pasted image 20231219210037.png",
-    "Pasted image 20231219212553.png",
-    "Pasted image 20231019155517.png",
-    "关于npm包如何使用js和ts.md",
-    "命名规范.md",
-    "projects/wipi/抽屉侧边栏UI设计.md",
     "images",
-    "projects/NextBlog Projects.md",
-    "projects/NextShop Projects.md",
-    "projects/next-admin/Mongoose save boolean value.md",
-    "开发技巧/VS Code snippets.md",
     "projects/next-admin",
-    "开发技巧/VS Code 快速生成html模板.md",
     "开发技巧",
-    "deno/install and basic usage.md",
-    "bun/install and basic usage.md",
     "deno",
     "bun",
-    "node/ES6 模块与 CommonJS 模块的差异.md",
-    "node/node install.md",
-    "node/Node JS 事件循环.md",
-    "node/Node js 做服务端优缺点.md",
-    "node/node version.md",
-    "node/TS学习路线.md",
-    "node/express usage.md",
-    "node/why you should use pnpm.md",
-    "node/npm set option.md",
-    "node/npm --save option meaning.md",
-    "node/关于package.json中type属性的含义.md",
-    "computer-science/k8s tutorial.md",
-    "computer-science/maven的pom文件 relativePath.md",
-    "computer-science/program files x86 vs program files.md",
-    "computer-science/DNS记录类型.md",
     "Nestjs",
-    "react-hook-tutorial/LICENSE",
-    "react-hook-tutorial",
     "computer-science/projects/nest-todo/Untitled.canvas",
-    "chat-gpt",
-    "projects/nest-composite",
     "Untitled.canvas",
     "Untitled 1.canvas"
   ]
