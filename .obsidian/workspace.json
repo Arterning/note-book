@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "62b1e1de64b66ea2",
+        "id": "4fb6b9ff8dd91336",
         "type": "tabs",
         "children": [
           {
-            "id": "9462f9a2711d9169",
+            "id": "bb1c912c97bfa7cc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/airbnb-clone.md",
+                "file": "projects/lms-platform/Integrate Stripe.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "projects/airbnb-clone.md",
+                "file": "projects/lms-platform/Integrate Stripe.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "projects/airbnb-clone.md",
+                "file": "projects/lms-platform/Integrate Stripe.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "projects/airbnb-clone.md"
+                "file": "projects/lms-platform/Integrate Stripe.md"
               }
             }
           }
@@ -146,11 +146,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9462f9a2711d9169",
+  "active": "bb1c912c97bfa7cc",
   "lastOpenFiles": [
+    "images/Pasted image 20231230212800.png",
+    "images/Pasted image 20231230212713.png",
+    "images/Pasted image 20231230212007.png",
+    "projects/lms-platform/Use react-table.md",
+    "projects/lms-platform/Integrate Stripe.md",
+    "images/Pasted image 20231230205805.png",
+    "projects/lms-platform/Course setup page.md",
+    "projects/lms-platform/Create new course with name.md",
+    "projects/lms-platform/Use Mux to store video.md",
+    "projects/lms-platform/Use Uploadthing to upload image.md",
+    "images/Pasted image 20231230151509.png",
+    "images/Pasted image 20231230151242.png",
+    "projects/lms-platform",
+    "projects/airbnb-clone.md",
     "projects/Nest Todo.md",
     "projects/CRUD Design Pattern.md",
-    "projects/airbnb-clone.md",
     "projects/ecommerce-clone/ecommerce-clone.md",
     "projects/ecommerce-clone/ecommerce-clone web.md",
     "projects/love-hui/LoveHui System Design.md",
@@ -166,8 +179,6 @@
     "Pasted image 20231019155517.png",
     "Pasted image 20231016195651.png",
     "images/Pasted image 20231227171155.png",
-    "images/Pasted image 20231229100259.png",
-    "images/Pasted image 20231229152243.png",
     "GitHub/My Issue solved.md",
     "域名续费他妈的怎么这么贵.md",
     "GitHub",
@@ -175,16 +186,6 @@
     "命名规范.md",
     "关于npm包如何使用js和ts.md",
     "projects/next-admin/Conver Form Data.md",
-    "projects/NextShop Projects.md",
-    "projects/NextBlog Projects.md",
-    "articles/历史/大部分底层孩子对自己的困境毫无感知.md",
-    "articles/历史/电影投资的背后，是韭菜的撒币梦.md",
-    "articles/历史/崇祯有翻盘的可能.md",
-    "articles/历史/《永不消逝的电波》原型，死守秘密的地下党，死前高呼毛主席万岁.md",
-    "articles/口才/如何锻炼口才.md",
-    "articles/经济/jj_5_巨大的贫富差距.png",
-    "articles/经济/jj_3_2022-01-01_11-33.png",
-    "articles/经济/jj_3_2022-01-01_11-27.png",
     "state management/Hox",
     "state management",
     "state management/ReactQuery",
@@ -193,7 +194,6 @@
     "projects/next-admin",
     "开发技巧",
     "deno",
-    "bun",
     "computer-science/projects/nest-todo/Untitled.canvas",
     "Untitled.canvas",
     "Untitled 1.canvas"
