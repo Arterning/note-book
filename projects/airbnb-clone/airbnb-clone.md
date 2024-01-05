@@ -1,3 +1,7 @@
+Be notice that we use `app` router and `page`  router at once
+![[Pasted image 20240101135627.png]]
+
+
 
 user can put  their own house to the system, and other people rent it.
 
