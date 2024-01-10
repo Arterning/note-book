@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "dd008cfecb96bdd4",
+        "id": "f4a775e1a281ee05",
         "type": "tabs",
         "children": [
           {
-            "id": "57b19c74ecf8c1ea",
+            "id": "1bf4fcd4fda5f18d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Laravel/Controller.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -56,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "swr",
+                "query": "git",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Laravel/Controller.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Laravel/Controller.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Laravel/Controller.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -146,54 +138,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "57b19c74ecf8c1ea",
+  "active": "1bf4fcd4fda5f18d",
   "lastOpenFiles": [
+    "git/git-config.md",
+    "git/git script.md",
+    "独立开发变现/独立产品.md",
+    "独立开发变现/卖课.md",
+    "独立开发变现/Must be quick.md",
+    "独立开发变现/How to start.md",
     "Laravel/Route.md",
-    "Laravel/Controller.md",
     "Laravel/Model.md",
+    "Laravel/Controller.md",
     "Laravel/basic usage.md",
-    "开发技巧/Use Webstorm and Vscode at the same time.md",
-    "Laravel",
-    "开发技巧/Use command line to dev.md",
-    "开发技巧/Test api quick and fast.md",
-    "springboot/quick start.md",
-    "为什么有的app侧重移动端.md",
-    "移动应用",
+    "jdk/JDK8,JDK11,JDK17,JDK21及中间版本主要更新特性.md",
+    "Web Layout/UploadThing website layout.md",
     "Web Layout/Good Refer.md",
+    "Web Layout/UI设计/如何让页面更有高级感.md",
+    "碎片/2023-10-06.md",
+    "碎片/全栈开发工具.md",
+    "images/Pasted image 20231122140844.png",
+    "碎片/命名规范.md",
+    "碎片/关于npm包如何使用js和ts.md",
+    "碎片/1703642856811.png",
+    "碎片/2023-10-23.md",
+    "images/Pasted image 20231016195651.png",
+    "GitHub/My Issue solved.md",
+    "git",
+    "springboot/spring test.md",
+    "springboot/spring boot 配置文件.md",
+    "springboot/spring boot 基本使用.md",
+    "springboot/避免NPE.md",
+    "碎片/spring-init.md",
+    "碎片/demo的使用.md",
+    "jdk",
+    "images/Pasted image 20240109174619.png",
+    "images/Pasted image 20240109174605.png",
+    "images/Pasted image 20240109174506.png",
+    "Untitled",
+    "images/Pasted image 20240109090127.png",
+    "独立开发变现",
+    "images/Pasted image 20240108142127.png",
+    "Laravel",
+    "移动应用",
     "springboot",
     "images/Pasted image 20240105104710.png",
     "images/Pasted image 20240105104649.png",
-    "Web Layout/UI设计/如何让页面更有高级感.md",
     "Web Layout/UI设计",
-    "Web Layout/UploadThing website layout.md",
-    "images/Pasted image 20240105103804.png",
-    "images/Pasted image 20240104144551.png",
-    "开发技巧/VS Code 快速生成html模板.md",
     "Web Layout",
-    "碎片/Gitlen plugin is not free.md",
-    "basic usage.md",
     "Taro",
-    "images/Pasted image 20240103121218.png",
-    "前端/性能/图片懒加载.md",
-    "前端/eslint/Eslint and prettier.md",
-    "前端/eslint/Basic Usage.md",
-    "css/HSL color.md",
-    "Nestjs/官网地址.md",
-    "Nestjs/核心原理.md",
-    "Nestjs/why should add  use client.md",
-    "projects/lms-platform/Create new course with name.md",
-    "projects/lms-platform/Course setup page.md",
-    "projects/lms-platform/Use react-table.md",
-    "projects/lms-platform/Use Uploadthing to upload image.md",
-    "images/Pasted image 20240102100702.png",
-    "images/Pasted image 20240102100531.png",
-    "images/Pasted image 20240102100125.png",
-    "projects/next-auth",
-    "images/Pasted image 20240101201235.png",
-    "projects/AI-SASS",
-    "images/Pasted image 20240101144736.png",
-    "projects/spotify-clone",
-    "projects/messenger",
     "computer-science/projects/nest-todo/Untitled.canvas",
     "Untitled.canvas",
     "Untitled 1.canvas"
