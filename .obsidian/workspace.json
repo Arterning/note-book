@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3420fdee2bba0ad9",
+        "id": "5bccbc33e001bf11",
         "type": "tabs",
         "children": [
           {
-            "id": "7c0c952a1cb5cc02",
+            "id": "6eeaeac54b863f6c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "后端/swagger 与 springfox的关系.md",
+                "file": "english/01-english.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "migrate",
+                "query": "tag:#幼稚不",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "后端/swagger 与 springfox的关系.md",
+                "file": "english/01-english.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "后端/swagger 与 springfox的关系.md",
+                "file": "english/01-english.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -114,7 +114,7 @@
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "frequency",
+                "sortOrder": "alphabetical",
                 "useHierarchy": true
               }
             }
@@ -125,12 +125,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "后端/swagger 与 springfox的关系.md"
+                "file": "english/01-english.md"
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -146,48 +146,48 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "127f56f716322723",
+  "active": "6eeaeac54b863f6c",
   "lastOpenFiles": [
-    "后端/权限系统设计.md",
-    "后端/template/03.md",
-    "后端/template/02.md",
-    "后端/template/01.md",
-    "后端/什么是IO密集型和CPU密集型.md",
-    "后端/安全和加密讨论.md",
-    "后端/数据库选择.md",
-    "后端/Saas and self deploy.md",
-    "后端/safe/03漏洞发现/SQL注入/05http header注入.md",
+    "chat-gpt/What is e2e test.md",
+    "chat-gpt/React 类组件是单例吗.md",
+    "chat-gpt/Nest和SpringBoot.md",
+    "state management/Compare state management solution.md",
+    "state management/ReactQuery/react query and SWR.md",
+    "state management/ReactQuery/basic usage.md",
+    "state management/Hox/Basic Usage.md",
+    "archived/java/java8Lambada表达式.md",
+    "archived/java/java 集合.md",
+    "archived/java/CountDownLatch,cyclicBarrier,semaphere.md",
+    "面试/面试记录总结.md",
+    "后端/其他总结.md",
+    "后端/应该如何理解高并发，我提供一个思路，助力大家从容应对面试.md",
+    "面试/spring/spring/借助Proxy代理提升架构扩展性.md",
+    "面试/spring/springboot/Dubbo.md",
+    "面试/spring/springboot/Druid.md",
+    "面试/spring/springboot/Caffeine.md",
+    "面试/spring/springboot/Apollo.md",
+    "面试/spring/spring/统计代码块耗时的小工具.md",
+    "面试/spring/spring/如何实现注解RPC Consumer属性动态注入.md",
+    "面试/skill/你离职的原因是什么？如何避坑？.md",
+    "面试/arch/system/网关技术选型，为什么选择 Openresty.md",
+    "面试/arch/system/如何设计一个高并发系统？.md",
+    "面试/arch/designmodel/软件设计模式系列（第二期）.md",
+    "面试/arch/case/Redis + Lua 组合实现分布式限流.md",
+    "面试/arch/case/借助流程引擎优化系统的复杂度.md",
+    "tutorial/tutorial-extras/img/docsVersionDropdown.png",
+    "tutorial/tutorial-extras/img/localeDropdown.png",
+    "images/Pasted image 20240112161208.png",
+    "面试/backEnd/数据结构/LRU新增.png",
+    "面试/backEnd/数据结构/LRU访问006.png",
+    "面试/backEnd/数据结构/LRU访问002.png",
+    "面试/backEnd/数据结构/LinkedHashMap结构.png",
     "Untitled",
-    "后端/safe/03漏洞发现/SQL注入/03sql盲注.md",
-    "后端/safe/03漏洞发现/SQL注入/01基于insert update delete注入.md",
     "后端/safe/03漏洞发现/Snipaste_2022/Snipaste_2022-08-14_10-30-47.png",
-    "后端/safe/03漏洞发现/RCE攻击/WAF绕过.md",
-    "后端/safe/03漏洞发现/RCE攻击/远程命令执行漏洞.md",
-    "后端/safe/03漏洞发现/RCE攻击/001.md",
-    "后端/safe/03漏洞发现/nmap/nmap参数.md",
-    "后端/safe/03漏洞发现/文件包含漏洞发现/文件包含漏洞.md",
-    "后端/safe/03漏洞发现/文件包含漏洞发现/关键文件.md",
-    "后端/safe/03漏洞发现/密码爆破/密码爆破工具.md",
-    "后端/safe/03漏洞发现/加密解密/003MD5和SHA区别.md",
-    "后端/safe/03漏洞发现/加密解密/002MD5.md",
-    "后端/safe/03漏洞发现/加密解密/001.md",
-    "后端/safe/03漏洞发现/操作系统漏洞发现/001.md",
-    "后端/safe/02侦查和信息收集/001.md",
-    "后端/safe/01面试内容/001.md",
-    "后端/safe/01面试内容/003.md",
-    "后端/safe/01面试内容/004.md",
     "images/Pasted image 20240109174605.png",
     "images/Pasted image 20240110152840.png",
-    "images/Pasted image 20240109174619.png",
-    "images/Pasted image 20231219205810.png",
-    "images/Pasted image 20231219144029.png",
-    "images/Pasted image 20231016195651.png",
     "express",
-    "images/Pasted image 20231122140844.png",
-    "碎片/1703642856811.png",
     "git",
     "jdk",
-    "images/Pasted image 20240109174506.png",
     "独立开发变现",
     "Laravel",
     "移动应用",
