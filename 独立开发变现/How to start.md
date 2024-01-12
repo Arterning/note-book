@@ -22,6 +22,7 @@ aiCarousels是一个工具，可以帮助非设计师使用AI为LinkedIn、Insta
 
 https://www.ezindie.com/weekly/issue-113
 
+https://www.aicarousels.com/
 
 
 # Create beautiful AI photos without using a camera

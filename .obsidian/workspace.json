@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "f4a775e1a281ee05",
+        "id": "3420fdee2bba0ad9",
         "type": "tabs",
         "children": [
           {
-            "id": "1bf4fcd4fda5f18d",
+            "id": "7c0c952a1cb5cc02",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "后端/swagger 与 springfox的关系.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -52,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git",
+                "query": "migrate",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "后端/swagger 与 springfox的关系.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "后端/swagger 与 springfox的关系.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "后端/swagger 与 springfox的关系.md"
+              }
             }
           }
         ],
@@ -138,54 +146,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1bf4fcd4fda5f18d",
+  "active": "127f56f716322723",
   "lastOpenFiles": [
-    "git/git-config.md",
-    "git/git script.md",
-    "独立开发变现/独立产品.md",
-    "独立开发变现/卖课.md",
-    "独立开发变现/Must be quick.md",
-    "独立开发变现/How to start.md",
-    "Laravel/Route.md",
-    "Laravel/Model.md",
-    "Laravel/Controller.md",
-    "Laravel/basic usage.md",
-    "jdk/JDK8,JDK11,JDK17,JDK21及中间版本主要更新特性.md",
-    "Web Layout/UploadThing website layout.md",
-    "Web Layout/Good Refer.md",
-    "Web Layout/UI设计/如何让页面更有高级感.md",
-    "碎片/2023-10-06.md",
-    "碎片/全栈开发工具.md",
-    "images/Pasted image 20231122140844.png",
-    "碎片/命名规范.md",
-    "碎片/关于npm包如何使用js和ts.md",
-    "碎片/1703642856811.png",
-    "碎片/2023-10-23.md",
-    "images/Pasted image 20231016195651.png",
-    "GitHub/My Issue solved.md",
-    "git",
-    "springboot/spring test.md",
-    "springboot/spring boot 配置文件.md",
-    "springboot/spring boot 基本使用.md",
-    "springboot/避免NPE.md",
-    "碎片/spring-init.md",
-    "碎片/demo的使用.md",
-    "jdk",
-    "images/Pasted image 20240109174619.png",
-    "images/Pasted image 20240109174605.png",
-    "images/Pasted image 20240109174506.png",
+    "后端/权限系统设计.md",
+    "后端/template/03.md",
+    "后端/template/02.md",
+    "后端/template/01.md",
+    "后端/什么是IO密集型和CPU密集型.md",
+    "后端/安全和加密讨论.md",
+    "后端/数据库选择.md",
+    "后端/Saas and self deploy.md",
+    "后端/safe/03漏洞发现/SQL注入/05http header注入.md",
     "Untitled",
-    "images/Pasted image 20240109090127.png",
+    "后端/safe/03漏洞发现/SQL注入/03sql盲注.md",
+    "后端/safe/03漏洞发现/SQL注入/01基于insert update delete注入.md",
+    "后端/safe/03漏洞发现/Snipaste_2022/Snipaste_2022-08-14_10-30-47.png",
+    "后端/safe/03漏洞发现/RCE攻击/WAF绕过.md",
+    "后端/safe/03漏洞发现/RCE攻击/远程命令执行漏洞.md",
+    "后端/safe/03漏洞发现/RCE攻击/001.md",
+    "后端/safe/03漏洞发现/nmap/nmap参数.md",
+    "后端/safe/03漏洞发现/文件包含漏洞发现/文件包含漏洞.md",
+    "后端/safe/03漏洞发现/文件包含漏洞发现/关键文件.md",
+    "后端/safe/03漏洞发现/密码爆破/密码爆破工具.md",
+    "后端/safe/03漏洞发现/加密解密/003MD5和SHA区别.md",
+    "后端/safe/03漏洞发现/加密解密/002MD5.md",
+    "后端/safe/03漏洞发现/加密解密/001.md",
+    "后端/safe/03漏洞发现/操作系统漏洞发现/001.md",
+    "后端/safe/02侦查和信息收集/001.md",
+    "后端/safe/01面试内容/001.md",
+    "后端/safe/01面试内容/003.md",
+    "后端/safe/01面试内容/004.md",
+    "images/Pasted image 20240109174605.png",
+    "images/Pasted image 20240110152840.png",
+    "images/Pasted image 20240109174619.png",
+    "images/Pasted image 20231219205810.png",
+    "images/Pasted image 20231219144029.png",
+    "images/Pasted image 20231016195651.png",
+    "express",
+    "images/Pasted image 20231122140844.png",
+    "碎片/1703642856811.png",
+    "git",
+    "jdk",
+    "images/Pasted image 20240109174506.png",
     "独立开发变现",
-    "images/Pasted image 20240108142127.png",
     "Laravel",
     "移动应用",
     "springboot",
-    "images/Pasted image 20240105104710.png",
-    "images/Pasted image 20240105104649.png",
     "Web Layout/UI设计",
     "Web Layout",
-    "Taro",
     "computer-science/projects/nest-todo/Untitled.canvas",
     "Untitled.canvas",
     "Untitled 1.canvas"
