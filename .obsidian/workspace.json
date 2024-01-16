@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a4b7dc2942059f3a",
+        "id": "be37ae5c33bd6a60",
         "type": "tabs",
         "children": [
           {
-            "id": "14db91a5832495d7",
+            "id": "c4ae386b9a26a44c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "后端/complex-sql/data migration.md",
+                "file": "archived/work-flow/work-flow-3-Drone.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "left join",
+                "query": "对称加密",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,11 +65,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 220.5
+    "width": 397.5
   },
   "right": {
     "id": "6ee6a3f8df298175",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "后端/complex-sql/data migration.md",
+                "file": "archived/work-flow/work-flow-3-Drone.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "后端/complex-sql/data migration.md",
+                "file": "archived/work-flow/work-flow-3-Drone.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "后端/complex-sql/data migration.md"
+                "file": "archived/work-flow/work-flow-3-Drone.md"
               }
             }
           }
@@ -146,46 +147,46 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "14db91a5832495d7",
+  "active": "c4ae386b9a26a44c",
   "lastOpenFiles": [
-    "后端/complex-sql/delete data.md",
-    "后端/complex-sql/Join query.md",
-    "后端/complex-sql/Why back end is sometimes sucks.md",
-    "后端/complex-sql/data migration.md",
-    "后端/API sign invoke.md",
-    "后端/complex-sql",
-    "独立开发变现/Must be quick.md",
-    "开发技巧/VS Code snippets.md",
-    "开发技巧/VS Code 快速生成html模板.md",
-    "开发技巧/Use Webstorm and Vscode at the same time.md",
-    "开发技巧/Serve start a web http.md",
     "后端/安全和加密讨论.md",
-    "后端/Recursive Queries with MySQL.md",
-    "后端/QPS 等概念和指标.md",
-    "后端/Undefined and null.md",
-    "后端/URL Encode Decode.md",
-    "后端/How should we update entity.md",
-    "images/Pasted image 20240112165745.png",
-    "后端/DNS记录类型.md",
-    "后端/阻塞和非阻塞的概念.md",
-    "后端/应该如何理解高并发，我提供一个思路，助力大家从容应对面试.md",
-    "后端/文件命名规范.md",
-    "english/01-english.md",
-    "chat-gpt/What is e2e test.md",
-    "chat-gpt/React 类组件是单例吗.md",
-    "chat-gpt/Nest和SpringBoot.md",
-    "state management/Compare state management solution.md",
-    "state management/ReactQuery/react query and SWR.md",
-    "tutorial/tutorial-extras/img/docsVersionDropdown.png",
-    "tutorial/tutorial-extras/img/localeDropdown.png",
-    "images/Pasted image 20240112161208.png",
-    "面试/backEnd/数据结构/LRU新增.png",
-    "面试/backEnd/数据结构/LRU访问006.png",
-    "面试/backEnd/数据结构/LRU访问002.png",
-    "面试/backEnd/数据结构/LinkedHashMap结构.png",
+    "后端/safe/靶场搭建.md",
+    "后端/safe/漏洞发现.md",
+    "后端/safe/python.md",
+    "后端/safe/ssh应该只设置密钥登录.md",
+    "后端/safe/tool.md",
+    "后端/safe/攻击实录/攻击思路.md",
+    "后端/数据库选择.md",
+    "后端/其他总结.md",
+    "后端/template/03.md",
+    "后端/template/02.md",
+    "后端/template/01.md",
+    "后端/safe/内网渗透/mimikatz.md",
+    "后端/safe/内网渗透/hashcat详细使用教程.md",
+    "后端/safe/内网渗透/006网络 & 传输 & 应用层隧道技术.md",
+    "后端/safe/内网渗透/005RDP协议.md",
+    "后端/safe/内网渗透/003SMB WMI协议连接.md",
+    "后端/safe/内网渗透/002IPC协议连接.md",
+    "后端/safe/内网渗透/001.md",
+    "后端/safe/红蓝对抗/红蓝对抗.md",
+    "后端/safe/内网渗透/Snipaste_2022/Snipaste_2022-08-26_13-36-47.png",
+    "后端/safe/03漏洞发现/js获取时间戳.md",
+    "后端/safe/03漏洞发现/http和https.md",
+    "后端/safe/03漏洞发现/bili教程.md",
+    "后端/safe/03漏洞发现/biji2.md",
+    "后端/safe/03漏洞发现/biji1.md",
+    "后端/safe/03漏洞发现/密码爆破工具.md",
+    "后端/safe/03漏洞发现/XSS攻击/Snipaste_2022/Snipaste_2022-08-27_10-41-18.png",
+    "后端/safe/03漏洞发现/XSS攻击/Snipaste_2022/Snipaste_2022-08-27_10-33-42.png",
+    "后端/safe/03漏洞发现/CSRF攻击/csrf防范.png",
+    "后端/safe/03漏洞发现/CSRF攻击/Snipaste_2022-08-27_13-46-28.png",
+    "后端/safe/SRC挖掘/Snipaste_2022-08-24_14-26-58-导入代码 自动审计.png",
+    "后端/safe/SRC挖掘/Snipaste_2022-08-24_14-24-40-CNVD高级搜索.png",
+    "后端/safe/SRC挖掘/Snipaste_2022-08-24_13-53-54.png",
+    "后端/safe/SRC挖掘/根据目标站点的指纹js用于fofa搜索.png",
+    "后端/safe/应急响应/Snipaste_2022-08-26_14-25-58.png",
+    "后端/complex-sql",
     "Untitled",
-    "后端/safe/03漏洞发现/Snipaste_2022/Snipaste_2022-08-14_10-30-47.png",
-    "images/Pasted image 20240109174605.png",
     "express",
     "git",
     "jdk",
