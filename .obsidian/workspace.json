@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c5543e4a70876ee5",
+        "id": "a4b7dc2942059f3a",
         "type": "tabs",
         "children": [
           {
-            "id": "2ccead8b37aaa7f4",
+            "id": "14db91a5832495d7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "后端/Undefined and null.md",
+                "file": "后端/complex-sql/data migration.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#幼稚不",
+                "query": "left join",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "后端/Undefined and null.md",
+                "file": "后端/complex-sql/data migration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "后端/Undefined and null.md",
+                "file": "后端/complex-sql/data migration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "后端/Undefined and null.md"
+                "file": "后端/complex-sql/data migration.md"
               }
             }
           }
@@ -146,34 +146,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2ccead8b37aaa7f4",
+  "active": "14db91a5832495d7",
   "lastOpenFiles": [
-    "images/Pasted image 20240112165745.png",
-    "后端/How should we update entity.md",
+    "后端/complex-sql/delete data.md",
+    "后端/complex-sql/Join query.md",
+    "后端/complex-sql/Why back end is sometimes sucks.md",
+    "后端/complex-sql/data migration.md",
+    "后端/API sign invoke.md",
+    "后端/complex-sql",
+    "独立开发变现/Must be quick.md",
+    "开发技巧/VS Code snippets.md",
+    "开发技巧/VS Code 快速生成html模板.md",
+    "开发技巧/Use Webstorm and Vscode at the same time.md",
+    "开发技巧/Serve start a web http.md",
+    "后端/安全和加密讨论.md",
+    "后端/Recursive Queries with MySQL.md",
+    "后端/QPS 等概念和指标.md",
     "后端/Undefined and null.md",
+    "后端/URL Encode Decode.md",
+    "后端/How should we update entity.md",
+    "images/Pasted image 20240112165745.png",
     "后端/DNS记录类型.md",
     "后端/阻塞和非阻塞的概念.md",
     "后端/应该如何理解高并发，我提供一个思路，助力大家从容应对面试.md",
     "后端/文件命名规范.md",
-    "后端/安全和加密讨论.md",
     "english/01-english.md",
     "chat-gpt/What is e2e test.md",
     "chat-gpt/React 类组件是单例吗.md",
     "chat-gpt/Nest和SpringBoot.md",
     "state management/Compare state management solution.md",
     "state management/ReactQuery/react query and SWR.md",
-    "state management/ReactQuery/basic usage.md",
-    "state management/Hox/Basic Usage.md",
-    "archived/java/java8Lambada表达式.md",
-    "archived/java/java 集合.md",
-    "archived/java/CountDownLatch,cyclicBarrier,semaphere.md",
-    "面试/面试记录总结.md",
-    "后端/其他总结.md",
-    "面试/spring/spring/借助Proxy代理提升架构扩展性.md",
-    "面试/spring/springboot/Dubbo.md",
-    "面试/spring/springboot/Druid.md",
-    "面试/spring/springboot/Caffeine.md",
-    "面试/spring/springboot/Apollo.md",
     "tutorial/tutorial-extras/img/docsVersionDropdown.png",
     "tutorial/tutorial-extras/img/localeDropdown.png",
     "images/Pasted image 20240112161208.png",
@@ -184,7 +186,6 @@
     "Untitled",
     "后端/safe/03漏洞发现/Snipaste_2022/Snipaste_2022-08-14_10-30-47.png",
     "images/Pasted image 20240109174605.png",
-    "images/Pasted image 20240110152840.png",
     "express",
     "git",
     "jdk",
@@ -193,7 +194,6 @@
     "移动应用",
     "springboot",
     "Web Layout/UI设计",
-    "Web Layout",
     "computer-science/projects/nest-todo/Untitled.canvas",
     "Untitled.canvas",
     "Untitled 1.canvas"

@@ -5,3 +5,18 @@
 必须以最快的速度打造出产品
 
 You must use the most familiar tool, and most quick tool to build product, you can just copy it.
+
+
+
+You can attemtion to low code platform, such as supabase, react, nextjs ...
+Or you can implement your own low code platform ...
+
+
+Things you can do 
+
+- api endpoint test tool ,for example,  apifox, thunder client, vscode plugin
+- implement editor
+- k8s install tool to reduce the time and effort to install k8s
+- Tool for ui/ux designer or other 
+
+
