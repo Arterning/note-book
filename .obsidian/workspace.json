@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ef27d400ba6a3341",
+        "id": "fc0ca410193e2e7a",
         "type": "tabs",
         "children": [
           {
-            "id": "c39bed3a7f0ac2a5",
+            "id": "769d5b8a882000fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "独立开发变现/独立产品.md",
+                "file": "开发技巧/Proxy Settings.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "typeorm",
+                "query": "git config",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "独立开发变现/独立产品.md",
+                "file": "开发技巧/Proxy Settings.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "独立开发变现/独立产品.md",
+                "file": "开发技巧/Proxy Settings.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "独立开发变现/独立产品.md"
+                "file": "开发技巧/Proxy Settings.md"
               }
             }
           }
@@ -146,8 +147,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c39bed3a7f0ac2a5",
+  "active": "dbbf81ff3ba0cd44",
   "lastOpenFiles": [
+    "独立开发变现/独立产品.md",
+    "开发技巧/Proxy Settings.md",
     "知识图谱.md",
     "Untitled.canvas",
     "projects/nest-cms/2-内容模块/5-自定义数据验证约束及约束中的依赖注入.md",
@@ -173,7 +176,6 @@
     "后端/其他总结.md",
     "后端/权限系统设计.md",
     "后端/什么是IO密集型和CPU密集型.md",
-    "archived/work-flow/work-flow-3-Drone.md",
     "后端/safe/内网渗透/Snipaste_2022/Snipaste_2022-08-26_13-36-47.png",
     "后端/safe/03漏洞发现/XSS攻击/Snipaste_2022/Snipaste_2022-08-27_10-41-18.png",
     "后端/safe/03漏洞发现/XSS攻击/Snipaste_2022/Snipaste_2022-08-27_10-33-42.png",
