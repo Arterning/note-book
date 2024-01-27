@@ -65,6 +65,8 @@ npm config set https-proxy http://127.0.0.1:7890
 # 恢复
 npm config delete proxy
 npm config delete https-proxy
+
+
 ```
 
 

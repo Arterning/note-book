@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "fc0ca410193e2e7a",
+        "id": "4cb3b9e757c1f468",
         "type": "tabs",
         "children": [
           {
-            "id": "769d5b8a882000fd",
+            "id": "9e10a7df7f992232",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "开发技巧/Proxy Settings.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -56,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git config",
+                "query": "docker",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +61,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "开发技巧/Proxy Settings.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "开发技巧/Proxy Settings.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "开发技巧/Proxy Settings.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -147,35 +138,41 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dbbf81ff3ba0cd44",
+  "active": "9e10a7df7f992232",
   "lastOpenFiles": [
-    "独立开发变现/独立产品.md",
+    "碎片/docker start minio.md",
+    "面试/tech/Docker 那点破事.md",
+    "后端/文件命名规范.md",
+    "面试/middleware/mysql/拉取 binlog，自动同步数据.md",
+    "后端/spark/01-spark-入门.md",
+    "docker/deploy.md",
+    "docker/Docker desktop proxy.md",
+    "docker/upload docker hub.md",
+    "bun/install and basic usage.md",
+    "开发技巧/openssl用法详解.md",
     "开发技巧/Proxy Settings.md",
-    "知识图谱.md",
+    "开发技巧/Serve start a web http.md",
+    "tool/命令行代理设置.md",
+    "开发技巧/deploy fabric.md",
+    "开发技巧/关于nginx安装openssl自签名证书.md",
+    "git/密钥配置.md",
+    "Vagrant/vagrant usage.md",
+    "Vagrant/vagrant reload and vagrant provision.md",
+    "Vagrant/HomeStead settings.md",
+    "OS/windows 开机启动管理.md",
+    "开发技巧/Test api quick and fast.md",
+    "开发技巧/Use command line to dev.md",
+    "开发技巧/Use Webstorm and Vscode at the same time.md",
+    "开发技巧/VS Code 快速生成html模板.md",
+    "开发技巧/VS Code snippets.md",
+    "开发技巧/What's the difference between 127.0.0.1 and 0.0.0.0.md",
+    "Vagrant",
+    "images/Pasted image 20240125164551.png",
+    "images/Pasted image 20240125164458.png",
+    "OS",
+    "images/Pasted image 20240125162210.png",
+    "docker",
     "Untitled.canvas",
-    "projects/nest-cms/2-内容模块/5-自定义数据验证约束及约束中的依赖注入.md",
-    "projects/nest-cms/2-内容模块/6-批量操作及软删除(回收站)功能使用.md",
-    "projects/nest-cms/2-内容模块/7-使用ElasticSearch及Mysql两种方式实现全文搜索.md",
-    "projects/nest-cms/2-内容模块/3-数据关联与树形嵌套结构的分类和评论的实现.md",
-    "projects/nest-cms/3-核心框架/1-实现一个CRUD框架以抽象化代码.md",
-    "projects/nest-cms/3-核心框架/2-自建动态配置系统，动态模块构造器及解构化应用实例.md",
-    "projects/nest-cms/3-核心框架/3-构建配置式路由与Open API文档.md",
-    "projects/nest-cms/4-CLI工具/1-Yargs构建命令行工具以及数据迁移的实现.md",
-    "projects/nest-cms/4-CLI工具/2-数据填充命令及数据工厂的实现.md",
-    "projects/nest-cms/5-用户与权限/1-用户模块开发以及使用Passport实现JWT认证和无痛刷新.md",
-    "projects/nest-cms/FindOptionsUtils.applyOptionsToTreeQueryBuilder.md",
-    "projects/nest-cms/2-内容模块/4-自定义全局的验证管道，拦截器和过滤器.md",
-    "projects/nest-cms/2-内容模块/2-请求数据的验证和响应数据的序列化.md",
-    "projects/nest-cms/2-内容模块/1-Nestjs整合Typeorm实现基本的CRUD操作及分页数据查询.md",
-    "projects/nest-cms/1-基础入门/2-Nestjs核心概念详解.md",
-    "projects/nest-cms/1-基础入门/1-Typescript+Eslint+Prettier搭建Nestjs工程及断点调试.md",
-    "projects/nest-cms/0-basic/03-原理实现/README.md",
-    "projects/nest-cms/0-basic/03-原理实现/nestjs技术分享.md",
-    "projects/lms-platform/Integrate Stripe.md",
-    "projects/lms-platform/Use Uploadthing to upload image.md",
-    "后端/其他总结.md",
-    "后端/权限系统设计.md",
-    "后端/什么是IO密集型和CPU密集型.md",
     "后端/safe/内网渗透/Snipaste_2022/Snipaste_2022-08-26_13-36-47.png",
     "后端/safe/03漏洞发现/XSS攻击/Snipaste_2022/Snipaste_2022-08-27_10-41-18.png",
     "后端/safe/03漏洞发现/XSS攻击/Snipaste_2022/Snipaste_2022-08-27_10-33-42.png",
@@ -183,19 +180,13 @@
     "后端/safe/03漏洞发现/CSRF攻击/Snipaste_2022-08-27_13-46-28.png",
     "后端/safe/SRC挖掘/Snipaste_2022-08-24_14-26-58-导入代码 自动审计.png",
     "后端/safe/SRC挖掘/Snipaste_2022-08-24_14-24-40-CNVD高级搜索.png",
-    "后端/safe/SRC挖掘/Snipaste_2022-08-24_13-53-54.png",
-    "后端/safe/SRC挖掘/根据目标站点的指纹js用于fofa搜索.png",
-    "后端/safe/应急响应/Snipaste_2022-08-26_14-25-58.png",
     "后端/complex-sql",
-    "Untitled",
     "express",
     "git",
     "jdk",
     "独立开发变现",
     "Laravel",
     "移动应用",
-    "springboot",
-    "Web Layout/UI设计",
     "computer-science/projects/nest-todo/Untitled.canvas",
     "Untitled 1.canvas"
   ]
