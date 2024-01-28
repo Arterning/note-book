@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "4cb3b9e757c1f468",
+        "id": "5804bb2810c065da",
         "type": "tabs",
         "children": [
           {
-            "id": "9e10a7df7f992232",
+            "id": "f53fd00793b4102a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "OS/如何打造开发环境.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -52,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "docker",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "OS/如何打造开发环境.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "OS/如何打造开发环境.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "OS/如何打造开发环境.md"
+              }
             }
           }
         ],
@@ -138,8 +146,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9e10a7df7f992232",
+  "active": "f53fd00793b4102a",
   "lastOpenFiles": [
+    "OS/WSL Export Imort.md",
+    "OS/WSL problems.md",
+    "开发技巧/Proxy Settings.md",
+    "Vagrant/vagrant usage.md",
+    "Vagrant/vagrant reload and vagrant provision.md",
+    "Vagrant/HomeStead settings.md",
+    "git/git 基本设置.md",
+    "OS/如何打造开发环境.md",
     "碎片/docker start minio.md",
     "面试/tech/Docker 那点破事.md",
     "后端/文件命名规范.md",
@@ -150,22 +166,14 @@
     "docker/upload docker hub.md",
     "bun/install and basic usage.md",
     "开发技巧/openssl用法详解.md",
-    "开发技巧/Proxy Settings.md",
     "开发技巧/Serve start a web http.md",
     "tool/命令行代理设置.md",
     "开发技巧/deploy fabric.md",
     "开发技巧/关于nginx安装openssl自签名证书.md",
     "git/密钥配置.md",
-    "Vagrant/vagrant usage.md",
-    "Vagrant/vagrant reload and vagrant provision.md",
-    "Vagrant/HomeStead settings.md",
     "OS/windows 开机启动管理.md",
     "开发技巧/Test api quick and fast.md",
     "开发技巧/Use command line to dev.md",
-    "开发技巧/Use Webstorm and Vscode at the same time.md",
-    "开发技巧/VS Code 快速生成html模板.md",
-    "开发技巧/VS Code snippets.md",
-    "开发技巧/What's the difference between 127.0.0.1 and 0.0.0.0.md",
     "Vagrant",
     "images/Pasted image 20240125164551.png",
     "images/Pasted image 20240125164458.png",

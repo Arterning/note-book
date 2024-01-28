@@ -7,7 +7,7 @@ note dont' use `cat > ~/.bash_pofile` , that is to override
 cat >> ~/.bash_profile << EOF
 function proxy_on() {
     export http_proxy=http://127.0.0.1:7890
-    export https_proxy=\$http_proxy
+    export https_proxy=http://127.0.0.1:7890
     echo -e "终端代理已开启。"
 }
 
