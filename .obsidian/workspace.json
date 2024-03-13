@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4c2c0be6c394ebdb",
+        "id": "82c1378e990a2423",
         "type": "tabs",
         "children": [
           {
-            "id": "dd2166cffec23e9f",
+            "id": "d75922da097e7b3b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "go/Go Create a new projects and run.md",
+                "file": "面试/frontEnd/一次Web端大量图片同时加载卡顿问题的优化之旅.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "webpack",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "go/Go Create a new projects and run.md",
+                "file": "面试/frontEnd/一次Web端大量图片同时加载卡顿问题的优化之旅.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "go/Go Create a new projects and run.md",
+                "file": "面试/frontEnd/一次Web端大量图片同时加载卡顿问题的优化之旅.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "go/Go Create a new projects and run.md"
+                "file": "面试/frontEnd/一次Web端大量图片同时加载卡顿问题的优化之旅.md"
               }
             }
           }
@@ -146,55 +146,55 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dd2166cffec23e9f",
+  "active": "d75922da097e7b3b",
   "lastOpenFiles": [
-    "go/Go Path and Go ROOT.md",
-    "go/Go CLI.md",
-    "go/Go Create a new projects and run.md",
-    "开发技巧/项目命名规范.md",
-    "images/Pasted image 20240130195804.png",
-    "Vagrant/vagrant usage.md",
-    "运维/The Importance of CICD.md",
-    "Laravel/Homestead.md",
+    "面试/frontEnd/Grid 布局.md",
+    "面试/frontEnd/一次Web端大量图片同时加载卡顿问题的优化之旅.md",
+    "面试/frontEnd/Flex 布局.md",
+    "面试/frontEnd/cookie机制原理.md",
+    "面试/frontEnd/原型链和 this.md",
+    "面试/frontEnd/For of 和 for in 的区别.md",
+    "面试/frontEnd/Proto 和 ptototype.md",
+    "面试/frontEnd/react.md",
+    "面试/frontEnd/margin 重叠.md",
+    "面试/frontEnd/http.md",
+    "面试/frontEnd/BFC.md",
+    "react/手动搭建脚手架.md",
+    "前端/webpack/Basic Usage.md",
+    "前端/tailwind.md",
+    "前端/svelet.md",
+    "前端/run eslint on save.png",
+    "前端/react state props ref.md",
+    "前端/node interpreter.png",
+    "前端/eslint-format.md",
+    "面试/frontEnd/webpack.md",
+    "面试/frontEnd/Webpack loader 和 plugins 的区别.md",
+    "面试/frontEnd/闭包.md",
+    "面试/frontEnd/发布订阅者模式和观察者模式的区别.md",
+    "面试/frontEnd/缓存.md",
+    "面试/frontEnd/This的指向.md",
+    "面试/frontEnd/Js 文件异步加载.md",
+    "面试/frontEnd/base64 优缺点.md",
+    "面试/frontEnd/虚拟 Dom.md",
+    "images/Pasted image 20240313141449.png",
+    "images/Pasted image 20240313141442.png",
+    "images/Pasted image 20240313141415.png",
+    "images/Pasted image 20240313141224.png",
+    "images/Pasted image 20240313140832.png",
+    "images/Pasted image 20240313140805.png",
+    "images/Pasted image 20240312083641.png",
+    "images/Pasted image 20240311112803.png",
+    "面试/Untitled",
+    "面试/Node",
+    "CodeSnipt/Stream",
+    "CodeSnipt",
     "运维",
-    "Laravel/Asset Bundling (Vite).md",
-    "Laravel/Create Post resource CRUD via Laravel.md",
-    "OS/SSH usage.md",
-    "Laravel/Route.md",
-    "Laravel/Model.md",
-    "Laravel/Controller.md",
-    "Laravel/basic usage.md",
-    "开发技巧/开发技巧.md",
-    "Vagrant/Homestead yaml config.md",
-    "OS/如何打造开发环境.md",
-    "OS/WSL problems.md",
-    "OS/WSL Export Imort.md",
-    "OS/windows 开机启动管理.md",
-    "OS/Vbox usage.md",
-    "OS/Bashrc file diff.md",
-    "images/Pasted image 20240129094458.png",
-    "OS/linux/sed.md",
-    "OS/linux/nohup.md",
-    "OS/linux/network.md",
-    "OS/linux/file.md",
     "Vagrant",
-    "images/Pasted image 20240125164551.png",
-    "images/Pasted image 20240125164458.png",
     "OS",
-    "images/Pasted image 20240125162210.png",
     "docker",
     "Untitled.canvas",
-    "后端/safe/内网渗透/Snipaste_2022/Snipaste_2022-08-26_13-36-47.png",
-    "后端/safe/03漏洞发现/XSS攻击/Snipaste_2022/Snipaste_2022-08-27_10-41-18.png",
-    "后端/safe/03漏洞发现/XSS攻击/Snipaste_2022/Snipaste_2022-08-27_10-33-42.png",
-    "后端/safe/03漏洞发现/CSRF攻击/csrf防范.png",
-    "后端/safe/03漏洞发现/CSRF攻击/Snipaste_2022-08-27_13-46-28.png",
     "后端/complex-sql",
     "express",
-    "git",
-    "jdk",
-    "独立开发变现",
-    "Laravel",
     "computer-science/projects/nest-todo/Untitled.canvas",
     "Untitled 1.canvas"
   ]

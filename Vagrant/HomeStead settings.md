@@ -78,7 +78,9 @@ We can see the default port mapping in the log
 
 So we need to visit http://127.0.0.1:8000/ in the outside to visit the website
 
-
+![[Pasted image 20240201171329.png]]
+HomeStead的端口转发实际上基于这个virtualbox
+可以发现，Docker和虚拟机都支持类似的功能 文件挂载 端口映射
 
 ## SSH key
 

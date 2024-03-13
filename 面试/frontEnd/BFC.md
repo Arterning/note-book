@@ -1,6 +1,183 @@
-## 史上最全面、最透彻的BFC原理剖析
 
-> [左鹏飞](https://github.com/zuopf769)   2017.09.21
+
+BFC 是**「块级格式化上下文」**，是一个独立的渲染区域，让处于 BFC 内部的元素与外部的元素相互隔离，使内外元素的定位不会相互影响。
+
+
+- BFC 中子元素的 margin box 的左边， 与包含块 (BFC) border box的左边相接触 (子元素 absolute 除外)
+    
+- BFC 的区域不会与 float 的元素区域重叠
+    
+- `BFC` 就是一个块级元素，块级元素会在垂直方向一个接一个的排列
+    
+- `BFC` 就是页面中的一个隔离的独立容器，容器里的标签不会影响到外部标签
+    
+- 垂直方向距离由 `margin` 决定，属于同一个 `BFC` 的两个相邻标签外边距会发生重叠，属于不同 `BFC` 的不会重叠
+    
+- 计算 `BFC` 的高度时，浮动元素也参与计算 （可以用于清除浮动）
+
+
+
+如何让元素变成BFC
+
+最简单： 把overflow设置成hidden
+
+
+
+## BFC 特性及应用
+
+**「1. 阻止`margin`重叠」**
+
+对于同一个 BFC 内的两个相邻元素，如果分别设置了上下边距，那么会发生折叠（取大的那个）
+
+```html
+<head>
+div{
+    width: 50px;
+    height: 50px;
+    background: pink;
+    margin: 50px;
+}
+</head>
+<body>
+    <div></div>
+    <div></div>
+</body>
+```
+
+
+
+
+```html
+<style>
+.container {  
+    overflow: hidden;  
+}  
+  
+.child {  
+    width: 50px;  
+    height: 50px;  
+    background: pink;  
+    margin: 50px;  
+}
+</style>
+
+<div class="container">
+    <div class="child"></div>
+</div>
+<div class="container">
+    <div class="child"></div>
+</div>
+```
+
+
+
+
+**「2. 清除浮动」**
+
+我们都知道，浮动的元素会脱离普通文档流，来看下面一个例子
+
+```html
+<style>
+  .container {
+    width: 500px;
+    border: 1px solid #000;
+  }
+  
+  .child {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: pink;
+  }
+</style>
+
+<div class="container">
+  <div class="child"></div>
+</div>
+```
+
+解释：由于容器内元素浮动，脱离了文档流，所以就只有外面容器的 2px 边距高度。
+
+**「即方块没有如期将容器撑开」**
+
+
+对于上面的例子，如果想内容在设置了浮动的条件下，还能撑开容器高度，那么可以通过触发容器的 BFC，那么容器将会包裹着浮动元素。
+
+```html
+<style>
+  .container {
+    width: 500px;
+    border: 1px solid #000;
+    overflow: hidden;
+  }
+  
+  .child {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: pink;
+  }
+</style>
+
+<div class="container">
+  <div class="child"></div>
+</div>
+```
+
+
+**「3. BFC 可以阻止元素被浮动元素覆盖」**
+
+```html
+<style>
+  .left {
+    height: 100px;
+    width: 100px;
+    float: left;
+    background: green;
+  }
+
+  .none {
+    width: 200px;
+    height: 200px;
+    background: grey;
+  }
+</style>
+    
+<div class="left">左浮动元素</div>
+<div class="none">
+  没设置浮动的元素，我的文字由于环绕没被覆盖，但实际方块被覆盖了
+</div>
+```
+
+
+这时候其实第二个元素有部分被浮动元素所覆盖，(但是文本信息不会被浮动元素所覆盖) 如果想避免元素被覆盖，可以触发第二个元素的 BFC 特性，在第二个元素中加入 **「overflow: hidden」**，就会变成：
+
+
+```html
+<style>
+  .left {
+    height: 100px;
+    width: 100px;
+    float: left;
+    background: green;
+  }
+
+  .none {
+    width: 200px;
+    height: 200px;
+    background: grey;
+    overflow: hidden;
+  }
+</style>
+    
+<div class="left">左浮动元素</div>
+<div class="none">
+  没设置浮动的元素，我的文字由于环绕没被覆盖，但实际方块被覆盖了
+</div>
+```
+
+
+
 
 
 本文讲了BFC的概念是什么； BFC的约束规则；咋样才能触发生成新的BFC；BFC在布局中的应用：防止margin重叠(塌陷,以最大的为准)； 清除内部浮动；自适应两（多）栏布局。
@@ -37,8 +214,23 @@
 
 ### 2.BFC的生成
 
-   
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上文提到BFC是一块渲染区域，那这块渲染区域到底在哪，它又是有多大，这些由生成BFC的元素决定，CSS2.1中规定满足下列CSS声明之一的元素便会生成BFC。
+只要元素满足下面任一条件即可触发 BFC 特性：
+
+- body 根元素就是一个 BFC
+    
+- 浮动元素：float 除 none 以外的值
+    
+- 绝对定位元素：position (absolute、fixed)
+    
+- display 为 inline-block、table-cell、flex
+    
+- overflow 除了 visible 以外的值 (hidden、auto、scroll)
+
+
+
+
+或者说
+
 
 + 根元素
 + float的值不为none
