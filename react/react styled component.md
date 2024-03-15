@@ -44,4 +44,72 @@ render(
 );
 ```
 
+
+
+感觉用这种方式还是没有tailwind 好，缺乏提示，不过还是贴一下几个例子吧。。
+
+
+
+```jsx
+import styled from "styled-components";
+
+const Button = styled.button`
+  color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
+
+// A new component based on Button, but with some override styles
+const TomatoButton = styled(Button)`
+  color: tomato;
+  border-color: tomato;
+`;
+
+
+// 传递参数
+interface InputProps {
+    inputColor?: string;
+}
+
+const Input = styled.input<InputProps>`
+  padding: 0.5em;
+  margin: 0.5em;
+  color: ${props => props.inputColor || "palevioletred"};
+  background: papayawhip;
+  border: none;
+  border-radius: 3px;
+`;
+
+const ExampleB : React.FC = () => (
+<div>
+    <Button>Normal Button</Button>
+    <TomatoButton>Tomato Button</TomatoButton>
+
+    <Input defaultValue="@probablyup" type="text" />
+    <Input defaultValue="@geelen" type="text" inputColor="rebeccapurple" />
+  </div>
+)
+
+export default ExampleB;
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ****[在React项目中使用css-in-js方案](https://juejin.cn/post/6844903993047531533)****

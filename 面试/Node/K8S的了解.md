@@ -85,10 +85,48 @@ LoadBalancer 是使用云提供商的负载均衡器向外部暴露服务。 外
 
 
 
-ingress
+## ingress
+
+配置好api前缀和服务名的对应关系
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-ingress
+  annotations:
+    # We are defining this annotation to prevent nginx
+    # from redirecting requests to `https` for now
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /hello
+            pathType: Prefix
+            backend:
+              service:
+                name: service-hellok8s-clusterip
+                port:
+                  number: 3000
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: service-nginx-clusterip
+                port:
+                  number: 4000
+
+```
 
 相当于网关 一般就是一个ingress service，然后通过他导出到多个普通cluster service
 
-配置前缀和service name的对应关系
 
 Ingress 公开从集群外部到集群内服务的 HTTP 和 HTTPS 路由。 流量路由由 Ingress 资源上定义的规则控制。Ingress 可为 Service 提供外部可访问的 URL、负载均衡流量、 SSL/TLS，以及基于名称的虚拟托管。
+
+
+1. API路由
+2. 负载均衡
+3. 外部可访问的URL
+
+
