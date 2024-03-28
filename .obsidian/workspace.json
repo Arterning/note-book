@@ -13,24 +13,50 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/React setState是同步还是异步.md",
+                "file": "面试/你们的项目如何部署的.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "256436e353b3895a",
+            "id": "ea3cfe3af8d99cec",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "images/Pasted image 20240323100044.png"
+                "file": "面试/谈话框架.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f34b6f6c44fd1a2a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "面试/谈一下你们的项目是如何做监控和报警的.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c817fe1c7cb940e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "面试/Mysql 乐观锁和悲观锁.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -96,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "images/Pasted image 20240323100044.png",
+                "file": "面试/谈一下你们的项目是如何做监控和报警的.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "images/Pasted image 20240323100044.png",
+                "file": "面试/谈一下你们的项目是如何做监控和报警的.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "images/Pasted image 20240323100044.png"
+                "file": "面试/谈一下你们的项目是如何做监控和报警的.md"
               }
             }
           }
@@ -157,44 +183,47 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "256436e353b3895a",
+  "active": "f34b6f6c44fd1a2a",
   "lastOpenFiles": [
+    "面试/监控系统设计.md",
+    "面试/面试记录总结.md",
+    "面试/布隆过滤器.md",
+    "面试/你们的项目如何部署的.md",
+    "面试/如何做限流访问.md",
+    "面试/什么是Drone.md",
+    "面试/数据结构.md",
+    "面试/思路扩散.md",
+    "面试/谈话框架.md",
+    "面试/谈谈对区块链的理解.md",
+    "面试/谈一下你们的项目是如何做监控和报警的.md",
+    "面试/谈一下WebSocket的理解.md",
+    "面试/统一登录中心 如何实现单点登录的.md",
+    "面试/AI 模型 整合 知识库.md",
+    "面试/K8s 常用命令.md",
+    "面试/K8s 的掌握.md",
+    "面试/K8s Ingress和Ingress Controller的区别.md",
+    "面试/Mysql 乐观锁和悲观锁.md",
+    "面试/OIDC和Auth2.0的关系.md",
+    "面试/Promise 面试题.md",
     "面试/React setState是同步还是异步.md",
+    "统一登录和运维平台的设计.md",
+    "面试/Redis 存储地理位置.md",
+    "面试/Redis 哨兵.md",
+    "面试/Redis 总结.md",
+    "面试/Redis是AP还是CP.md",
+    "images/Pasted image 20240327113205.png",
+    "images/Pasted image 20240327112759.png",
+    "面试/Brix",
+    "面试/SCOW超算平台调研",
+    "images/Pasted image 20240323102924.png",
     "images/Pasted image 20240323100044.png",
-    "面试/xxl-job原理/分布式任务调度系统xxl-job小结.md",
-    "面试/xxl-job原理/一文直接搞懂时间轮算法的精妙之处.md",
     "images/Pasted image 20240323095721.png",
     "images/Pasted image 20240323095653.png",
     "images/Pasted image 20240323095459.png",
-    "面试/xxl-job原理/XXL-JOB核心源码解读及时间轮原理剖析.md",
-    "运维/本地玩转k8s.md",
     "面试/xxl-job原理",
-    "面试/面试记录总结.md",
-    "面试/frontEnd/react setState是同步还是异步.md",
-    "safe/03漏洞发现/后端漏洞/XXE/What is XXE.md",
     "safe/03漏洞发现/后端漏洞/Snipaste_2022-08-27_13-51-01.png",
-    "safe/03漏洞发现/后端漏洞/比较好的解决方案.md",
-    "safe/03漏洞发现/后端漏洞/XXE/002pikachu.md",
-    "safe/03漏洞发现/后端漏洞/文件上传漏洞发现/002关于00截断.md",
-    "safe/03漏洞发现/后端漏洞/文件上传漏洞发现/php文件上传00截断.md",
-    "safe/03漏洞发现/后端漏洞/文件上传漏洞发现/如何防范.md",
-    "safe/03漏洞发现/后端漏洞/文件上传漏洞发现/文件上传漏洞.md",
-    "safe/03漏洞发现/后端漏洞/服务器端请求伪造.md",
-    "safe/03漏洞发现/后端漏洞/文件上传漏洞发现/003htaccess是什么.md",
-    "safe/03漏洞发现/后端漏洞/文件上传漏洞发现/002靶场通关2.md",
-    "safe/03漏洞发现/后端漏洞/文件上传漏洞发现/002靶场通关3.md",
-    "safe/03漏洞发现/后端漏洞/文件包含漏洞/文件包含漏洞.md",
-    "safe/03漏洞发现/后端漏洞/文件包含漏洞/关键文件.md",
-    "safe/03漏洞发现/后端漏洞/文件上传漏洞发现/002靶场通关.md",
-    "safe/03漏洞发现/后端漏洞/RCE攻击/远程命令执行漏洞.md",
-    "safe/03漏洞发现/WAF绕过技巧.md",
-    "safe/03漏洞发现/MyBatis中的两种占位符.md",
-    "safe/03漏洞发现/Mybatis Order by 注入漏洞.md",
     "safe/SRC挖掘/Snipaste_2022-08-24_14-26-58-导入代码 自动审计.png",
     "safe/SRC挖掘/Snipaste_2022-08-24_14-24-40-CNVD高级搜索.png",
-    "safe/SRC挖掘/Snipaste_2022-08-24_13-53-54.png",
-    "safe/SRC挖掘/根据目标站点的指纹js用于fofa搜索.png",
-    "safe/WireShark/Snipaste_2022-07-31_15-31-10.png",
     "safe/03漏洞发现/后端漏洞/文件包含漏洞",
     "safe/03漏洞发现/后端漏洞",
     "safe/03漏洞发现/前端漏洞",
@@ -202,8 +231,6 @@
     "CodeSnipt/Stream",
     "CodeSnipt",
     "运维",
-    "Vagrant",
-    "OS",
     "Untitled.canvas",
     "computer-science/projects/nest-todo/Untitled.canvas",
     "Untitled 1.canvas"

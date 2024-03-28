@@ -1,5 +1,8 @@
 
 
+首先最重要的一点 websocket是一个二进制的协议。
+
+
 
 
 Websocket 握手
