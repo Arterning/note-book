@@ -62,4 +62,15 @@
 - 如果有其他阶段更紧急待执行的任务，比如 timer ，close ，那么 poll 阶段将不阻塞，会进行下一个 tick 阶段。
 
 
-  
+
+总结:
+
+宏任务
+- timer callback
+- poll 回调 处理IO
+- setImeediate回调
+- close callback
+
+微任务
+- Promise
+- process.nextTick

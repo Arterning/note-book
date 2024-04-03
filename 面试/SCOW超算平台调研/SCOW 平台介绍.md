@@ -3,3 +3,10 @@
 **超算管理系统**面向运维工作者，协助运营人员建立成熟的超算运营机制，管理超算的人员、费用等信息，帮助超算的运营工作。
 
 
+底层基于Slurm 调度平台，基于命令封装了一个grpc调度接口
+
+
+portal-web作为全栈工程，提供API和React页面。基于page/api实现的api路由，在page/api路由中通过grpc的方式调用portal-server提供的方法。
+
+
+portal-server 通过grpc和其他服务进行交互。

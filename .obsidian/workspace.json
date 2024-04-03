@@ -4,59 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "9f7eeb4baedbaab0",
+        "id": "2faa28d82db8ab8d",
         "type": "tabs",
         "children": [
           {
-            "id": "be9ae2411df81e38",
+            "id": "7641c16e69ed252e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/你们的项目如何部署的.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ea3cfe3af8d99cec",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "面试/谈话框架.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f34b6f6c44fd1a2a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "面试/谈一下你们的项目是如何做监控和报警的.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c817fe1c7cb940e5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "面试/Mysql 乐观锁和悲观锁.md",
+                "file": "面试/做过的项目.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "索引失效",
+                "query": "是否需要进入",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试/谈一下你们的项目是如何做监控和报警的.md",
+                "file": "面试/做过的项目.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试/谈一下你们的项目是如何做监控和报警的.md",
+                "file": "面试/做过的项目.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/谈一下你们的项目是如何做监控和报警的.md"
+                "file": "面试/做过的项目.md"
               }
             }
           }
@@ -183,54 +146,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f34b6f6c44fd1a2a",
+  "active": "7641c16e69ed252e",
   "lastOpenFiles": [
-    "面试/监控系统设计.md",
-    "面试/面试记录总结.md",
-    "面试/布隆过滤器.md",
-    "面试/你们的项目如何部署的.md",
-    "面试/如何做限流访问.md",
-    "面试/什么是Drone.md",
-    "面试/数据结构.md",
-    "面试/思路扩散.md",
-    "面试/谈话框架.md",
-    "面试/谈谈对区块链的理解.md",
-    "面试/谈一下你们的项目是如何做监控和报警的.md",
-    "面试/谈一下WebSocket的理解.md",
-    "面试/统一登录中心 如何实现单点登录的.md",
-    "面试/AI 模型 整合 知识库.md",
-    "面试/K8s 常用命令.md",
-    "面试/K8s 的掌握.md",
-    "面试/K8s Ingress和Ingress Controller的区别.md",
-    "面试/Mysql 乐观锁和悲观锁.md",
-    "面试/OIDC和Auth2.0的关系.md",
-    "面试/Promise 面试题.md",
-    "面试/React setState是同步还是异步.md",
-    "统一登录和运维平台的设计.md",
-    "面试/Redis 存储地理位置.md",
-    "面试/Redis 哨兵.md",
-    "面试/Redis 总结.md",
-    "面试/Redis是AP还是CP.md",
-    "images/Pasted image 20240327113205.png",
-    "images/Pasted image 20240327112759.png",
+    "面试/谈话思路.md",
+    "面试/SCOW超算平台调研/HPC中常见的调度器介绍.md",
+    "面试/SCOW超算平台调研/gRPC 原理.md",
+    "面试/SCOW超算平台调研/gRPC入门.md",
+    "面试/AI/大致讲一下ChatGPT的原理.md",
+    "面试/AI/AI 模型 整合 知识库.md",
+    "面试/MySQL/讲一讲 MySQL 数据备份杀手锏 binlog.md",
+    "面试/MySQL/高并发下使用MySQL乐观锁解决超卖问题.md",
+    "面试/MySQL/mysql 常见问题.md",
+    "面试/MySQL/MySQL 主备延迟有哪些坑？主备切换策略.md",
+    "面试/MySQL/存储引擎.md",
+    "面试/你离职的原因是什么？如何避坑？.md",
+    "面试/MySQL/执行计划分析.md",
+    "面试/MySQL/Mysql 乐观锁和悲观锁.md",
+    "面试/MySQL/SQL 优化有哪些技巧.md",
+    "面试/MySQL/SQL 语句明明命中了索引，为什么执行很慢？.md",
+    "面试/MySQL/MySQL 主从延迟 7 种解决方案.md",
+    "面试/MySQL/mysql 一棵 B+ 树能存多少条数据？.md",
+    "面试/MySQL/拉取 binlog，自动同步数据.md",
+    "面试/MySQL/监听MYSQL的方式.md",
+    "面试/MySQL/索引策略.md",
+    "面试/MySQL/Inner Join 和 Outer Join的区别.md",
+    "面试/MySQL/一张千万级的数据表，删除了一半的数据，你觉得B+树索引文件会不会变小？.md",
+    "面试/MySQL/跑了4个实验，实战讲解 MySQL的行锁、间隙锁.md",
+    "面试/MySQL/多表联合查询SQL优化思路建议.md",
+    "images/Pasted image 20240403125611.png",
+    "面试/K8s/K8s Ingress和Ingress Controller的区别.md",
+    "images/Pasted image 20240403122431.png",
+    "images/Pasted image 20240403122011.png",
+    "images/Pasted image 20240403122006.png",
+    "images/Pasted image 20240403121922.png",
+    "面试/数据结构/LRU新增.png",
+    "面试/数据结构/LRU访问006.png",
+    "面试/数据结构/LRU访问002.png",
+    "面试/数据结构/LinkedHashMap结构.png",
+    "面试/多线程/BlockingQueue的四种操作形式.png",
+    "面试/区块链",
+    "面试/AI",
+    "面试/Node/事件循环",
+    "面试/arch/限流",
+    "面试/K8s",
+    "面试/Redis问题",
+    "面试/MySQL",
     "面试/Brix",
     "面试/SCOW超算平台调研",
-    "images/Pasted image 20240323102924.png",
-    "images/Pasted image 20240323100044.png",
-    "images/Pasted image 20240323095721.png",
-    "images/Pasted image 20240323095653.png",
-    "images/Pasted image 20240323095459.png",
     "面试/xxl-job原理",
-    "safe/03漏洞发现/后端漏洞/Snipaste_2022-08-27_13-51-01.png",
-    "safe/SRC挖掘/Snipaste_2022-08-24_14-26-58-导入代码 自动审计.png",
-    "safe/SRC挖掘/Snipaste_2022-08-24_14-24-40-CNVD高级搜索.png",
-    "safe/03漏洞发现/后端漏洞/文件包含漏洞",
-    "safe/03漏洞发现/后端漏洞",
-    "safe/03漏洞发现/前端漏洞",
-    "面试/Node",
-    "CodeSnipt/Stream",
-    "CodeSnipt",
-    "运维",
     "Untitled.canvas",
     "computer-science/projects/nest-todo/Untitled.canvas",
     "Untitled 1.canvas"
