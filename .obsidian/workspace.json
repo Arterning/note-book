@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2faa28d82db8ab8d",
+        "id": "1cd97ea5cfe38037",
         "type": "tabs",
         "children": [
           {
-            "id": "7641c16e69ed252e",
+            "id": "547487f39eec5a3a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "面试/做过的项目.md",
+                "file": "开发/Other/chartRef.value 为什么为NULL.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "是否需要进入",
+                "query": "file: fastapi",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5
+    "width": 343.5
   },
   "right": {
     "id": "6ee6a3f8df298175",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "面试/做过的项目.md",
+                "file": "开发/Other/chartRef.value 为什么为NULL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "面试/做过的项目.md",
+                "file": "开发/Other/chartRef.value 为什么为NULL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "面试/做过的项目.md"
+                "file": "开发/Other/chartRef.value 为什么为NULL.md"
               }
             }
           }
@@ -138,64 +138,65 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
     }
   },
-  "active": "7641c16e69ed252e",
+  "active": "547487f39eec5a3a",
   "lastOpenFiles": [
-    "面试/谈话思路.md",
-    "面试/SCOW超算平台调研/HPC中常见的调度器介绍.md",
-    "面试/SCOW超算平台调研/gRPC 原理.md",
-    "面试/SCOW超算平台调研/gRPC入门.md",
-    "面试/AI/大致讲一下ChatGPT的原理.md",
-    "面试/AI/AI 模型 整合 知识库.md",
-    "面试/MySQL/讲一讲 MySQL 数据备份杀手锏 binlog.md",
-    "面试/MySQL/高并发下使用MySQL乐观锁解决超卖问题.md",
-    "面试/MySQL/mysql 常见问题.md",
-    "面试/MySQL/MySQL 主备延迟有哪些坑？主备切换策略.md",
-    "面试/MySQL/存储引擎.md",
-    "面试/你离职的原因是什么？如何避坑？.md",
-    "面试/MySQL/执行计划分析.md",
-    "面试/MySQL/Mysql 乐观锁和悲观锁.md",
-    "面试/MySQL/SQL 优化有哪些技巧.md",
-    "面试/MySQL/SQL 语句明明命中了索引，为什么执行很慢？.md",
-    "面试/MySQL/MySQL 主从延迟 7 种解决方案.md",
-    "面试/MySQL/mysql 一棵 B+ 树能存多少条数据？.md",
-    "面试/MySQL/拉取 binlog，自动同步数据.md",
-    "面试/MySQL/监听MYSQL的方式.md",
-    "面试/MySQL/索引策略.md",
-    "面试/MySQL/Inner Join 和 Outer Join的区别.md",
-    "面试/MySQL/一张千万级的数据表，删除了一半的数据，你觉得B+树索引文件会不会变小？.md",
-    "面试/MySQL/跑了4个实验，实战讲解 MySQL的行锁、间隙锁.md",
-    "面试/MySQL/多表联合查询SQL优化思路建议.md",
+    "开发/后端/URL Encode Decode.md",
+    "开发/Other/chartRef.value 为什么为NULL.md",
+    "开发/前端/react state props ref.md",
+    "开发/前端/run eslint on save.png",
+    "开发/前端/tailwind.md",
+    "开发/前端/svelet.md",
+    "开发/前端/node interpreter.png",
+    "开发/前端/eslint-format.md",
+    "开发/前端/图片懒加载.md",
+    "开发/后端/安全和加密讨论.md",
+    "开发/技术栈",
+    "开发/Base/Python/fastapi_best_architecture 使用.md",
+    "开发/Base",
+    "开发/Base/Python",
+    "开发/Other/什么是 ASGI.md",
+    "开发/Other/React Hook Form的原理.md",
+    "开发/Other/pip 修改源.md",
+    "开发/Other/Mysql： BLOB, TEXT, GEOMETRY or JSON column 'Fresp' can't have a default.md",
+    "开发/Other/Homestead 自带 MySQL 的 默认账号与密码.md",
+    "开发/Other/知识图谱.md",
+    "2024-05-20.md",
+    "开发",
+    "开发/面试/面试记录总结.md",
+    "开发/Other/merged.md",
+    "开发/Other/Nodejs 事件循环.md",
+    "开发/Other/markdown.md",
+    "开发/Other/markdown template.md",
+    "开发/Other/Master JWT.md",
+    "开发/Other/declare.md",
+    "开发/Other/Cookie Session and token.md",
+    "开发/Other/basic usage.md",
+    "开发/Other/最近几年，Headless 这个概念有点流行.md",
+    "开发/Other/1703642856811.png",
+    "images/Pasted image 20231219212553.png",
+    "images/Pasted image 20231219205810.png",
+    "images/Pasted image 20231128154626.png",
+    "images/Pasted image 20231019155517.png",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "未命名.canvas",
+    "Python",
     "images/Pasted image 20240403125611.png",
-    "面试/K8s/K8s Ingress和Ingress Controller的区别.md",
     "images/Pasted image 20240403122431.png",
     "images/Pasted image 20240403122011.png",
-    "images/Pasted image 20240403122006.png",
-    "images/Pasted image 20240403121922.png",
-    "面试/数据结构/LRU新增.png",
-    "面试/数据结构/LRU访问006.png",
-    "面试/数据结构/LRU访问002.png",
-    "面试/数据结构/LinkedHashMap结构.png",
-    "面试/多线程/BlockingQueue的四种操作形式.png",
-    "面试/区块链",
-    "面试/AI",
-    "面试/Node/事件循环",
-    "面试/arch/限流",
-    "面试/K8s",
-    "面试/Redis问题",
-    "面试/MySQL",
-    "面试/Brix",
-    "面试/SCOW超算平台调研",
-    "面试/xxl-job原理",
-    "Untitled.canvas",
-    "computer-science/projects/nest-todo/Untitled.canvas",
-    "Untitled 1.canvas"
+    "开发/面试/区块链",
+    "开发/面试/AI",
+    "开发/面试/Node/事件循环",
+    "开发/面试/arch/限流",
+    "开发/面试/K8s",
+    "computer-science/projects/nest-todo/Untitled.canvas"
   ]
 }
