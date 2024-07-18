@@ -12,7 +12,7 @@
 >
 > 我们保留并锁定了原始分支（legacy-single-app-pydantic-v2），您可以在分支选择器中找到它
 
-简体中文 | [English](开发/Other/README.md)
+简体中文 | [English](其他文件/README.md)
 
 基于 FastAPI 框架的前后端分离中后台解决方案，遵循[伪三层架构](#伪三层架构)设计， 支持 **python3.10** 及以上版本
 

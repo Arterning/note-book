@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "1cd97ea5cfe38037",
+        "id": "fe55860a417b2a99",
         "type": "tabs",
         "children": [
           {
-            "id": "547487f39eec5a3a",
+            "id": "582db8994aea2136",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "开发/Other/chartRef.value 为什么为NULL.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -56,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file: fastapi",
+                "query": "fastapi dev main.py",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "开发/Other/chartRef.value 为什么为NULL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "开发/Other/chartRef.value 为什么为NULL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "开发/Other/chartRef.value 为什么为NULL.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -146,41 +138,42 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "547487f39eec5a3a",
+  "active": "127f56f716322723",
   "lastOpenFiles": [
-    "开发/后端/URL Encode Decode.md",
-    "开发/Other/chartRef.value 为什么为NULL.md",
-    "开发/前端/react state props ref.md",
+    "开发/后端/k8s tutorial.md",
+    "其他文件/work-flow-1-ufw.md",
+    "开发/远程工作/01-如何找到远程工作.md",
+    "archived/readme.md",
+    "开发/操作系统/linux/linux_001_Linux Kernel 4.9 中的 BBR 算法与之前的 TCP 拥塞控制相比有什么优势.md",
+    "开发/Base/jdk/java/BigDecimal的实现.md",
+    "开发/Base/jdk/java/java 浮点计算和BigDecimal.md",
+    "archived/java/JDK_000.md",
+    "开发/Base/jdk/java/java nio.md",
+    "开发/Base/jdk/java/并行和并发的区别.md",
+    "开发/Base/jdk/java/java_bug_of_date_format.md",
+    "开发/商业化/盘点那些走向世界的中国开源项目.md",
+    "开发/商业化/程序员之神.md",
+    "开发/商业化/001.md",
+    "开发/开源/001.md",
+    "开发/开源/002.md",
+    "开发/开源/如何参加一个开源项目.md",
+    "开发/开源/做项目不给钱？这位小哥一怒之下把代码开源到 GitHub.md",
+    "开发/开源/如何参与一个顶级开源项目.md",
+    "开发/开源/cloud platform.md",
+    "开发/开源/dubbo.md",
+    "开发/开源/fastJson.md",
+    "开发/开源/xmail.md",
+    "开发/开源/TensorFlow.md",
+    "开发/开源/spug.md",
+    "开发/开源/pyecharts.md",
+    "开发/技术栈/FastAPI",
     "开发/前端/run eslint on save.png",
-    "开发/前端/tailwind.md",
-    "开发/前端/svelet.md",
     "开发/前端/node interpreter.png",
-    "开发/前端/eslint-format.md",
-    "开发/前端/图片懒加载.md",
-    "开发/后端/安全和加密讨论.md",
     "开发/技术栈",
-    "开发/Base/Python/fastapi_best_architecture 使用.md",
     "开发/Base",
     "开发/Base/Python",
-    "开发/Other/什么是 ASGI.md",
-    "开发/Other/React Hook Form的原理.md",
-    "开发/Other/pip 修改源.md",
-    "开发/Other/Mysql： BLOB, TEXT, GEOMETRY or JSON column 'Fresp' can't have a default.md",
-    "开发/Other/Homestead 自带 MySQL 的 默认账号与密码.md",
-    "开发/Other/知识图谱.md",
-    "2024-05-20.md",
     "开发",
-    "开发/面试/面试记录总结.md",
-    "开发/Other/merged.md",
-    "开发/Other/Nodejs 事件循环.md",
-    "开发/Other/markdown.md",
-    "开发/Other/markdown template.md",
-    "开发/Other/Master JWT.md",
-    "开发/Other/declare.md",
-    "开发/Other/Cookie Session and token.md",
-    "开发/Other/basic usage.md",
-    "开发/Other/最近几年，Headless 这个概念有点流行.md",
-    "开发/Other/1703642856811.png",
+    "其他文件/1703642856811.png",
     "images/Pasted image 20231219212553.png",
     "images/Pasted image 20231219205810.png",
     "images/Pasted image 20231128154626.png",
@@ -196,7 +189,6 @@
     "开发/面试/AI",
     "开发/面试/Node/事件循环",
     "开发/面试/arch/限流",
-    "开发/面试/K8s",
     "computer-science/projects/nest-todo/Untitled.canvas"
   ]
 }

@@ -1,4 +1,4 @@
-﻿# mybatis学习笔记(1)-对原生jdbc程序中的问题总结
+# mybatis学习笔记(1)-对原生jdbc程序中的问题总结
 
 标签：mybatis
 

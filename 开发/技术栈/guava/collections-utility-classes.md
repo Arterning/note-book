@@ -291,4 +291,4 @@ Table<String, Character, Integer> table = Tables.newCustomTable(
 transpose(Table<R, C, V>)方法允许你把Table<C, R, V>转置成Table<R, C, V>。例如，如果你在用Table构建加权有向图，这个方法就可以把有向图反转。
 
 ------
-[返回目录](开发/Other/README.md)
+[返回目录](其他文件/README.md)
