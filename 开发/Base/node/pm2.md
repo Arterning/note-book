@@ -31,3 +31,12 @@ Run npm script
 ```
 pm2 start 'bun run start'
 ```
+
+
+## pm2 开启前端服务
+
+```
+pm2 start pnpm -- run dev --host 0.0.0.0
+pm2 list
+pm2 restart 0
+```
