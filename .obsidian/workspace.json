@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "开发/Base/node/pm2.md",
+                "file": "开发/技术栈/FastAPI/fastapi 整合elasticsearch.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "开发/Base/node/pm2.md",
+                "file": "开发/技术栈/FastAPI/fastapi 整合elasticsearch.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "开发/Base/node/pm2.md",
+                "file": "开发/技术栈/FastAPI/fastapi 整合elasticsearch.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "开发/Base/node/pm2.md"
+                "file": "开发/技术栈/FastAPI/fastapi 整合elasticsearch.md"
               }
             }
           }
@@ -146,8 +146,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "127f56f716322723",
+  "active": "84afca3bda964e18",
   "lastOpenFiles": [
+    "开发/Base/node/pm2.md",
+    "开发/技术栈/FastAPI/fastapi 整合elasticsearch.md",
+    "未命名",
     "开发/技术栈/FastAPI/fastapi_best_architecture 使用.md",
     "开发/技术栈/FastAPI/Fastapi通过接口迁移数据.md",
     "开发/技术栈/FastAPI/部署项目.md",
@@ -172,8 +175,6 @@
     "文科系列/人物/粟裕.md",
     "文科系列/人物/吕俊生.md",
     "文科系列/人物/林彪.md",
-    "文科系列/人物/胡琏离别家书.md",
-    "文科系列/军事/军用卡车为什么区分凸头和扁头.md",
     "开发/技术栈/FastAPI",
     "开发/前端/run eslint on save.png",
     "开发/前端/node interpreter.png",
@@ -196,7 +197,6 @@
     "开发/面试/区块链",
     "开发/面试/AI",
     "开发/面试/Node/事件循环",
-    "开发/面试/arch/限流",
     "computer-science/projects/nest-todo/Untitled.canvas"
   ]
 }
