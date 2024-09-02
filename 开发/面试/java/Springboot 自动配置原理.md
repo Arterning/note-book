@@ -1,7 +1,0 @@
-
-然后，最最最重要的另一个注解@Import，这个注解导入了一个类，点进去这个类查看主要逻辑，实际上就是通过SPI机制，扫描并加载META-INF/spring.factories中的配置类，这个文件中是key-value格式，key是EnableAutoConfiguration，value是类路径
-
-  
-随便打开这样的一个value配置类后，比如Redis的配置类，我们会发现类上面有个@ConditionalOnMissingBean注解，
-这个注解含义就是如果容器中没有该类在注入容器。这也就能说明一个平时的疑问，redis提供了一个默认的配置类的
-bean。我如果自定义一个肯定会报冲突，但是实际上并没有，就是因为这个@ConditionalOnMissingBean

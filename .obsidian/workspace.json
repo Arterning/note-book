@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "8c23e447fd604df5",
+        "id": "6e63dbfc2174fee2",
         "type": "tabs",
         "children": [
           {
-            "id": "84afca3bda964e18",
+            "id": "42131614b3b2b344",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "开发/技术栈/FastAPI/fastapi 整合elasticsearch.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -56,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "fastapi dev main.py",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "开发/技术栈/FastAPI/fastapi 整合elasticsearch.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "开发/技术栈/FastAPI/fastapi 整合elasticsearch.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "开发/技术栈/FastAPI/fastapi 整合elasticsearch.md"
+                "file": "开发/技术栈/FastAPI/部署项目.md"
               }
             }
           }
@@ -146,57 +140,57 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "84afca3bda964e18",
+  "active": "127f56f716322723",
   "lastOpenFiles": [
-    "开发/Base/node/pm2.md",
-    "开发/技术栈/FastAPI/fastapi 整合elasticsearch.md",
-    "未命名",
-    "开发/技术栈/FastAPI/fastapi_best_architecture 使用.md",
-    "开发/技术栈/FastAPI/Fastapi通过接口迁移数据.md",
-    "开发/技术栈/FastAPI/部署项目.md",
-    "文科系列/书籍.md",
-    "文科系列/关于以色列的军事能力，被媒体宣传吹得神乎其神.md",
-    "文科系列/政治/“辍学生”毛泽东：最好的读书时间，从来就不在课堂上.md",
-    "文科系列/哲学/实践论和矛盾论.md",
-    "文科系列/新闻/饭统戴老板的九个爆款秘方.md",
-    "文科系列/新闻/01-news.md",
-    "文科系列/脱口秀主题/崔娃每日秀（0916）山火肆虐，飓风不休，建国不慌：气候变化？休得胡言.md",
-    "文科系列/脱口秀主题/崔娃每日秀（0909）自破家门作何妖 颜色改良惹人恼.md",
-    "文科系列/脱口秀主题/崔娃每日秀（0828）球员弃赛为哪般，且向黑白深处看.md",
-    "文科系列/随笔/段子/p3.md",
-    "文科系列/随笔/段子/p2.md",
-    "文科系列/随笔/段子/天涯搞笑评论.md",
-    "文科系列/随笔/段子/论乳和棒.md",
-    "文科系列/社会/38岁的谢娜，还能靠装疯卖傻火多久.md",
-    "文科系列/社会/“杀人犯”四叔回来了.md",
-    "文科系列/社会/“老许，你要老婆不要？”.md",
-    "文科系列/人物/朱元璋.md",
-    "文科系列/人物/朱可夫元帅.md",
-    "文科系列/人物/粟裕.md",
-    "文科系列/人物/吕俊生.md",
-    "文科系列/人物/林彪.md",
-    "开发/技术栈/FastAPI",
-    "开发/前端/run eslint on save.png",
-    "开发/前端/node interpreter.png",
-    "开发/技术栈",
-    "开发/Base",
-    "开发/Base/Python",
-    "开发",
-    "其他文件/1703642856811.png",
-    "images/Pasted image 20231219212553.png",
-    "images/Pasted image 20231219205810.png",
-    "images/Pasted image 20231128154626.png",
-    "images/Pasted image 20231019155517.png",
+    "技术栈/开发技巧/项目命名规范.md",
+    "技术栈/开发技巧/开发技巧.md",
+    "技术栈/开发技巧/关于nginx安装openssl自签名证书.md",
+    "技术栈/开发技巧/WSL windows Sub Linux.md",
+    "技术栈/开发技巧/VSCode 配置 workspace.md",
+    "技术栈/开发技巧/What's the difference between 127.0.0.1 and 0.0.0.0.md",
+    "技术栈/开发技巧/VS Code 快速生成html模板.md",
+    "技术栈/开发技巧/Use Webstorm and Vscode at the same time.md",
+    "技术栈/开发技巧/VS Code snippets.md",
+    "技术栈/开发技巧/Use command line to dev.md",
+    "技术栈/开发技巧/Test api quick and fast.md",
+    "技术栈/开发技巧/Serve start a web http.md",
+    "技术栈/开发技巧/Proxy Settings.md",
+    "技术栈/开发技巧/openssl用法详解.md",
+    "技术栈/开发技巧/How to remove %0D from end of URL when using wget.md",
+    "技术栈/开发技巧/deploy fabric.md",
+    "技术栈/开发技巧",
+    "远程工作/01-如何找到远程工作.md",
+    "远程工作",
+    "商业化/线上 GC 告警，我菊花一紧，裤子都没提！！.md",
+    "商业化/阅读源码的三种境界.md",
+    "商业化/我的程序员进阶之路.md",
+    "商业化/见过的最垃圾的代码，是怎么样的？.md",
+    "商业化/我的程序员蜕变之路.md",
+    "商业化/程序员如何精确评估开发时间？.md",
+    "商业化/程序员之神.md",
+    "商业化/史上最烂的项目：苦撑 12 年，600 多万行代码.md",
+    "商业化/盘点那些走向世界的中国开源项目.md",
+    "商业化",
+    "前端/run eslint on save.png",
+    "前端/node interpreter.png",
+    "前端",
+    "面试/数据结构/LRU访问006.png",
+    "面试/数据结构/LRU访问002.png",
+    "面试/数据结构/LRU新增.png",
+    "面试/数据结构/LinkedHashMap结构.png",
+    "面试/多线程/ThreadLocal结构图.png",
+    "面试/多线程/epoll和poll区别.png",
+    "面试/多线程/BlockingQueue的四种操作形式.png",
+    "面试/spring/springboot",
+    "面试/spring/springcloud",
+    "面试/spring/spring",
+    "面试/Node/事件循环",
+    "面试/arch/限流",
+    "面试/arch/system",
+    "技术栈/大数据技术栈/spark/008_1.png",
     "Untitled 1.canvas",
     "Untitled.canvas",
     "未命名.canvas",
-    "Python",
-    "images/Pasted image 20240403125611.png",
-    "images/Pasted image 20240403122431.png",
-    "images/Pasted image 20240403122011.png",
-    "开发/面试/区块链",
-    "开发/面试/AI",
-    "开发/面试/Node/事件循环",
     "computer-science/projects/nest-todo/Untitled.canvas"
   ]
 }
